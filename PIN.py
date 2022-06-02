@@ -1,7 +1,8 @@
 #Creating def for PIN access 
 
 def PIN_access():
-    pin:("1234")
-    print ("Enter PIN: ")
-    if pin == 1234:
+    userpin=int(input("Enter PIN: "))
+    if userpin == 1234:
         print ("access granted")
+
+PIN_access()

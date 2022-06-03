@@ -3,9 +3,12 @@
 def initalquestion():
     while True:
         iq=input("""Is your issue regarding a:
-        1 - Device
-        2 Website
+
+1 - Device
+2 Website
+
 """)
+        print ('\n')
         if iq == "1":
             print ("You have selected: Device ")
         elif iq == "2":
@@ -13,12 +16,17 @@ def initalquestion():
         else:
             print ("Unrecognised input!")
         contq = input("Do you wish to continue? (y or n) ").strip().lower()
-        if contq == "y":
+        print ('\n')
+        if contq == "y" or contq == "yes":
             print ("Continuing")
             print ('\n')
             break
-        else:
-            print("stopping")
+        elif contq == "n" or contq == "no":
+            print ("Stopping")
             break
+        else:
+            print("Unrecognised input")
+            print ('\n')
+        
         
 initalquestion()

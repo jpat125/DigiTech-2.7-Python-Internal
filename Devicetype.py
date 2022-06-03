@@ -35,4 +35,5 @@ def devicetype():
             else:
                 print("Unrecognised input")
                 print ('\n')
-            
+
+devicetype()

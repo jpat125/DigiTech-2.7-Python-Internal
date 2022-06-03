@@ -5,16 +5,20 @@ def initalquestion():
         iq=input("""Is your issue regarding a:
         1 - Device
         2 Website
-        """)
-        if iq == 1:
+""")
+        if iq == "1":
             print ("You have selected: Device ")
-        elif iq == 2:
+        elif iq == "2":
             print ("You have selected: Website ") 
         else:
             print ("Unrecognised input!")
-        contq = input("Do you wish to continue? (y or n").strip().lower()
+        contq = input("Do you wish to continue? (y or n) ").strip().lower()
         if contq == "y":
             print ("Continuing")
+            print ('\n')
             break
         else:
-            ()
+            print("stopping")
+            break
+        
+initalquestion()

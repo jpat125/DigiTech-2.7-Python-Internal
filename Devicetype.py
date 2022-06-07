@@ -34,7 +34,7 @@ def devicetype():
         elif contq == "n" or contq == "no":
             print ("Stopping")
             print ('\n')
-            break
+            
         else:
             print("Unrecognised input")   
             print ('\n')

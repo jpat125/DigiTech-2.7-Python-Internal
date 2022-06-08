@@ -22,7 +22,7 @@ def devq1():
         print ('\n')
         contq = input("Do you wish to continue? (y or n) ").strip().lower()
         print ('\n')
-        if contq == "y" or contq == "yes":
+        if (contq == "y" or contq == "yes") and (devq1v == 1 or devq1v == 2 or devq1v == 3 or devq1v == 4):    
             print ("Continuing")
             print ('\n')
             break

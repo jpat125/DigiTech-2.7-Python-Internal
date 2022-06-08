@@ -21,7 +21,7 @@ def deviceos():
             
         contq = input("Do you wish to continue? (y or n) ").strip().lower()
         print ('\n')
-        if contq == "y" or contq == "yes":
+        if contq == "y" or contq == "yes" and :
             print ("Continuing")
             print ('\n')
             break

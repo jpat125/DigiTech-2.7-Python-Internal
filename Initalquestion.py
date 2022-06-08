@@ -17,7 +17,7 @@ def initalquestion():
             print ("Unrecognised input!")
         contq = input("Do you wish to continue? (y or n) ").strip().lower()
         print ('\n')
-        if contq == "y" or contq == "yes":
+        if (contq == "y" or contq == "yes") and (iq == 1 or iq == 2): 
             print ("Continuing")
             print ('\n')
             break

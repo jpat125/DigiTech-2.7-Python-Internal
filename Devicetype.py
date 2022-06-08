@@ -30,7 +30,7 @@ def devicetype():
         print('\n')
         contq = input("Do you wish to continue? (y or n) ").strip().lower()
         print ('\n')
-        if contq == "y" or contq == "yes":
+        if (contq == "y" or contq == "yes") and (devty == 1 or  devty == 2 or  devty == 3 or  devty == 4 or  devty == 5):   
             print ("Continuing")
             print ('\n')
             break

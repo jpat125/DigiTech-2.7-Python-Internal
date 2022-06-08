@@ -17,7 +17,7 @@ def displayissue():
         contq = input("Do you wish to continue? (y or n) ").strip().lower()
         
         print ('\n')
-        if contq == "y" or contq == "yes":
+        if contq == "y" or contq == "yes" and displayissue == 1 or displayissue == 2 or displayissue == 3 or displayissue == 4 :
             print ("Continuing")
             print ('\n')
             break

@@ -13,7 +13,10 @@ def wifissue():
             
         elif wifiissuev == 3:
             print ("Other")
-            
+        
+        else:
+            print ("Unrecognised input, please try again") 
+
         print ('\n')
         contq = input("Do you wish to continue? (y or n) ").strip().lower()
         print ('\n')

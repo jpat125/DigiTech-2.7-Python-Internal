@@ -5,23 +5,24 @@ from glob import glob
 def devicetype():
     while True:
         global devty
-        devty=(input("""Please select the type of device you are having an issue with:
+        devty=(int(input("""Please select the type of device you are having an issue with:
 
 1 - Laptop
 2 - Ipad (Apple only)
 3 - Tablet
 4 - Apple Mac
-"""))
+5 - Other
+""")))
 
-        if devty == "1":
+        if devty == 1:
             print ("You have selected: Laptop")
-        elif devty == "2":
+        elif devty == 2:
             print ("You have selected: Ipad")
-        elif devty == "3":
+        elif devty == 3:
             print ("You have selected: Tablet")
-        elif devty == "4":
+        elif devty == 4:
             print ("You have selected: Apple Mac")
-        elif devty == "Other":
+        elif devty == 5:
             print ("You have selected: Other")
         else:
             print ("Unrecognised input")

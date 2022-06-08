@@ -12,8 +12,10 @@ def deviceos():
             print ("IpadOS")
         elif deviceosv == "ios":
             print ("IOS")
-        elif deviceos == "macos":
+        elif deviceosv == "macos":
             print ("macOS")
+        elif deviceosv == "other":
+            print ("Other")
         else:
             print ("That doesn't seem to be a supported Operating System, perphaps you have mispelt?")
             

@@ -21,6 +21,8 @@ def devicetype():
             print ("You have selected: Tablet")
         elif devty == "4":
             print ("You have selected: Apple Mac")
+        elif devty == "Other":
+            print ("You have selected: Other")
         else:
             print ("Unrecognised input")
 

@@ -1,16 +1,23 @@
 def displayissue():
     while True:
         displayissue=(int(input("""Please type the number that best represents your display issue:
-    1 - Issue with casting 
+    1 - Issue with Apple TV
     2 - Issue with mirroring 
-    3 - Issue with Apple TV
+    3 - Issue with connecting to monitor
     4 - Other 
 
     """)))
         if displayissue == 1:
-            print ("Casting")
+            print ("Apple TV")
         elif displayissue == 2:
             print ("Mirroring")
+        elif displayissue == 3:
+            print ("Monitor")
+        elif displayissue == 4:
+            print ("Other")
+        else:
+            print("unrecognised input, please try again")
+
 
             
         print ('\n')

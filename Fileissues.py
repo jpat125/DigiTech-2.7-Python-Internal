@@ -2,7 +2,7 @@ def fileissue():
     while True:
         fileissuev=(int(input("""I am having issues with:
 1 - Zipping & Un-zipping files
-2 - 
+2 - Onedrive
 3 - Other
 
 """)))
@@ -10,7 +10,7 @@ def fileissue():
             print ("Zipping & unzipping")
             
         elif fileissuev == 2:
-            print("remaining connected issue")
+            print("Onedrive")
             
         elif fileissuev == 3:
             print ("Other")

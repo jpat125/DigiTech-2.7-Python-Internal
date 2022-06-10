@@ -8,6 +8,9 @@ def devq1():
 2 - Wi-Fi issues
 3 - File issues
 4 - Audio issues
+5 - Error codes
+6 - Other
+
 
 """).strip().lower()))
         if devq1v == 1:
@@ -18,6 +21,10 @@ def devq1():
             print ("file issues")#leads to file issues issues question
         elif devq1v == 4:
             print ("audio issues")#leads to audio issues question
+        elif devq1v == 5:
+            print ("Error code")#leads to google search
+        elif devq1v == 6:
+            print ("other")#lead to google search
         else:
             print ("Unrecognised input")
         

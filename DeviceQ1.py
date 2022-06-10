@@ -8,9 +8,8 @@ def devq1():
 2 - Wi-Fi issues
 3 - File issues
 4 - Audio issues
-5 - Error codes
+5 - Error code(s)
 6 - Other
-
 
 """).strip().lower()))
         if devq1v == 1:

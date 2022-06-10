@@ -3,7 +3,7 @@ def displayissue():
         displayissue=(int(input("""Please type the number that best represents your display issue:
     1 - Issue with Apple TV
     2 - Issue with mirroring 
-    3 - Issue with connecting to monitor
+    3 - Issue with connecting to monitor/projector
     4 - Other 
 
     """)))

@@ -7,7 +7,9 @@ def devq1():
 1 - Display issue (including projecting)
 2 - Wi-Fi issues
 3 - File issues
-4 - Audio issues """).strip().lower()))
+4 - Audio issues
+
+""").strip().lower()))
         if devq1v == 1:
             print("display issues")#leads to display issues question
         elif devq1v == 2:

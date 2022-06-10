@@ -12,6 +12,7 @@ def devicetype():
 3 - Tablet
 4 - Apple Mac
 5 - Other
+
 """)))
 
         if devty == 1:

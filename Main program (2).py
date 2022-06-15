@@ -369,6 +369,15 @@ def errorcodesearch():
     time.sleep (1.5)
 
 
+#resource db to go here:
+
+
+
+
+
+
+
+
 
 PIN_access()
 initalquestion()

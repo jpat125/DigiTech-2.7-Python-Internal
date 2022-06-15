@@ -35,6 +35,7 @@ def devicetype():
             print ("Continuing")
             print ('\n')
             break
+        
         elif contq == "n" or contq == "no":
             print ("Stopping")
             print ('\n')

@@ -16,7 +16,7 @@ def deviceos():
             print ("macOS")
         elif deviceosv == "other":
             print ("Other")
-        elif deviceos == "unkown":
+        elif deviceosv == "unknown":
             print ("unknown")
         else:
             print ("That doesn't seem to be a supported Operating System, perphaps you have mispelt?")

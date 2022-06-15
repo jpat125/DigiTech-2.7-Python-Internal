@@ -1,7 +1,3 @@
-
-from shutil import which
-
-
 def whichweb():
      while True:
         whichweb=(int(input("""Please select an option below:

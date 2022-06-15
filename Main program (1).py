@@ -28,13 +28,13 @@ def initalquestion():
 """)))
         print ('\n')
         if iq == 1:
-            print (devicetype())
+            return (devicetype())
         elif iq == 2:
-            print (whichweb()) 
+            return (whichweb()) 
         else:
             print ("Unrecognised input!")
         print ('\n')
-        contq = input("Do you wish to continue? (y or n) ").strip().lower()
+        contq = input(("Do you wish to continue? (y or n) ").strip().lower())
         print ('\n')
         if (contq == "y" or contq == "yes") and (iq == 1 or iq == 2 or iq == 3 or iq == 4):    
             print ("Continuing")
@@ -137,7 +137,7 @@ def deviceos():
     global deviceosv
     
     while True:
-        deviceosv=(input("What is the Operating System of the device? eg. Windows 10, IpadOS, macOS (if unknown, type 'uknown') ").strip().lower())
+        deviceosv=(input("What is the Operating System of the device? eg. Windows 10, IpadOS, macOS (if unknown, type 'uknown') ").strip().lower().replace(" ", ""))
         if deviceosv == "windows10":
             print ("Windows 10")
         elif deviceosv =="windows11":
@@ -372,6 +372,5 @@ def devq1():
 
 PIN_access()
 initalquestion()
-devicetype()
 deviceos()
 devq1()

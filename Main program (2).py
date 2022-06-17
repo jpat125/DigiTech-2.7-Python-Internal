@@ -101,13 +101,15 @@ def whichweb():
 def devicetype():
     while True:
         global devty
-        devty=(int(input("""Please select the type of device you are having an issue with:
+        devty=(int(input("""Please type out the number next to the type of device you are having an issue with:
 
 1 - Laptop
 2 - Ipad (Apple only)
 3 - Tablet
 4 - Apple Mac
 5 - Other
+
+*Press enter after typing*
 
 """)))
 
@@ -145,7 +147,7 @@ def deviceos():
     global deviceosv
     
     while True:
-        deviceosv=(input("What is the Operating System of the device? eg. Windows 10, IpadOS, macOS (if unknown, type 'uknown') ").strip().lower().replace(" ", ""))
+        deviceosv=(input("What is the Operating System of the device? eg. Windows 10, IpadOS, macOS (if unknown, type 'uknown') *Press enter after typing* ").strip().lower().replace(" ", ""))
         if deviceosv == "windows10":
             print ("Windows 10")
         elif deviceosv =="windows11":
@@ -186,6 +188,8 @@ def displayissue():
     3 - Issue with connecting to monitor/projector
     4 - Other 
 
+*Press enter after typing*
+
     """)))
         if (displayissue == 1) and (userpin == staffuserpin):
             print ("Apple TV")
@@ -221,13 +225,15 @@ def devq1():
     
     while True:
         global devq1v
-        devq1v = (int(input("""Please select one of the options below:
+        devq1v = (int(input("""Please type the number of one of the options below:
 1 - Display issue (including projecting)
 2 - Wi-Fi issues
 3 - File issues
 4 - Audio issues
 5 - Error code(s)
 6 - Other
+
+*Press enter after typing*
 
 """).strip().lower()))
         if devq1v == 1:
@@ -268,6 +274,8 @@ def audioissue():
 2 - Connecting to speakers
 3 - Other
 
+*Press enter after typing*
+
 """)))
         if audioissuev == 1:
             print ("connecting to projector/tv")
@@ -302,6 +310,8 @@ def wifissue():
 2 - Remaining connected
 3 - Other
 
+*Press enter after typing*
+
 """)))
         if wifiissuev == 1:
             print ("connecting issues")
@@ -335,6 +345,8 @@ def fileissue():
 1 - Zipping & Un-zipping files
 2 - Onedrive
 3 - Other
+
+*Press enter after typing*
 
 """)))
         if fileissuev == 1:

@@ -8,10 +8,19 @@ import time
 def PIN_access():
 
     while True:
+        global studentuserpin
+        global staffuserpin
+        global userpin
+        studentuserpin = (1234)
+        staffuserpin = (12345)
         userpin=int(input("Enter PIN: "))
-        if userpin == 1234:
-            print ("access granted")
+        if userpin == studentuserpin:
+            print ("MAGS Student access granted")
             print('\n')
+            break
+        elif userpin == staffuserpin:
+            print ("MAGS Staff access granted")
+            print ('\n')
             break
         else:
             print ("Please try again:")
@@ -178,8 +187,9 @@ def displayissue():
     4 - Other 
 
     """)))
-        if displayissue == 1:
+        if (displayissue == 1) and (userpin == staffuserpin):
             print ("Apple TV")
+
         elif displayissue == 2:
             print ("Mirroring")
         elif displayissue == 3:
@@ -187,7 +197,7 @@ def displayissue():
         elif displayissue == 4:
             print ("Other")
         else:
-            print("unrecognised input, please try again")
+            print("Either you don't have access to this or you have input an unrecognised input, please try again")
 
 
             

@@ -89,7 +89,6 @@ def whichweb():
 
 
 #def asks user for the type of device that is having the issue
-
 def devicetype():
     while True:
         global devty
@@ -364,7 +363,7 @@ def googlesearch():
 def errorcodesearch():
     taburl=("https://www.google.com/search?q=")
     errorcode=(input("Input error code: "))
-    search=(taburl+errorcode+deviceosv)
+    search=(taburl+"Error code "+errorcode+" "+deviceosv)
     webbrowser.open(search)
     time.sleep (1.5)
 

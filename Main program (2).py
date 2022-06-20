@@ -1,8 +1,6 @@
-#main program v1
-#from glob import glob
+#main program v2
 
-from logging.config import stopListening
-from shutil import which
+from lib2to3.pgen2 import driver
 import webbrowser
 import time
 
@@ -59,12 +57,63 @@ def initalquestion():
             print("Unrecognised input")  
             print ('\n')
 
+
+
+
+#resource db to go here:
+
+websites = {
+    "KAMAR":"https://drive.google.com/file/d/16K9lJfnL3C9IF913k29JYJDTiXMdrtNS/view",
+    "google classroom":"https://drive.google.com/file/d/1uAGse14fctRMNYP-3t28VuKLi79Y5XAq/view",
+    "google drive":"https://support.google.com/drive/?hl=en#topic=14940",
+    "google docs/slides":"https://support.google.com/docs/?hl=en#topic=1382883"}
+
+
+wificonnecting = {
+"win10":"link",
+"win11":"link",
+"macOS":"https://drive.google.com/file/d/1avw7-i5diAHQ6UPG6en7E9PQ999W1LiY/view",
+"iPadOS":"link"}
+
+wifiremain = {
+"win10":"link",
+"win11":"link",
+"macOS":"link",
+"iPadOS":"link"}
+
+displayappletv = {
+"win10":"link",
+"win11":"link",
+"macOS":"link",
+"iPadOS":"link"}
+
+
+displaymirroring = {
+"win10":"link",
+"win11":"link",
+"macOS":"link",
+"iPadOS":"link"}
+
+displaymonitor = {
+"win10":"link",
+"win11":"link",
+"macOS":"link",
+"iPadOS":"link"}
+
+file = {
+"win10":"link",
+"win11":"link",
+"macOS":"link",
+"ipadOS":"link"}
+
+
+
 #webq1
 def whichweb():
      while True:
         whichweb=(int(input("""Please select an option below:
 1 - KAMAR
-2 - Google Clasroom
+2 - Google Classroom
 3 - Google Drive  
 4 - Google docs/slides
 5 - Other
@@ -73,7 +122,7 @@ def whichweb():
         if whichweb == 1:
             print ("'KAMAR' selected")
         elif whichweb == 2:
-            print ("'Google Classroom' seleceted")
+            print ("'Google Classroom' selected")
         elif whichweb == 3:
             print("'Google Drive' selected")
         elif whichweb == 4:
@@ -99,17 +148,16 @@ def whichweb():
             print ('\n')
         
         if whichweb == 1:
-            webbrowser.open('https://drive.google.com/file/d/16K9lJfnL3C9IF913k29JYJDTiXMdrtNS/view')
+            webbrowser.open(websites["KAMAR"])
             exit()
-            
         elif whichweb == 2:
-            webbrowser.open('https://drive.google.com/file/d/1uAGse14fctRMNYP-3t28VuKLi79Y5XAq/view')
+            webbrowser.open(websites["google classroom"])
             exit()
         elif whichweb == 3:
-            webbrowser.open('https://support.google.com/drive/?hl=en#topic=14940')
+            webbrowser.open(websites["google drive"])
             exit()
         elif whichweb == 4:
-            webbrowser.open('https://support.google.com/docs/?hl=en#topic=1382883')
+            webbrowser.open(websites["google docs/slides"])
             exit()
         elif whichweb == 5:
             googlesearch()
@@ -359,6 +407,12 @@ def wifissue():
         else:
             print("Unrecognised input")  
             print ('\n')
+
+        if wifiissuev == 1:
+            webbrowser.open(wificonnecting["macOS"])
+
+
+
 #file issue
 def fileissue():
     while True:
@@ -409,11 +463,6 @@ def errorcodesearch():
     search=(taburl+"Error code "+errorcode+" "+deviceosv)
     webbrowser.open(search)
     time.sleep (1.5)
-
-
-#resource db to go here:
-
-
 
 
 

@@ -1,6 +1,8 @@
 #main program v1
 #from glob import glob
 
+from logging.config import stopListening
+from shutil import which
 import webbrowser
 import time
 
@@ -69,15 +71,15 @@ def whichweb():
 
 """).strip().lower()))
         if whichweb == 1:
-            print ("KAMAR selected")
+            print ("'KAMAR' selected")
         elif whichweb == 2:
-            print ("Google Classroom")
+            print ("'Google Classroom' seleceted")
         elif whichweb == 3:
-            print("Google Drive")
+            print("'Google Drive' selected")
         elif whichweb == 4:
-            print ("Googgle doc/slides")
+            print ("'Google doc/slides' selected")
         elif whichweb == 5:
-            print ("other")
+            print ("'other' selected")
         else:
             print ("Unrecognised input, please try again")
 
@@ -87,7 +89,7 @@ def whichweb():
         if (contq == "y" or contq == "yes") and (whichweb == 1 or whichweb == 2 or  whichweb == 3 or  whichweb == 4 or  whichweb == 5):
             print ("Continuing")
             print ('\n')
-            break
+            
         elif contq == "n" or contq == "no":
             print ("Stopping")
             print ('\n')
@@ -95,6 +97,25 @@ def whichweb():
         else:
             print("Unrecognised input")  
             print ('\n')
+        
+        if whichweb == 1:
+            webbrowser.open('https://drive.google.com/file/d/16K9lJfnL3C9IF913k29JYJDTiXMdrtNS/view')
+            exit()
+            
+        elif whichweb == 2:
+            webbrowser.open('https://drive.google.com/file/d/1uAGse14fctRMNYP-3t28VuKLi79Y5XAq/view')
+            exit()
+        elif whichweb == 3:
+            webbrowser.open('https://support.google.com/drive/?hl=en#topic=14940')
+            exit()
+        elif whichweb == 4:
+            webbrowser.open('https://support.google.com/docs/?hl=en#topic=1382883')
+            exit()
+        elif whichweb == 5:
+            googlesearch()
+            exit()
+        else:
+            ()
 
 
 #def asks user for the type of device that is having the issue

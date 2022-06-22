@@ -105,10 +105,15 @@ displaymonitor = {
 audiochange = {
 "win10":"https://drive.google.com/file/d/1Bic8Y3aIkCVFxz77vaDQByvWPgDL1rZ0/view?usp=sharing",
 "win11":"https://drive.google.com/file/d/1E_-dt2ZA0ZGOVo6F-7JS_r149Y6BDLcz/view?usp=sharing",
-"macos":"https://drive.google.com/file/d/1CA1taoNVdKo1CW68eVIS2PtQKXXT2yos/view?usp=sharing",
+"macOS":"https://drive.google.com/file/d/1CA1taoNVdKo1CW68eVIS2PtQKXXT2yos/view?usp=sharing",
 }
 
 
+audioconnect = {
+"win10":"",
+"win11":"",
+"macOS":""
+}
 
 printPIN = {
 "printpin":"https://drive.google.com/file/d/1_c7usYyc0CTCGd8SgoJAvnoGQXVf0Djg/view"}
@@ -412,6 +417,13 @@ def audioissue():
 
         if (audioissuev == 1) and (deviceosv == "windows 10"):
             webbrowser.open(audioconnect["win10"])
+        elif (audioissuev == 1) and (deviceosv == "windows 11"):
+            webbrowser.open(audioconnect["win11"])
+        elif (audioissuev == 1) and (deviceosv == "macOS"):
+            webbrowser.open(audioconnect["macOS"])
+        else:
+            print ("Chosen device OS not compatible with this option")
+
 
 
 

@@ -1,6 +1,8 @@
 #main program v2
 
+from dis import dis
 from lib2to3.pgen2 import driver
+from unicodedata import mirrored
 import webbrowser
 import time
 
@@ -70,7 +72,7 @@ websites = {
 
 
 wificonnecting = {
-"win/chrome/ipad":"https://drive.google.com/file/d/1jPfGX0knT0gAQYvaS7phYlL1D7onEiCx/view?usp=sharing",
+"win/ipad":"https://drive.google.com/file/d/1jPfGX0knT0gAQYvaS7phYlL1D7onEiCx/view?usp=sharing",
 "macOS":"https://drive.google.com/file/d/1avw7-i5diAHQ6UPG6en7E9PQ999W1LiY/view"
 }
 
@@ -228,8 +230,6 @@ def deviceos():
             print ("IOS")
         elif deviceosv == "macos":
             print ("macOS")
-        elif deviceosv == "ChromeOS":
-            print ("ChromeOS")
         elif deviceosv == "other":
             print ("Other")
         elif deviceosv == "unknown":
@@ -265,7 +265,6 @@ def displayissue():
     """)))
         if (displayissue == 1) and (userpin == staffuserpin):
             print ("Apple TV")
-
         elif displayissue == 2:
             print ("Mirroring")
         elif displayissue == 3:
@@ -276,7 +275,7 @@ def displayissue():
             print("Either you don't have access to this or you have input an unrecognised input, please try again")
 
 
-            
+
         print ('\n')
         contq = input("Do you wish to continue? (y or n) ").strip().lower()
         
@@ -291,6 +290,33 @@ def displayissue():
         else:
             print("Unrecognised input")  
             print ('\n')
+
+        if (displayissue == 1) and (deviceosv == "macOS"):
+            webbrowser.open ("https://drive.google.com/file/d/1_eXdfVO4nRM_LLPizo9hWQtqul91OAbw/view?usp=sharing")
+        else:
+            print ("Chosen device OS not compatible with this option")
+
+        if (displayissue == 2) and (deviceosv == "macOS"):
+            webbrowser.open(displaymirroring["macOS"])
+        elif (displayissue == 2) and (deviceosv == "windows 10"):
+            webbrowser.open(displaymirroring["win10"])
+        elif (displayissue == 2) and (deviceosv == "windows 11"):
+            webbrowser.open(displaymirroring["win11"])
+        else:
+            print ("Chosen device OS not compatible with this option")
+        if (displayissue == 3) and (deviceosv == "macOS"):
+            webbrowser.open(displaymonitor["macOS"])
+        elif (displayissue == 3) and (deviceosv == "windows 10"):
+            webbrowser.open(displaymonitor["win10"])
+        elif (displayissue == 3) and (deviceosv == "windows 11"):
+            webbrowser.open(displaymonitor["win11"])
+        else:
+            print ("Chose device OS not compatible with this option")
+
+        if displayissue == 4:
+            googlesearch()
+        else:
+            ()
 
 #deviceQ1
 def devq1():
@@ -313,7 +339,7 @@ def devq1():
         elif devq1v == 2:
             return (wifissue())#leads to wifi issues question
         elif devq1v == 3:
-            return (printissue())#leads to file issues issues question
+            return (printissue())#leads to print issues issues question
         elif devq1v == 4:
             return (audioissue())#leads to audio issues question
         elif devq1v == 5:
@@ -416,6 +442,11 @@ def wifissue():
         else:
             ()
         
+        if (wifiissuev ==2):
+            googlesearch()
+
+
+
 #file issue
 def printissue():
     while True:

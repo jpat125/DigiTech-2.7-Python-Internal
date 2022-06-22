@@ -70,10 +70,9 @@ websites = {
 
 
 wificonnecting = {
-"win10":"link",
-"win11":"link",
-"macOS":"https://drive.google.com/file/d/1avw7-i5diAHQ6UPG6en7E9PQ999W1LiY/view",
-"iPadOS":"link"}
+"win,chrome,":"https://drive.google.com/file/d/1jPfGX0knT0gAQYvaS7phYlL1D7onEiCx/view?usp=sharing",
+"macOS":"https://drive.google.com/file/d/1avw7-i5diAHQ6UPG6en7E9PQ999W1LiY/view"
+}
 
 wifiremain = {
 "win10":"link",
@@ -100,13 +99,15 @@ displaymonitor = {
 "macOS":"link",
 "iPadOS":"link"}
 
-file = {
-"win10":"link",
-"win11":"link",
-"macOS":"link",
-"ipadOS":"link"}
+printPIN = {
+"printpin":"https://drive.google.com/file/d/1_c7usYyc0CTCGd8SgoJAvnoGQXVf0Djg/view"}
+
+print = {
+"print":"https://drive.google.com/file/d/1_c7usYyc0CTCGd8SgoJAvnoGQXVf0Djg/view"}
 
 
+#helpdesk email
+helpdesk = ("helpdesk@mags.school.nz")
 
 #webq1
 def whichweb():
@@ -227,6 +228,8 @@ def deviceos():
             print ("IOS")
         elif deviceosv == "macos":
             print ("macOS")
+        elif deviceosv == "ChromeOS":
+            print ("ChromeOS")
         elif deviceosv == "other":
             print ("Other")
         elif deviceosv == "unknown":
@@ -297,7 +300,7 @@ def devq1():
         devq1v = (int(input("""Please type the number of one of the options below:
 1 - Display issue (including projecting)
 2 - Wi-Fi issues
-3 - File issues
+3 - Printing issues
 4 - Audio issues
 5 - Error code(s)
 6 - Other
@@ -310,7 +313,7 @@ def devq1():
         elif devq1v == 2:
             return (wifissue())#leads to wifi issues question
         elif devq1v == 3:
-            return (fileissue())#leads to file issues issues question
+            return (printissue())#leads to file issues issues question
         elif devq1v == 4:
             return (audioissue())#leads to audio issues question
         elif devq1v == 5:
@@ -376,8 +379,7 @@ def wifissue():
     while True:
         wifiissuev=(int(input("""I am having issues with:
 1 - Connecting
-2 - Remaining connected
-3 - Other
+2 - Other
 
 *Press enter after typing*
 
@@ -386,10 +388,7 @@ def wifissue():
             print ("connecting issues")
             
         elif wifiissuev == 2:
-            print("remaining connected issue")
-            
-        elif wifiissuev == 3:
-            print ("Other")
+            print("Other")
         
         else:
             print ("Unrecognised input, please try again") 
@@ -408,30 +407,35 @@ def wifissue():
             print("Unrecognised input")  
             print ('\n')
 
-        if wifiissuev == 1:
+        if (wifiissuev == 1) and (deviceosv == "MacOS"):
             webbrowser.open(wificonnecting["macOS"])
+        elif (wifiissuev == 1) and deviceosv == "windows 10" or (deviceosv == "windows 11") or (deviceosv == "chromeOS") or (deviceosv == "ipadOS"):
+            webbrowser.open(wificonnecting["win/chrome"])
+        else:
+            ()
+        
 
 
 
 #file issue
-def fileissue():
+def printissue():
     while True:
-        fileissuev=(int(input("""I am having issues with:
-1 - Zipping & Un-zipping files
-2 - Onedrive
+        printissuev=(int(input("""I am having issues with:
+1 - Setting printing PIN
+2 - Printing in Black & White/Colour
 3 - Other
 
 *Press enter after typing*
 
 """)))
-        if fileissuev == 1:
-            print ("Zipping & unzipping")
+        if printissuev == 1:
+            print ("'Printing PIN issue' selected")
             
-        elif fileissuev == 2:
-            print("Onedrive")
+        elif printissuev == 2:
+            print("'Printing issue' selected")
             
-        elif fileissuev == 3:
-            print ("Other")
+        elif printissuev == 3:
+            print ("'Other' selected")
         
         else:
             print ("Unrecognised input, please try again") 
@@ -439,7 +443,7 @@ def fileissue():
         print ('\n')
         contq = input("Do you wish to continue? (y or n) ").strip().lower()
         print ('\n')
-        if (contq == "y" or contq == "yes") and (fileissuev == 1 or fileissuev ==  2 or fileissuev ==  3):
+        if (contq == "y" or contq == "yes") and (printissuev == 1 or printissuev ==  2 or printissuev ==  3):
             print ("Continuing")
             print ('\n')
             break
@@ -449,6 +453,20 @@ def fileissue():
         else:
             print("Unrecognised input")  
             print ('\n')
+
+        if printissue == 1:
+            webbrowser.open(printPIN["printpin"])
+            exit()
+        elif printissue == 2:
+            webbrowser.open(print["print"])
+            exit()
+        elif printissue == 3:
+            print (helpdesk)
+        else:
+            ()
+
+
+
 #google search
 def googlesearch():
     taburl=("https://www.google.com/search?q=")

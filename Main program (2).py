@@ -101,6 +101,15 @@ displaymonitor = {
 "macOS":"link",
 "iPadOS":"link"}
 
+
+audiochange = {
+"win10":"https://drive.google.com/file/d/1Bic8Y3aIkCVFxz77vaDQByvWPgDL1rZ0/view?usp=sharing",
+"win11":"https://drive.google.com/file/d/1E_-dt2ZA0ZGOVo6F-7JS_r149Y6BDLcz/view?usp=sharing",
+"macos":"https://drive.google.com/file/d/1CA1taoNVdKo1CW68eVIS2PtQKXXT2yos/view?usp=sharing",
+}
+
+
+
 printPIN = {
 "printpin":"https://drive.google.com/file/d/1_c7usYyc0CTCGd8SgoJAvnoGQXVf0Djg/view"}
 
@@ -400,6 +409,21 @@ def audioissue():
         else:
             print("Unrecognised input")  
             print ('\n')
+
+        if (audioissuev == 1) and (deviceosv == "windows 10"):
+            webbrowser.open(audioconnect["win10"])
+
+
+
+
+        if (audioissuev == 2) and (deviceosv == "windows 10"):
+            webbrowser.open(audiochange["win10"])
+        elif (audioissuev == 2) and (deviceosv == "windows 11"):
+            webbrowser.open(audiochange["win11"])
+        elif (audioissuev == 2) and (deviceosv == ["macOS"]):
+            webbrowser.open(audiochange["macos"])
+        else:
+            print ("Chosen device OS not compatible with this option")
 #wifi issue
 def wifissue():
     while True:
@@ -444,9 +468,6 @@ def wifissue():
         
         if (wifiissuev ==2):
             googlesearch()
-
-
-
 #file issue
 def printissue():
     while True:

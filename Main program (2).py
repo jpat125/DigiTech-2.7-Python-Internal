@@ -70,7 +70,7 @@ websites = {
 
 
 wificonnecting = {
-"win,chrome,":"https://drive.google.com/file/d/1jPfGX0knT0gAQYvaS7phYlL1D7onEiCx/view?usp=sharing",
+"win/chrome/ipad":"https://drive.google.com/file/d/1jPfGX0knT0gAQYvaS7phYlL1D7onEiCx/view?usp=sharing",
 "macOS":"https://drive.google.com/file/d/1avw7-i5diAHQ6UPG6en7E9PQ999W1LiY/view"
 }
 
@@ -383,6 +383,8 @@ def wifissue():
 
 *Press enter after typing*
 
+
+
 """)))
         if wifiissuev == 1:
             print ("connecting issues")
@@ -410,13 +412,10 @@ def wifissue():
         if (wifiissuev == 1) and (deviceosv == "MacOS"):
             webbrowser.open(wificonnecting["macOS"])
         elif (wifiissuev == 1) and deviceosv == "windows 10" or (deviceosv == "windows 11") or (deviceosv == "chromeOS") or (deviceosv == "ipadOS"):
-            webbrowser.open(wificonnecting["win/chrome"])
+            webbrowser.open(wificonnecting["win/chrome/ipad"])
         else:
             ()
         
-
-
-
 #file issue
 def printissue():
     while True:
@@ -464,6 +463,8 @@ def printissue():
             print (helpdesk)
         else:
             ()
+
+
 
 
 

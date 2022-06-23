@@ -244,6 +244,53 @@ def deviceos():
         else:
             print("Unrecognised input")  
             print ('\n')
+#deviceQ1
+def devq1():
+    
+    while True:
+        global devq1v
+        devq1v = (int(input("""Please type the number of one of the options below:
+1 - Display issue (including projecting)
+2 - Wi-Fi issues
+3 - Printing issues
+4 - Audio issues
+5 - Error code(s)
+6 - Other
+
+*Press enter after typing*
+
+""").strip().lower()))
+        if devq1v == 1:
+            return (displayissue())#leads to display issues question
+        elif devq1v == 2:
+            return (wifissue())#leads to wifi issues question
+        elif devq1v == 3:
+            return (printissue())#leads to print issues issues question
+        elif devq1v == 4:
+            return (audioissue())#leads to audio issues question
+        elif devq1v == 5:
+            return (errorcodesearch())#leads to google search
+        elif devq1v == 6:
+            return (googlesearch())#lead to google search
+        else:
+            print ("Unrecognised input")
+        
+        print ('\n')
+        contq = input("Have you selected the correct option? (y or n) ").strip().lower()
+        print ('\n')
+        if (contq == "y" or contq == "yes") and (devq1v == 1 or devq1v == 2 or devq1v == 3 or devq1v == 4):    
+            print ("Continuing")
+            print ('\n')
+            break
+        elif contq == "n" or contq == "no":
+                    print ("Stopping")
+                    print ('\n')
+                            
+        else:
+            print("Unrecognised input")  
+            print ('\n')
+
+
 
 #display issue
 def displayissue():
@@ -318,53 +365,6 @@ def displayissue():
             googlesearch()
         else:
             ()
-
-#deviceQ1
-def devq1():
-    
-    while True:
-        global devq1v
-        devq1v = (int(input("""Please type the number of one of the options below:
-1 - Display issue (including projecting)
-2 - Wi-Fi issues
-3 - Printing issues
-4 - Audio issues
-5 - Error code(s)
-6 - Other
-
-*Press enter after typing*
-
-""").strip().lower()))
-        if devq1v == 1:
-            return (displayissue())#leads to display issues question
-        elif devq1v == 2:
-            return (wifissue())#leads to wifi issues question
-        elif devq1v == 3:
-            return (printissue())#leads to print issues issues question
-        elif devq1v == 4:
-            return (audioissue())#leads to audio issues question
-        elif devq1v == 5:
-            return (errorcodesearch())#leads to google search
-        elif devq1v == 6:
-            return (googlesearch())#lead to google search
-        else:
-            print ("Unrecognised input")
-        
-        print ('\n')
-        contq = input("Have you selected the correct option? (y or n) ").strip().lower()
-        print ('\n')
-        if (contq == "y" or contq == "yes") and (devq1v == 1 or devq1v == 2 or devq1v == 3 or devq1v == 4):    
-            print ("Continuing")
-            print ('\n')
-            break
-        elif contq == "n" or contq == "no":
-                    print ("Stopping")
-                    print ('\n')
-                            
-        else:
-            print("Unrecognised input")  
-            print ('\n')
-
 #audio issue
 def audioissue():
     while True:
@@ -416,7 +416,7 @@ def audioissue():
         elif (audioissuev == 2) and (deviceosv == "windows 11"):
             webbrowser.open(audioconnect["win11"])
         elif (audioissuev == 2) and (deviceosv == ["macOS"]):
-            webbrowser.open(audioconnect["macos"])
+            webbrowser.open(audioconnect["macOS"])
         else:
             print ("Chosen device OS not compatible with this option")
 #wifi issue

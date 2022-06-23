@@ -335,29 +335,33 @@ def displayissue():
 
         if (displayissue == 1) and (deviceosv == "macOS"):
             webbrowser.open ("https://drive.google.com/file/d/1_eXdfVO4nRM_LLPizo9hWQtqul91OAbw/view?usp=sharing")
+            exit()
         else:
             print ("Chosen device OS not compatible with this option")
 
         
         if (displayissue == 2) and (deviceosv == "macOS"):
             webbrowser.open(displaymirroring["macOS"])
-        elif (displayissue == 2) and (deviceosv == "windows 10"):
+            exit()
+        elif (displayissue == 2) and (deviceosv == "windows10"):
             webbrowser.open(displaymirroring["win10"])
-        elif (displayissue == 2) and (deviceosv == "windows 11"):
+            exit()
+        elif (displayissue == 2) and (deviceosv == "windows11"):
             webbrowser.open(displaymirroring["win11"])
+            exit()
         else:
             print ("Chose device OS not compatible with this option")
 
 
-
-
-
         if (displayissue == 3) and (deviceosv == "macOS"):
             webbrowser.open(displaymonitor["macOS"])
-        elif (displayissue == 3) and (deviceosv == "windows 10"):
+            exit()
+        elif (displayissue == 3) and (deviceosv == "windows10"):
             webbrowser.open(displaymonitor["win10"])
-        elif (displayissue == 3) and (deviceosv == "windows 11"):
+            exit()
+        elif (displayissue == 3) and (deviceosv == "windows11"):
             webbrowser.open(displaymonitor["win11"])
+            exit()
         else:
             print ("Chose device OS not compatible with this option")
 
@@ -394,7 +398,7 @@ def audioissue():
         if (contq == "y" or contq == "yes") and (audioissuev == 1 or audioissuev ==  2 or audioissuev ==  3):
             print ("Continuing")
             print ('\n')
-            break
+            
         elif contq == "n" or contq == "no":
             print ("Stopping")
             print ('\n')                
@@ -402,21 +406,26 @@ def audioissue():
             print("Unrecognised input")  
             print ('\n')
 
-        if (audioissuev == 1) and (deviceosv == "windows 10"):
+        if (audioissuev == 1) and (deviceosv == "windows10"):
             webbrowser.open(audioconnect["win10"])
-        elif (audioissuev == 1) and (deviceosv == "windows 11"):
+            exit()
+        elif (audioissuev == 1) and (deviceosv == "windows11"):
             webbrowser.open(audioconnect["win11"])
+            exit()
         elif (audioissuev == 1) and (deviceosv == "macOS"):
             webbrowser.open(audioconnect["macOS"])
-        else:
-            print ("Chosen device OS not compatible with this option")
-
-        if (audioissuev == 2) and (deviceosv == "windows 10"):
+            exit()
+        elif (audioissuev == 2) and (deviceosv == "windows10"):
             webbrowser.open(audioconnect["win10"])
-        elif (audioissuev == 2) and (deviceosv == "windows 11"):
+            exit()
+        elif (audioissuev == 2) and (deviceosv == "windows11"):
             webbrowser.open(audioconnect["win11"])
+            exit()
         elif (audioissuev == 2) and (deviceosv == ["macOS"]):
             webbrowser.open(audioconnect["macOS"])
+            exit()
+        elif audioissuev == 3:
+            helpdesk
         else:
             print ("Chosen device OS not compatible with this option")
 #wifi issue
@@ -431,7 +440,7 @@ def wifissue():
 """)))
         if wifiissuev == 1:
             print ("connecting issues")
-            
+        
         elif wifiissuev == 2:
             print("Other")
         
@@ -454,11 +463,14 @@ def wifissue():
 
         if (wifiissuev == 1) and (deviceosv == "MacOS"):
             webbrowser.open(wificonnecting["macOS"])
+            exit()
         elif (wifiissuev == 1) and deviceosv == "windows 10" or (deviceosv == "windows 11") or (deviceosv == "ipadOS"):
             webbrowser.open(wificonnecting["win/ipad"])
+            exit()
         else:
-            ()
-        
+            print("Either you don't have access to this or you have input an unrecognised input, please try again")
+            
+
         if (wifiissuev ==2):
             googlesearch()
 #print issue
@@ -490,7 +502,7 @@ def printissue():
         if (contq == "y" or contq == "yes") and (printissuev == 1 or printissuev ==  2 or printissuev ==  3):
             print ("Continuing")
             print ('\n')
-            break
+            
         elif contq == "n" or contq == "no":
             print ("Stopping")
             print ('\n')                
@@ -498,13 +510,13 @@ def printissue():
             print("Unrecognised input")  
             print ('\n')
 
-        if printissue == 1:
+        if printissuev == 1:
             webbrowser.open(printPIN["printpin"])
             exit()
-        elif printissue == 2:
+        elif printissuev == 2:
             webbrowser.open(printing["printing"])
             exit()
-        elif printissue == 3:
+        elif printissuev == 3:
             print (helpdesk)
         else:
             ()
@@ -518,6 +530,7 @@ def googlesearch():
     search=(taburl+querey)
     webbrowser.open(search)
     time.sleep (1.5)
+    exit()
 #error code
 def errorcodesearch():
     taburl=("https://www.google.com/search?q=")
@@ -525,6 +538,7 @@ def errorcodesearch():
     search=(taburl+"Error code "+errorcode+" "+deviceosv)
     webbrowser.open(search)
     time.sleep (1.5)
+    exit()
 
 
 

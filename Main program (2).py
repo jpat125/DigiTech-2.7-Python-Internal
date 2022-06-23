@@ -65,10 +65,10 @@ def initalquestion():
 #resource db to go here:
 
 websites = {
-    "KAMAR":"https://drive.google.com/file/d/16K9lJfnL3C9IF913k29JYJDTiXMdrtNS/view",
-    "google classroom":"https://drive.google.com/file/d/1uAGse14fctRMNYP-3t28VuKLi79Y5XAq/view",
-    "google drive":"https://support.google.com/drive/?hl=en#topic=14940",
-    "google docs/slides":"https://support.google.com/docs/?hl=en#topic=1382883"}
+"KAMAR":"https://drive.google.com/file/d/16K9lJfnL3C9IF913k29JYJDTiXMdrtNS/view",
+"google classroom":"https://drive.google.com/file/d/1uAGse14fctRMNYP-3t28VuKLi79Y5XAq/view",
+"google drive":"https://support.google.com/drive/?hl=en#topic=14940",
+"google docs/slides":"https://support.google.com/docs/?hl=en#topic=1382883"}
 
 
 wificonnecting = {
@@ -82,12 +82,6 @@ wifiremain = {
 "macOS":"link",
 "iPadOS":"link"}
 
-displayappletv = {
-"win10":"link",
-"win11":"link",
-"macOS":"link",
-"iPadOS":"link"}
-
 
 displaymirroring = {
 "win10":"link",
@@ -96,23 +90,16 @@ displaymirroring = {
 "iPadOS":"link"}
 
 displaymonitor = {
-"win10":"link",
-"win11":"link",
-"macOS":"link",
+"win10":"https://drive.google.com/file/d/11cTYSBwgbVK_A3CK0hyCAuHVPsX62OoV/view?usp=sharing",
+"win11":"https://drive.google.com/file/d/1XJcZodhqdsZootrNOwhm0yENvMtlNec8/view?usp=sharing",
+"macOS":"https://drive.google.com/file/d/1rcsKU7H14xK5pZoheyIC0-aI5S3J88Vs/view?usp=sharing",
 "iPadOS":"link"}
 
 
-audiochange = {
-"win10":"https://drive.google.com/file/d/1Bic8Y3aIkCVFxz77vaDQByvWPgDL1rZ0/view?usp=sharing",
-"win11":"https://drive.google.com/file/d/1E_-dt2ZA0ZGOVo6F-7JS_r149Y6BDLcz/view?usp=sharing",
-"macOS":"https://drive.google.com/file/d/1CA1taoNVdKo1CW68eVIS2PtQKXXT2yos/view?usp=sharing",
-}
-
-
 audioconnect = {
-"win10":"",
-"win11":"",
-"macOS":""
+"win10":"https://drive.google.com/file/d/1KnkxN617MFcKG_Yo95xtZw4vE7tO0c1h/view?usp=sharing",
+"win11":"https://drive.google.com/file/d/1FehHSMAIIBheyqeIJqlIE9c0utXIstOt/view?usp=sharing",
+"macOS":"https://drive.google.com/file/d/1FOhVpn30CN4Fj0DJwkFZpoR2HB9Qkij2/view?usp=sharing",
 }
 
 printPIN = {
@@ -424,16 +411,12 @@ def audioissue():
         else:
             print ("Chosen device OS not compatible with this option")
 
-
-
-
-
         if (audioissuev == 2) and (deviceosv == "windows 10"):
-            webbrowser.open(audiochange["win10"])
+            webbrowser.open(audioconnect["win10"])
         elif (audioissuev == 2) and (deviceosv == "windows 11"):
-            webbrowser.open(audiochange["win11"])
+            webbrowser.open(audioconnect["win11"])
         elif (audioissuev == 2) and (deviceosv == ["macOS"]):
-            webbrowser.open(audiochange["macos"])
+            webbrowser.open(audioconnect["macos"])
         else:
             print ("Chosen device OS not compatible with this option")
 #wifi issue
@@ -444,8 +427,6 @@ def wifissue():
 2 - Other
 
 *Press enter after typing*
-
-
 
 """)))
         if wifiissuev == 1:
@@ -473,14 +454,14 @@ def wifissue():
 
         if (wifiissuev == 1) and (deviceosv == "MacOS"):
             webbrowser.open(wificonnecting["macOS"])
-        elif (wifiissuev == 1) and deviceosv == "windows 10" or (deviceosv == "windows 11") or (deviceosv == "chromeOS") or (deviceosv == "ipadOS"):
-            webbrowser.open(wificonnecting["win/chrome/ipad"])
+        elif (wifiissuev == 1) and deviceosv == "windows 10" or (deviceosv == "windows 11") or (deviceosv == "ipadOS"):
+            webbrowser.open(wificonnecting["win/ipad"])
         else:
             ()
         
         if (wifiissuev ==2):
             googlesearch()
-#file issue
+#print issue
 def printissue():
     while True:
         printissuev=(int(input("""I am having issues with:

@@ -1,18 +1,15 @@
 #main program v2
 
-from dis import dis
-from lib2to3.pgen2 import driver
-from unicodedata import mirrored
 import webbrowser
 import time
 
 #pin def
 def PIN_access():
-
+    global studentuserpin
+    global staffuserpin
+    global userpin
+        
     while True:
-        global studentuserpin
-        global staffuserpin
-        global userpin
         studentuserpin = (1234)
         staffuserpin = (12345)
         userpin=int(input("Enter PIN: "))
@@ -511,8 +508,6 @@ def printissue():
 
 
 
-
-
 #google search
 def googlesearch():
     taburl=("https://www.google.com/search?q=")
@@ -527,10 +522,6 @@ def errorcodesearch():
     search=(taburl+"Error code "+errorcode+" "+deviceosv)
     webbrowser.open(search)
     time.sleep (1.5)
-
-
-
-
 
 
 

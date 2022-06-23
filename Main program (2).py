@@ -132,7 +132,7 @@ def whichweb():
             print ("Unrecognised input, please try again")
 
         print ('\n')
-        contq = input("Do you wish to continue? (y or n) ").strip().lower()
+        contq = input("Have you selected the correct option? (y or n) ").strip().lower()
         print ('\n')
         if (contq == "y" or contq == "yes") and (whichweb == 1 or whichweb == 2 or  whichweb == 3 or  whichweb == 4 or  whichweb == 5):
             print ("Continuing")

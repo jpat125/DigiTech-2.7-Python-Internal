@@ -30,7 +30,7 @@ def initalquestion():
     while True:
         iq=(int(input("""Is your issue regarding a:
 
-1 - Device
+1 - BYOD, School or Staff Device
 2 - Website
 
 """)))
@@ -195,7 +195,7 @@ def devicetype():
             print ("Unrecognised input")
 
         print('\n')
-        contq = input("Do you wish to continue? (y or n) ").strip().lower()
+        contq = input("Have you selected the correct option? (y or n) ").strip().lower()
         print ('\n')
         if (contq == "y" or contq == "yes") and (devty == 1 or  devty == 2 or  devty == 3 or  devty == 4 or  devty == 5):   
             print ("Continuing")
@@ -222,8 +222,6 @@ def deviceos():
            print ("Windows 11")
         elif deviceosv == "ipados":
             print ("IpadOS")
-        elif deviceosv == "ios":
-            print ("IOS")
         elif deviceosv == "macos":
             print ("macOS")
         elif deviceosv == "other":
@@ -233,7 +231,7 @@ def deviceos():
         else:
             print ("That doesn't seem to be a supported Operating System, perphaps you have mispelt?")
             
-        contq = input("Do you wish to continue? (y or n) ").strip().lower()
+        contq = input("Have you selected the correct option? (y or n) ").strip().lower()
         print ('\n')
         if contq == "y" or contq == "yes":
             print ("Continuing")
@@ -274,7 +272,7 @@ def displayissue():
 
 
         print ('\n')
-        contq = input("Do you wish to continue? (y or n) ").strip().lower()
+        contq = input("Have you selected the correct option? (y or n) ").strip().lower()
         
         print ('\n')
         if contq == "y" or contq == "yes" and displayissue == 1 or displayissue == 2 or displayissue == 3 or displayissue == 4 :
@@ -353,7 +351,7 @@ def devq1():
             print ("Unrecognised input")
         
         print ('\n')
-        contq = input("Do you wish to continue? (y or n) ").strip().lower()
+        contq = input("Have you selected the correct option? (y or n) ").strip().lower()
         print ('\n')
         if (contq == "y" or contq == "yes") and (devq1v == 1 or devq1v == 2 or devq1v == 3 or devq1v == 4):    
             print ("Continuing")
@@ -391,7 +389,7 @@ def audioissue():
             print ("Unrecognised input, please try again") 
 
         print ('\n')
-        contq = input("Do you wish to continue? (y or n) ").strip().lower()
+        contq = input("Have you selected the correct option? (y or n) ").strip().lower()
         print ('\n')
         if (contq == "y" or contq == "yes") and (audioissuev == 1 or audioissuev ==  2 or audioissuev ==  3):
             print ("Continuing")
@@ -441,7 +439,7 @@ def wifissue():
             print ("Unrecognised input, please try again") 
 
         print ('\n')
-        contq = input("Do you wish to continue? (y or n) ").strip().lower()
+        contq = input("Have you selected the correct option? (y or n) ").strip().lower()
         print ('\n')
         if (contq == "y" or contq == "yes") and (wifiissuev == 1 or wifiissuev ==  2 or wifiissuev ==  3):
             print ("Continuing")
@@ -487,7 +485,7 @@ def printissue():
             print ("Unrecognised input, please try again") 
 
         print ('\n')
-        contq = input("Do you wish to continue? (y or n) ").strip().lower()
+        contq = input("Have you selected the correct option? (y or n) ").strip().lower()
         print ('\n')
         if (contq == "y" or contq == "yes") and (printissuev == 1 or printissuev ==  2 or printissuev ==  3):
             print ("Continuing")
@@ -504,7 +502,7 @@ def printissue():
             webbrowser.open(printPIN["printpin"])
             exit()
         elif printissue == 2:
-            webbrowser.open(print["print"])
+            webbrowser.open(printing["printing"])
             exit()
         elif printissue == 3:
             print (helpdesk)

@@ -80,11 +80,6 @@ wifiremain = {
 "iPadOS":"link"}
 
 
-displaymirroring = {
-"win10":"link",
-"win11":"link",
-"macOS":"link",
-"iPadOS":"link"}
 
 displaymonitor = {
 "win10":"https://drive.google.com/file/d/11cTYSBwgbVK_A3CK0hyCAuHVPsX62OoV/view?usp=sharing",
@@ -254,20 +249,20 @@ def displayissue():
     while True:
         displayissue=(int(input("""Please type the number that best represents your display issue:
     1 - Issue with Apple TV
-    2 - Issue with mirroring 
-    3 - Issue with connecting to monitor/projector
-    4 - Other 
+    2 - Issue with connecting to monitor/projector (includes mirroring)
+    3 - Other 
 
 *Press enter after typing*
 
     """)))
         if (displayissue == 1) and (userpin == staffuserpin):
             print ("Apple TV")
-        elif displayissue == 2:
-            print ("Mirroring")
-        elif displayissue == 3:
+        else:
+            print("Either you don't have access to this or you have input an unrecognised input, please try again")
+            exit()
+        if displayissue == 2:
             print ("Monitor")
-        elif displayissue == 4:
+        elif displayissue == 3:
             print ("Other")
         else:
             print("Either you don't have access to this or you have input an unrecognised input, please try again")
@@ -295,23 +290,15 @@ def displayissue():
             print ("Chosen device OS not compatible with this option")
 
         if (displayissue == 2) and (deviceosv == "macOS"):
-            webbrowser.open(displaymirroring["macOS"])
-        elif (displayissue == 2) and (deviceosv == "windows 10"):
-            webbrowser.open(displaymirroring["win10"])
-        elif (displayissue == 2) and (deviceosv == "windows 11"):
-            webbrowser.open(displaymirroring["win11"])
-        else:
-            print ("Chosen device OS not compatible with this option")
-        if (displayissue == 3) and (deviceosv == "macOS"):
             webbrowser.open(displaymonitor["macOS"])
-        elif (displayissue == 3) and (deviceosv == "windows 10"):
+        elif (displayissue == 2) and (deviceosv == "windows 10"):
             webbrowser.open(displaymonitor["win10"])
-        elif (displayissue == 3) and (deviceosv == "windows 11"):
+        elif (displayissue == 2) and (deviceosv == "windows 11"):
             webbrowser.open(displaymonitor["win11"])
         else:
             print ("Chose device OS not compatible with this option")
 
-        if displayissue == 4:
+        if displayissue == 3:
             googlesearch()
         else:
             ()

@@ -10,8 +10,8 @@ def PIN_access():
     global userpin
         
     while True:
-        studentuserpin = (1234)
-        staffuserpin = (12345)
+        studentuserpin = 1234
+        staffuserpin = 12345
         userpin=int(input("Enter PIN: "))
         if userpin == studentuserpin:
             print ("MAGS Student access granted")
@@ -102,7 +102,7 @@ audioconnect = {
 printPIN = {
 "printpin":"https://drive.google.com/file/d/1_c7usYyc0CTCGd8SgoJAvnoGQXVf0Djg/view"}
 
-print = {
+printing = {
 "print":"https://drive.google.com/file/d/1_c7usYyc0CTCGd8SgoJAvnoGQXVf0Djg/view"}
 
 

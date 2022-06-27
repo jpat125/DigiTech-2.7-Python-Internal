@@ -197,7 +197,7 @@ def devicetype():
         print('\n')
         contq = input("Have you selected the correct option? (y or n) ").strip().lower()
         print ('\n')
-        if (contq == "y" or contq == "yes") and (devty == 1 or  devty == 2 or  devty == 3 or  devty == 4 or  devty == 5):   
+        if (contq == "y" or contq == "yes") and (devty == 1 or devty == 2 or devty == 3 or devty == 4 or devty == 5):   
             print ("Continuing")
             print ('\n')
             break
@@ -514,7 +514,7 @@ def printissue():
             webbrowser.open(printPIN["printpin"])
             exit()
         elif printissuev == 2:
-            webbrowser.open(printing["printing"])
+            webbrowser.open(printing["print"])
             exit()
         elif printissuev == 3:
             print (helpdesk)

@@ -3,6 +3,15 @@
 import webbrowser
 import time
 
+
+# /*ooooooooo.   ooooo ooooo      ooo                                                                
+# `888   `Y88. `888' `888b.     `8'                                                                
+#  888   .d88'  888   8 `88b.    8        .oooo.    .ooooo.   .ooooo.   .ooooo.   .oooo.o  .oooo.o 
+#  888ooo88P'   888   8   `88b.  8       `P  )88b  d88' `"Y8 d88' `"Y8 d88' `88b d88(  "8 d88(  "8 
+#  888          888   8     `88b.8        .oP"888  888       888       888ooo888 `"Y88b.  `"Y88b.  
+#  888          888   8       `888       d8(  888  888   .o8 888   .o8 888    .o o.  )88b o.  )88b 
+# o888o        o888o o8o        `8       `Y888""8o `Y8bod8P' `Y8bod8P' `Y8bod8P' 8""888P' 8""888P' 
+
 #pin def
 def PIN_access():
     global studentuserpin
@@ -24,6 +33,18 @@ def PIN_access():
         else:
             print ("Please try again:")
             print ('\n')
+
+
+# /*ooooo              o8o      .             oooo                                                     .    o8o                        
+# `888'              `"'    .o8             `888                                                   .o8    `"'                        
+#  888  ooo. .oo.   oooo  .o888oo  .oooo.    888        .ooooo oo oooo  oooo   .ooooo.   .oooo.o .o888oo oooo   .ooooo.  ooo. .oo.   
+#  888  `888P"Y88b  `888    888   `P  )88b   888       d88' `888  `888  `888  d88' `88b d88(  "8   888   `888  d88' `88b `888P"Y88b  
+#  888   888   888   888    888    .oP"888   888       888   888   888   888  888ooo888 `"Y88b.    888    888  888   888  888   888  
+#  888   888   888   888    888 . d8(  888   888       888   888   888   888  888    .o o.  )88b   888 .  888  888   888  888   888  
+# o888o o888o o888o o888o   "888" `Y888""8o o888o      `V8bod888   `V88V"V8P' `Y8bod8P' 8""888P'   "888" o888o `Y8bod8P' o888o o888o 
+#                                                            888.                                                                    
+#                                                            8P'                                                                     
+#                                                            "                                                                    
 
 #Create def to ask user inital question (issue with device or website?)
 def initalquestion():
@@ -188,6 +209,8 @@ def whichweb():
 #                                                                       .o..P'       888                                                                                     `Y8P'       o888o                
 #def asks user for the type of device that is having the issue
 
+
+
 def devicetype():
     while True:
         global devty
@@ -241,6 +264,8 @@ def devicetype():
 # o888bood8P'   `Y8bod8P'     `8'     o888o `Y8bod8P' `Y8bod8P'  `Y8bood8P'  8""88888P'  
 #devOS
 
+
+
 def deviceos():
     global deviceosv
     
@@ -285,6 +310,8 @@ def deviceos():
 #                                           888.       
 #                                           8P'
 #deviceQ1
+
+
 
 def devq1():
     
@@ -342,6 +369,8 @@ def devq1():
 #                              o888o                      `Y8P'                                                          
 #                                                                                                                        */
 #display issue
+
+
 
 def displayissue():
     while True:
@@ -429,6 +458,8 @@ def displayissue():
                                                                                                           
 #audio issue
 
+
+
 def audioissue():
     while True:
         audioissuev=(int(input("""I am having issues with:
@@ -500,6 +531,8 @@ print ("Chosen device OS not compatible with this option")
 
 #wifi issue
 
+
+
 def wifissue():
     while True:
         wifiissuev=(int(input("""I am having issues with:
@@ -553,6 +586,8 @@ def wifissue():
 #  888          888      888   888   888    888 .       888  o.  )88b o.  )88b  888   888  888    .o 
 # o888o        d888b    o888o o888o o888o   "888"      o888o 8""888P' 8""888P'  `V88V"V8P' `Y8bod8P' 
 #print issue
+
+
 
 def printissue():
     while True:
@@ -612,6 +647,8 @@ def printissue():
 #                                   "Y88888P'                                                                                   
 #google search
 
+
+
 def googlesearch():
     taburl=("https://www.google.com/search?q=")
     querey=(input("Input query: "))
@@ -629,6 +666,8 @@ def googlesearch():
 # o888ooooood8 d888b    d888b    `Y8bod8P' d888b    `Y8bod8P' `Y8bod8P' `Y8bod88P" `Y8bod8P'      8""888P' `Y8bod8P' `Y888""8o d888b    `Y8bod8P' o888o o888o 
 
 #error code
+
+
 
 def errorcodesearch():
     taburl=("https://www.google.com/search?q=")

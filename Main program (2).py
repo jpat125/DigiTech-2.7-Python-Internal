@@ -61,6 +61,16 @@ def initalquestion():
 
 #resource db to go here:
 
+# /*ooooooooo.                                                                                  
+# `888   `Y88.                                                                                
+#  888   .d88'  .ooooo.   .oooo.o  .ooooo.  oooo  oooo  oooo d8b  .ooooo.   .ooooo.   .oooo.o 
+#  888ooo88P'  d88' `88b d88(  "8 d88' `88b `888  `888  `888""8P d88' `"Y8 d88' `88b d88(  "8 
+#  888`88b.    888ooo888 `"Y88b.  888   888  888   888   888     888       888ooo888 `"Y88b.  
+#  888  `88b.  888    .o o.  )88b 888   888  888   888   888     888   .o8 888    .o o.  )88b 
+# o888o  o888o `Y8bod8P' 8""888P' `Y8bod8P'  `V88V"V8P' d888b    `Y8bod8P' `Y8bod8P' 8""888P' 
+                                                                                            
+                                                                                            
+                                                                                    
 websites = {
 "KAMAR":"https://drive.google.com/file/d/16K9lJfnL3C9IF913k29JYJDTiXMdrtNS/view",
 "google classroom":"https://drive.google.com/file/d/1uAGse14fctRMNYP-3t28VuKLi79Y5XAq/view",
@@ -73,15 +83,10 @@ wificonnecting = {
 "macOS":"https://drive.google.com/file/d/1avw7-i5diAHQ6UPG6en7E9PQ999W1LiY/view"
 }
 
-wifiremain = {
-"win10":"link",
-"win11":"link",
-"macOS":"link",
-"iPadOS":"link"}
 
 displaymirroring = {
 "win10/11":"https://drive.google.com/file/d/1Lcqxyu1V3Ux5n3U7_t3FQlk_shnTFlem/view?usp=sharing",
-"macOS":""
+"macOS":"https://drive.google.com/file/d/1cf2DiJSysehx9bMe8kMZXQsfhKdwsHwl/view?usp=sharing"
 }
 
 displaymonitor = {
@@ -106,6 +111,16 @@ printing = {
 
 #helpdesk email
 helpdesk = ("helpdesk@mags.school.nz")
+
+# /*oooooo   oooooo     oooo oooo         o8o            oooo                                         .o8                 o8o      .             
+#  `888.    `888.     .8'  `888         `"'            `888                                        "888                 `"'    .o8             
+#   `888.   .8888.   .8'    888 .oo.   oooo   .ooooo.   888 .oo.        oooo oooo    ooo  .ooooo.   888oooo.   .oooo.o oooo  .o888oo  .ooooo.  
+#    `888  .8'`888. .8'     888P"Y88b  `888  d88' `"Y8  888P"Y88b        `88. `88.  .8'  d88' `88b  d88' `88b d88(  "8 `888    888   d88' `88b 
+#     `888.8'  `888.8'      888   888   888  888        888   888         `88..]88..8'   888ooo888  888   888 `"Y88b.   888    888   888ooo888 
+#      `888'    `888'       888   888   888  888   .o8  888   888          `888'`888'    888    .o  888   888 o.  )88b  888    888 . 888    .o 
+#       `8'      `8'       o888o o888o o888o `Y8bod8P' o888o o888o          `8'  `8'     `Y8bod8P'  `Y8bod8P' 8""888P' o888o   "888" `Y8bod8P' 
+
+
 
 #webq1
 def whichweb():
@@ -163,9 +178,16 @@ def whichweb():
             exit()
         else:
             ()
-
-
+# /*oooooooooo.                          o8o                          .                                    
+# `888'   `Y8b                         `"'                        .o8                                    
+#  888      888  .ooooo.  oooo    ooo oooo   .ooooo.   .ooooo.  .o888oo oooo    ooo oo.ooooo.   .ooooo.  
+#  888      888 d88' `88b  `88.  .8'  `888  d88' `"Y8 d88' `88b   888    `88.  .8'   888' `88b d88' `88b 
+#  888      888 888ooo888   `88..8'    888  888       888ooo888   888     `88..8'    888   888 888ooo888 
+#  888     d88' 888    .o    `888'     888  888   .o8 888    .o   888 .    `888'     888   888 888    .o 
+# o888bood8P'   `Y8bod8P'     `8'     o888o `Y8bod8P' `Y8bod8P'   "888"     .8'      888bod8P' `Y8bod8P' 
+#                                                                       .o..P'       888                                                                                     `Y8P'       o888o                
 #def asks user for the type of device that is having the issue
+
 def devicetype():
     while True:
         global devty
@@ -210,7 +232,15 @@ def devicetype():
             print("Unrecognised input")   
             print ('\n')
 
+# /*oooooooooo.                          o8o                        .oooooo.    .oooooo..o 
+# `888'   `Y8b                         `"'                       d8P'  `Y8b  d8P'    `Y8 
+#  888      888  .ooooo.  oooo    ooo oooo   .ooooo.   .ooooo.  888      888 Y88bo.      
+#  888      888 d88' `88b  `88.  .8'  `888  d88' `"Y8 d88' `88b 888      888  `"Y8888o.  
+#  888      888 888ooo888   `88..8'    888  888       888ooo888 888      888      `"Y88b 
+#  888     d88' 888    .o    `888'     888  888   .o8 888    .o `88b    d88' oo     .d8P 
+# o888bood8P'   `Y8bod8P'     `8'     o888o `Y8bod8P' `Y8bod8P'  `Y8bood8P'  8""88888P'  
 #devOS
+
 def deviceos():
     global deviceosv
     
@@ -244,7 +274,18 @@ def deviceos():
         else:
             print("Unrecognised input")  
             print ('\n')
+
+# /*oooooooooo.                                      .o  
+# `888'   `Y8b                                   o888  
+#  888      888  .ooooo.  oooo    ooo  .ooooo oo  888  
+#  888      888 d88' `88b  `88.  .8'  d88' `888   888  
+#  888      888 888ooo888   `88..8'   888   888   888  
+#  888     d88' 888    .o    `888'    888   888   888  
+# o888bood8P'   `Y8bod8P'     `8'     `V8bod888  o888o 
+#                                           888.       
+#                                           8P'
 #deviceQ1
+
 def devq1():
     
     while True:
@@ -290,9 +331,18 @@ def devq1():
             print("Unrecognised input")  
             print ('\n')
 
-
-
+# /*oooooooooo.    o8o                      oooo                              o8o                                          
+# `888'   `Y8b   `"'                      `888                              `"'                                          
+#  888      888 oooo   .oooo.o oo.ooooo.   888   .oooo.   oooo    ooo      oooo   .oooo.o  .oooo.o oooo  oooo   .ooooo.  
+#  888      888 `888  d88(  "8  888' `88b  888  `P  )88b   `88.  .8'       `888  d88(  "8 d88(  "8 `888  `888  d88' `88b 
+#  888      888  888  `"Y88b.   888   888  888   .oP"888    `88..8'         888  `"Y88b.  `"Y88b.   888   888  888ooo888 
+#  888     d88'  888  o.  )88b  888   888  888  d8(  888     `888'          888  o.  )88b o.  )88b  888   888  888    .o 
+# o888bood8P'   o888o 8""888P'  888bod8P' o888o `Y888""8o     .8'          o888o 8""888P' 8""888P'  `V88V"V8P' `Y8bod8P' 
+#                               888                       .o..P'                                                         
+#                              o888o                      `Y8P'                                                          
+#                                                                                                                        */
 #display issue
+
 def displayissue():
     while True:
         displayissue=(int(input("""Please type the number that best represents your display issue:
@@ -369,7 +419,16 @@ def displayissue():
             googlesearch()
         else:
             ()
+# /*      .o.                         .o8   o8o                 ooooo                                         
+#      .888.                       "888   `"'                 `888'                                         
+#     .8"888.     oooo  oooo   .oooo888  oooo   .ooooo.        888   .oooo.o  .oooo.o oooo  oooo   .ooooo.  
+#    .8' `888.    `888  `888  d88' `888  `888  d88' `88b       888  d88(  "8 d88(  "8 `888  `888  d88' `88b 
+#   .88ooo8888.    888   888  888   888   888  888   888       888  `"Y88b.  `"Y88b.   888   888  888ooo888 
+#  .8'     `888.   888   888  888   888   888  888   888       888  o.  )88b o.  )88b  888   888  888    .o 
+# o88o     o8888o  `V88V"V8P' `Y8bod88P" o888o `Y8bod8P'      o888o 8""888P' 8""888P'  `V88V"V8P' `Y8bod8P' 
+                                                                                                          
 #audio issue
+
 def audioissue():
     while True:
         audioissuev=(int(input("""I am having issues with:
@@ -427,8 +486,20 @@ def audioissue():
         elif audioissuev == 3:
             helpdesk
         else:
-            print ("Chosen device OS not compatible with this option")
+            ()
+print ("Chosen device OS not compatible with this option")
+
+# /*oooooo   oooooo     oooo  o8o   .o88o.  o8o        o8o                                          
+#  `888.    `888.     .8'   `"'   888 `"  `"'        `"'                                          
+#   `888.   .8888.   .8'   oooo  o888oo  oooo       oooo   .oooo.o  .oooo.o oooo  oooo   .ooooo.  
+#    `888  .8'`888. .8'    `888   888    `888       `888  d88(  "8 d88(  "8 `888  `888  d88' `88b 
+#     `888.8'  `888.8'      888   888     888        888  `"Y88b.  `"Y88b.   888   888  888ooo888 
+#      `888'    `888'       888   888     888        888  o.  )88b o.  )88b  888   888  888    .o 
+#       `8'      `8'       o888o o888o   o888o      o888o 8""888P' 8""888P'  `V88V"V8P' `Y8bod8P' 
+
+
 #wifi issue
+
 def wifissue():
     while True:
         wifiissuev=(int(input("""I am having issues with:
@@ -473,7 +544,16 @@ def wifissue():
 
         if (wifiissuev ==2):
             googlesearch()
+
+# /*ooooooooo.             o8o                  .         o8o                                          
+# `888   `Y88.           `"'                .o8         `"'                                          
+#  888   .d88' oooo d8b oooo  ooo. .oo.   .o888oo      oooo   .oooo.o  .oooo.o oooo  oooo   .ooooo.  
+#  888ooo88P'  `888""8P `888  `888P"Y88b    888        `888  d88(  "8 d88(  "8 `888  `888  d88' `88b 
+#  888          888      888   888   888    888         888  `"Y88b.  `"Y88b.   888   888  888ooo888 
+#  888          888      888   888   888    888 .       888  o.  )88b o.  )88b  888   888  888    .o 
+# o888o        d888b    o888o o888o o888o   "888"      o888o 8""888P' 8""888P'  `V88V"V8P' `Y8bod8P' 
 #print issue
+
 def printissue():
     while True:
         printissuev=(int(input("""I am having issues with:
@@ -521,9 +601,17 @@ def printissue():
         else:
             ()
 
-
-
+# /*  .oooooo.                                   oooo                                                                 oooo        
+#  d8P'  `Y8b                                  `888                                                                 `888        
+# 888            .ooooo.   .ooooo.   .oooooooo  888   .ooooo.        .oooo.o  .ooooo.   .oooo.   oooo d8b  .ooooo.   888 .oo.   
+# 888           d88' `88b d88' `88b 888' `88b   888  d88' `88b      d88(  "8 d88' `88b `P  )88b  `888""8P d88' `"Y8  888P"Y88b  
+# 888     ooooo 888   888 888   888 888   888   888  888ooo888      `"Y88b.  888ooo888  .oP"888   888     888        888   888  
+# `88.    .88'  888   888 888   888 `88bod8P'   888  888    .o      o.  )88b 888    .o d8(  888   888     888   .o8  888   888  
+#  `Y8bood8P'   `Y8bod8P' `Y8bod8P' `8oooooo.  o888o `Y8bod8P'      8""888P' `Y8bod8P' `Y888""8o d888b    `Y8bod8P' o888o o888o 
+#                                   d"     YD                                                                                   
+#                                   "Y88888P'                                                                                   
 #google search
+
 def googlesearch():
     taburl=("https://www.google.com/search?q=")
     querey=(input("Input query: "))
@@ -531,7 +619,17 @@ def googlesearch():
     webbrowser.open(search)
     time.sleep (1.5)
     exit()
+
+# /*oooooooooooo                                                                .o8                                                                 oooo        
+# `888'     `8                                                               "888                                                                 `888        
+#  888         oooo d8b oooo d8b  .ooooo.  oooo d8b  .ooooo.   .ooooo.   .oooo888   .ooooo.        .oooo.o  .ooooo.   .oooo.   oooo d8b  .ooooo.   888 .oo.   
+#  888oooo8    `888""8P `888""8P d88' `88b `888""8P d88' `"Y8 d88' `88b d88' `888  d88' `88b      d88(  "8 d88' `88b `P  )88b  `888""8P d88' `"Y8  888P"Y88b  
+#  888    "     888      888     888   888  888     888       888   888 888   888  888ooo888      `"Y88b.  888ooo888  .oP"888   888     888        888   888  
+#  888       o  888      888     888   888  888     888   .o8 888   888 888   888  888    .o      o.  )88b 888    .o d8(  888   888     888   .o8  888   888  
+# o888ooooood8 d888b    d888b    `Y8bod8P' d888b    `Y8bod8P' `Y8bod8P' `Y8bod88P" `Y8bod8P'      8""888P' `Y8bod8P' `Y888""8o d888b    `Y8bod8P' o888o o888o 
+
 #error code
+
 def errorcodesearch():
     taburl=("https://www.google.com/search?q=")
     errorcode=(input("Input error code: "))

@@ -63,6 +63,7 @@ def initalquestion():
         else:
             print ("Unrecognised input!")
         print ('\n')
+    
         contq = input(("Do you wish to continue? (y or n) ").strip().lower())
         print ('\n')
         if (contq == "y" or contq == "yes") and (iq == 1 or iq == 2 or iq == 3 or iq == 4):    
@@ -71,12 +72,10 @@ def initalquestion():
             break
         elif contq == "n" or contq == "no":
                     print ("Stopping")
-                    print ('\n')
-                            
+                    print ('\n')                   
         else:
             print("Unrecognised input")  
             print ('\n')
-
 
 
 
@@ -324,6 +323,7 @@ def devq1():
 4 - Audio issues
 5 - Error code(s)
 6 - Other
+7 - Contact Helpdesk
 
 *Press enter after typing*
 
@@ -340,6 +340,8 @@ def devq1():
             return (errorcodesearch())#leads to google search
         elif devq1v == 6:
             return (googlesearch())#lead to google search
+        elif devq1v == 7:
+            return (helpdesk)#throws up helpdesk email adress
         else:
             print ("Unrecognised input")
         

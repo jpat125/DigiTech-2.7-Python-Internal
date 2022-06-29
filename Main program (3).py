@@ -279,22 +279,25 @@ def devicetype():
         print ("Unrecognised input")
 
     print('\n')
-
+while True:
     if devty ==1 or devty==2 or devty==3 or devty==4 or devty==5:
         contq = input("Have you selected the correct option? (y or n) ").strip().lower()
         print ('\n')
         if (contq == "y" or contq == "yes") and (devty == 1 or devty == 2 or devty == 3 or devty == 4 or devty == 5):   
             print ("Continuing")
             print ('\n')
+            break
             
         
         elif contq == "n" or contq == "no":
             print ("Stopping")
             print ('\n')
+            break
             
         else:
             print("Unrecognised input")   
             print ('\n')
+            
 
 # /*oooooooooo.                          o8o                        .oooooo.    .oooooo..o 
 # `888'   `Y8b                         `"'                       d8P'  `Y8b  d8P'    `Y8 
@@ -618,43 +621,43 @@ def wifissue():
         except ValueError:       # Do this instead if the try block causes a ValueError
             print("Sorry, that is not a number. Please try again.")
 
-        if wifiissuev == 1:
-            print ("connecting issues")
-        
-        elif wifiissuev == 2:
-            print("Other")
-        
-        else:
-            print ("Unrecognised input, please try again") 
+    if wifiissuev == 1:
+        print ("connecting issues")
+    
+    elif wifiissuev == 2:
+        print("Other")
+    
+    else:
+        print ("Unrecognised input, please try again") 
 
+    print ('\n')
+
+    if wifiissuev ==1 or wifiissuev ==2: 
+        contq = input("Have you selected the correct option? (y or n) ").strip().lower()
         print ('\n')
-
-        if wifiissuev ==1 or wifiissuev ==2: 
-            contq = input("Have you selected the correct option? (y or n) ").strip().lower()
+        if (contq == "y" or contq == "yes") and (wifiissuev == 1 or wifiissuev ==  2 or wifiissuev ==  3):
+            print ("Continuing")
             print ('\n')
-            if (contq == "y" or contq == "yes") and (wifiissuev == 1 or wifiissuev ==  2 or wifiissuev ==  3):
-                print ("Continuing")
-                print ('\n')
-                break
-            elif contq == "n" or contq == "no":
-                print ("Stopping")
-                print ('\n')                
-            else:
-                print("Unrecognised input")  
-                print ('\n')
-
-        if (wifiissuev == 1) and (deviceosv == "MacOS"):
-            webbrowser.open(wificonnecting["macOS"])
-            exit()
-        elif (wifiissuev == 1) and deviceosv == "windows 10" or (deviceosv == "windows 11") or (deviceosv == "ipadOS"):
-            webbrowser.open(wificonnecting["win/ipad"])
-            exit()
-        else:
-            print("Either you don't have access to this or you have input an unrecognised input, please try again")
             
+        elif contq == "n" or contq == "no":
+            print ("Stopping")
+            print ('\n')                
+        else:
+            print("Unrecognised input")  
+            print ('\n')
 
-        if (wifiissuev ==2):
-            googlesearch()
+    if (wifiissuev == 1) and (deviceosv == "MacOS"):
+        webbrowser.open(wificonnecting["macOS"])
+        exit()
+    elif (wifiissuev == 1) and deviceosv == "windows 10" or (deviceosv == "windows 11") or (deviceosv == "ipadOS"):
+        webbrowser.open(wificonnecting["win/ipad"])
+        exit()
+    else:
+        print("Either you don't have access to this or you have input an unrecognised input, please try again")
+        
+
+    if (wifiissuev ==2):
+        googlesearch()
 
 # /*ooooooooo.             o8o                  .         o8o                                          
 # `888   `Y88.           `"'                .o8         `"'                                          
@@ -684,44 +687,45 @@ def printissue():
         except ValueError:       # Do this instead if the try block causes a ValueError
             print("Sorry, that is not a number. Please try again.")
 
-        if printissuev == 1:
-            print ("'Printing PIN issue' selected")
-            
-        elif printissuev == 2:
-            print("'Printing issue' selected")
-            
-        elif printissuev == 3:
-            print ("'Other' selected")
+
+    if printissuev == 1:
+        print ("'Printing PIN issue' selected")
         
-        else:
-            print ("Unrecognised input, please try again") 
+    elif printissuev == 2:
+        print("'Printing issue' selected")
+        
+    elif printissuev == 3:
+        print ("'Other' selected")
+    
+    else:
+        print ("Unrecognised input, please try again") 
 
+    print ('\n')
+
+    if printissuev==1 or printissuev==2 or printissuev==3:
+        contq = input("Have you selected the correct option? (y or n) ").strip().lower()
         print ('\n')
-
-        if printissuev==1 or printissuev==2 or printissuev==3:
-            contq = input("Have you selected the correct option? (y or n) ").strip().lower()
+        if (contq == "y" or contq == "yes") and (printissuev == 1 or printissuev ==  2 or printissuev ==  3):
+            print ("Continuing")
             print ('\n')
-            if (contq == "y" or contq == "yes") and (printissuev == 1 or printissuev ==  2 or printissuev ==  3):
-                print ("Continuing")
-                print ('\n')
-                
-            elif contq == "n" or contq == "no":
-                print ("Stopping")
-                print ('\n')                
-            else:
-                print("Unrecognised input")  
-                print ('\n')
-
-        if printissuev == 1:
-            webbrowser.open(printPIN["printpin"])
-            exit()
-        elif printissuev == 2:
-            webbrowser.open(printing["print"])
-            exit()
-        elif printissuev == 3:
-            helpdesk()
+            
+        elif contq == "n" or contq == "no":
+            print ("Stopping")
+            print ('\n')                
         else:
-            ()
+            print("Unrecognised input")  
+            print ('\n')
+
+    if printissuev == 1:
+        webbrowser.open(printPIN["printpin"])
+        exit()
+    elif printissuev == 2:
+        webbrowser.open(printing["print"])
+        exit()
+    elif printissuev == 3:
+        helpdesk()
+    else:
+        ()
 
 # /*  .oooooo.                                   oooo                                                                 oooo        
 #  d8P'  `Y8b                                  `888                                                                 `888        

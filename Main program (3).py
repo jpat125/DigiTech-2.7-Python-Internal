@@ -10,27 +10,6 @@ import pyperclip
 
 
 
-def validate_integer(prompt):
-    while True:
-        try:
-            int_input = int(input(prompt))
-            return int_input
-        except ValueError:
-            print("Please input a floating point number ")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 # /*ooooooooo.   ooooo ooooo      ooo                                                                
 # `888   `Y88. `888' `888b.     `8'                                                                
@@ -76,25 +55,30 @@ def PIN_access():
 
 #Create def to ask user inital question (issue with device or website?)
 def initalquestion():
+    global iq
+    iq = 0
     while True:
-        iq=(int(input("""Is your issue regarding a:
+        try:
+            iq=(int(input("""Is your issue regarding a:
 
 1 - BYOD, School or Staff Device
 2 - Website
 
 """)))
+        except ValueError:       # Do this instead if the try block causes a ValueError
+            print("Sorry, that is not a number. Please try again.")
+
         print ('\n')
+        print(iq)
         if iq == 1:
             return (devicetype())
         elif iq == 2:
-            return (whichweb()) 
-        elif iq != int:
-            print ("wrong")
+            return (whichweb())
         else:
-            print ("Unrecognised input!")
+           print ("Unrecognised input!")
             
         print ('\n')
-    
+
         if (iq == 2 or iq ==3):
             contq = input(("Do you wish to continue? (y or n) ").strip().lower())
             print ('\n')
@@ -261,9 +245,10 @@ def whichweb():
 
 
 def devicetype():
+    global devty
     while True:
-        global devty
-        devty=(int(input("""Please type out the number next to the type of device you are having an issue with:
+        try:
+            devty=(int(input("""Please type out the number next to the type of device you are having an issue with:
 
 1 - Laptop
 2 - Ipad (Apple only)
@@ -274,37 +259,42 @@ def devicetype():
 *Press enter after typing*
 
 """)))
+            break
 
-        if devty == 1:
-            print ("You have selected: Laptop")
-        elif devty == 2:
-            print ("You have selected: Ipad")
-        elif devty == 3:
-            print ("You have selected: Tablet")
-        elif devty == 4:
-            print ("You have selected: Apple Mac")
-        elif devty == 5:
-            print ("You have selected: Other")
-        else:
-            print ("Unrecognised input")
+        except ValueError:       # Do this instead if the try block causes a ValueError
+                print("Sorry, that is not a number. Please try again.")
 
-        print('\n')
 
-        if devty ==1 or devty==2 or devty==3 or devty==4 or devty==5:
-            contq = input("Have you selected the correct option? (y or n) ").strip().lower()
+    if devty == 1:
+        print ("You have selected: Laptop")
+    elif devty == 2:
+        print ("You have selected: Ipad")
+    elif devty == 3:
+        print ("You have selected: Tablet")
+    elif devty == 4:
+        print ("You have selected: Apple Mac")
+    elif devty == 5:
+        print ("You have selected: Other")
+    else:
+        print ("Unrecognised input")
+
+    print('\n')
+
+    if devty ==1 or devty==2 or devty==3 or devty==4 or devty==5:
+        contq = input("Have you selected the correct option? (y or n) ").strip().lower()
+        print ('\n')
+        if (contq == "y" or contq == "yes") and (devty == 1 or devty == 2 or devty == 3 or devty == 4 or devty == 5):   
+            print ("Continuing")
             print ('\n')
-            if (contq == "y" or contq == "yes") and (devty == 1 or devty == 2 or devty == 3 or devty == 4 or devty == 5):   
-                print ("Continuing")
-                print ('\n')
-                break
             
-            elif contq == "n" or contq == "no":
-                print ("Stopping")
-                print ('\n')
-                
-            else:
-                print("Unrecognised input")   
-                print ('\n')
+        
+        elif contq == "n" or contq == "no":
+            print ("Stopping")
+            print ('\n')
+            
+        else:
+            print("Unrecognised input")   
+            print ('\n')
 
 # /*oooooooooo.                          o8o                        .oooooo.    .oooooo..o 
 # `888'   `Y8b                         `"'                       d8P'  `Y8b  d8P'    `Y8 
@@ -365,10 +355,10 @@ def deviceos():
 
 
 def devq1():
-    
+    global devq1v
     while True:
-        global devq1v
-        devq1v = (int(input("""Please type the number of one of the options below:
+        try:
+            devq1v = (int(input("""Please type the number of one of the options below:
 1 - Display issue (including projecting)
 2 - Wi-Fi issues
 3 - Printing issues
@@ -380,39 +370,48 @@ def devq1():
 *Press enter after typing*
 
 """).strip().lower()))
-        if devq1v == 1:
-            return (displayissue())#leads to display issues question
-        elif devq1v == 2:
-            return (wifissue())#leads to wifi issues question
-        elif devq1v == 3:
-            return (printissue())#leads to print issues issues question
-        elif devq1v == 4:
-            return (audioissue())#leads to audio issues question
-        elif devq1v == 5:
-            return (errorcodesearch())#leads to google search
-        elif devq1v == 6:
-            return (googlesearch())#lead to google search
-        elif devq1v == 7:
-            return (helpdesk())#throws up helpdesk email adress
-        else:
-            print ("Unrecognised input")
-        
-        print ('\n')
 
-        if devty ==1 or devty ==2 or devty ==3 or devty ==4 or devty ==5 or devty ==6 or devty ==6:         
-            contq = input("Have you selected the correct option? (y or n) ").strip().lower()
+            break
+
+        except ValueError:       # Do this instead if the try block causes a ValueError
+                print("Sorry, that is not a number. Please try again.")
+
+
+
+
+    if devq1v == 1:
+        return (displayissue())#leads to display issues question
+    elif devq1v == 2:
+        return (wifissue())#leads to wifi issues question
+    elif devq1v == 3:
+        return (printissue())#leads to print issues issues question
+    elif devq1v == 4:
+        return (audioissue())#leads to audio issues question
+    elif devq1v == 5:
+        return (errorcodesearch())#leads to google search
+    elif devq1v == 6:
+        return (googlesearch())#lead to google search
+    elif devq1v == 7:
+        return (helpdesk())#throws up helpdesk email adress
+    else:
+        print ("Unrecognised input")
+    
+    print ('\n')
+
+    if devty ==1 or devty ==2 or devty ==3 or devty ==4 or devty ==5 or devty ==6 or devty ==6:         
+        contq = input("Have you selected the correct option? (y or n) ").strip().lower()
+        print ('\n')
+        if (contq == "y" or contq == "yes") and (devq1v == 1 or devq1v == 2 or devq1v == 3 or devq1v == 4):    
+            print ("Continuing")
             print ('\n')
-            if (contq == "y" or contq == "yes") and (devq1v == 1 or devq1v == 2 or devq1v == 3 or devq1v == 4):    
-                print ("Continuing")
-                print ('\n')
-                break
-            elif contq == "n" or contq == "no":
-                        print ("Stopping")
-                        print ('\n')
-                                
-            else:
-                print("Unrecognised input")  
-                print ('\n')
+
+        elif contq == "n" or contq == "no":
+                    print ("Stopping")
+                    print ('\n')
+                            
+        else:
+            print("Unrecognised input")  
+            print ('\n')
 
 # /*oooooooooo.    o8o                      oooo                              o8o                                          
 # `888'   `Y8b   `"'                      `888                              `"'                                          
@@ -430,7 +429,8 @@ def devq1():
 
 def displayissue():
     while True:
-        displayissue=(int(input("""Please type the number that best represents your display issue:
+        try:
+            displayissue=(int(input("""Please type the number that best represents your display issue:
     1 - Issue with Apple TV
     2 - Issue with mirroring
     3 - Issue with connecting to monitor/projector
@@ -439,70 +439,77 @@ def displayissue():
 *Press enter after typing*
 
     """)))
-        if (displayissue == 1) and (userpin == staffuserpin):
-            print ("Apple TV")
-        else:
-            print("Either you don't have access to this or you have input an unrecognised input, please try again")
-            exit()
-        if displayissue == 2:
-            print ("Monitor")
-        elif displayissue == 3:
-            print ("Other")
-        else:
-            print("Either you don't have access to this or you have input an unrecognised input, please try again")
-
-        print ('\n')
-        if displayissue == 1 or displayissue == 2 or  displayissue ==3:
-            contq = input("Have you selected the correct option? (y or n) ").strip().lower()
             
-            print ('\n')
-            if contq == "y" or contq == "yes" and displayissue == 1 or displayissue == 2 or displayissue == 3 or displayissue == 4 :
-                print ("Continuing")
-                print ('\n')
-                break
-            elif contq == "n" or contq == "no":
-                print ("Stopping")
-                print ('\n')                
-            else:
-                print("Unrecognised input")  
-                print ('\n')
+            break
 
-        if (displayissue == 1) and (deviceosv == "macOS"):
-            webbrowser.open ("https://drive.google.com/file/d/1_eXdfVO4nRM_LLPizo9hWQtqul91OAbw/view?usp=sharing")
-            exit()
-        else:
-            print ("Chosen device OS not compatible with this option")
+        except ValueError:       # Do this instead if the try block causes a ValueError
+            print("Sorry, that is not a number. Please try again.")
 
+
+    if (displayissue == 1) and (userpin == staffuserpin):
+        print ("Apple TV")
+    else:
+        print("Either you don't have access to this or you have input an unrecognised input, please try again")
+        exit()
+    if displayissue == 2:
+        print ("Monitor")
+    elif displayissue == 3:
+        print ("Other")
+    else:
+        print("Either you don't have access to this or you have input an unrecognised input, please try again")
+
+    print ('\n')
+    if displayissue == 1 or displayissue == 2 or  displayissue ==3:
+        contq = input("Have you selected the correct option? (y or n) ").strip().lower()
         
-        if (displayissue == 2) and (deviceosv == "macOS"):
-            webbrowser.open(displaymirroring["macOS"])
-            exit()
-        elif (displayissue == 2) and (deviceosv == "windows10"):
-            webbrowser.open(displaymirroring["win10"])
-            exit()
-        elif (displayissue == 2) and (deviceosv == "windows11"):
-            webbrowser.open(displaymirroring["win11"])
-            exit()
+        print ('\n')
+        if contq == "y" or contq == "yes" and displayissue == 1 or displayissue == 2 or displayissue == 3 or displayissue == 4 :
+            print ("Continuing")
+            print ('\n')
+            
+        elif contq == "n" or contq == "no":
+            print ("Stopping")
+            print ('\n')                
         else:
-            print ("Chose device OS not compatible with this option")
+            print("Unrecognised input")  
+            print ('\n')
+
+    if (displayissue == 1) and (deviceosv == "macOS"):
+        webbrowser.open ("https://drive.google.com/file/d/1_eXdfVO4nRM_LLPizo9hWQtqul91OAbw/view?usp=sharing")
+        exit()
+    else:
+        print ("Chosen device OS not compatible with this option")
+
+    
+    if (displayissue == 2) and (deviceosv == "macOS"):
+        webbrowser.open(displaymirroring["macOS"])
+        exit()
+    elif (displayissue == 2) and (deviceosv == "windows10"):
+        webbrowser.open(displaymirroring["win10"])
+        exit()
+    elif (displayissue == 2) and (deviceosv == "windows11"):
+        webbrowser.open(displaymirroring["win11"])
+        exit()
+    else:
+        print ("Chose device OS not compatible with this option")
 
 
-        if (displayissue == 3) and (deviceosv == "macOS"):
-            webbrowser.open(displaymonitor["macOS"])
-            exit()
-        elif (displayissue == 3) and (deviceosv == "windows10"):
-            webbrowser.open(displaymonitor["win10"])
-            exit()
-        elif (displayissue == 3) and (deviceosv == "windows11"):
-            webbrowser.open(displaymonitor["win11"])
-            exit()
-        else:
-            print ("Chose device OS not compatible with this option")
+    if (displayissue == 3) and (deviceosv == "macOS"):
+        webbrowser.open(displaymonitor["macOS"])
+        exit()
+    elif (displayissue == 3) and (deviceosv == "windows10"):
+        webbrowser.open(displaymonitor["win10"])
+        exit()
+    elif (displayissue == 3) and (deviceosv == "windows11"):
+        webbrowser.open(displaymonitor["win11"])
+        exit()
+    else:
+        print ("Chose device OS not compatible with this option")
 
-        if displayissue == 4:
-            googlesearch()
-        else:
-            ()
+    if displayissue == 4:
+        googlesearch()
+    else:
+        ()
 # /*      .o.                         .o8   o8o                 ooooo                                         
 #      .888.                       "888   `"'                 `888'                                         
 #     .8"888.     oooo  oooo   .oooo888  oooo   .ooooo.        888   .oooo.o  .oooo.o oooo  oooo   .ooooo.  
@@ -517,7 +524,8 @@ def displayissue():
 
 def audioissue():
     while True:
-        audioissuev=(int(input("""I am having issues with:
+        try:
+            audioissuev=(int(input("""I am having issues with:
 1 - Connecting to projector or TV
 2 - Connecting to speakers
 3 - Other
@@ -525,56 +533,61 @@ def audioissue():
 *Press enter after typing*
 
 """)))
-        if audioissuev == 1:
-            print ("connecting to projector/tv")
-            
-        elif audioissuev == 2:
-            print("connecting to speakers")
-            
-        elif audioissuev == 3:
-            print ("Other")
+            break
+
+        except ValueError:       # Do this instead if the try block causes a ValueError
+                print("Sorry, that is not a number. Please try again.")
+
+    if audioissuev == 1:
+        print ("connecting to projector/tv")
         
-        else:
-            print ("Unrecognised input, please try again") 
+    elif audioissuev == 2:
+        print("connecting to speakers")
+        
+    elif audioissuev == 3:
+        print ("Other")
+    
+    else:
+        print ("Unrecognised input, please try again") 
 
+    print ('\n')
+
+    if audioissuev == 1 or audioissuev == 2 or audioissuev == 3:
+        contq = input("Have you selected the correct option? (y or n) ").strip().lower()
         print ('\n')
-
-        if audioissuev == 1 or audioissuev == 2 or audioissuev == 3:
-            contq = input("Have you selected the correct option? (y or n) ").strip().lower()
+        if (contq == "y" or contq == "yes") and (audioissuev == 1 or audioissuev ==  2 or audioissuev ==  3):
+            print ("Continuing")
             print ('\n')
-            if (contq == "y" or contq == "yes") and (audioissuev == 1 or audioissuev ==  2 or audioissuev ==  3):
-                print ("Continuing")
-                print ('\n')
-                
-            elif contq == "n" or contq == "no":
-                print ("Stopping")
-                print ('\n')                
-            else:
-                print("Unrecognised input")  
-                print ('\n')
-
-        if (audioissuev == 1) and (deviceosv == "windows10"):
-            webbrowser.open(audioconnect["win10"])
-            exit()
-        elif (audioissuev == 1) and (deviceosv == "windows11"):
-            webbrowser.open(audioconnect["win11"])
-            exit()
-        elif (audioissuev == 1) and (deviceosv == "macOS"):
-            webbrowser.open(audioconnect["macOS"])
-            exit()
-        elif (audioissuev == 2) and (deviceosv == "windows10"):
-            webbrowser.open(audioconnect["win10"])
-            exit()
-        elif (audioissuev == 2) and (deviceosv == "windows11"):
-            webbrowser.open(audioconnect["win11"])
-            exit()
-        elif (audioissuev == 2) and (deviceosv == ["macOS"]):
-            webbrowser.open(audioconnect["macOS"])
-            exit()
-        elif audioissuev == 3:
-            helpdesk()
+            
+        elif contq == "n" or contq == "no":
+            print ("Stopping")
+            print ('\n')                
         else:
-            print ("Chosen device OS not compatible with this option")
+            print("Unrecognised input")  
+            print ('\n')
+
+    if (audioissuev == 1) and (deviceosv == "windows10"):
+        webbrowser.open(audioconnect["win10"])
+        exit()
+    elif (audioissuev == 1) and (deviceosv == "windows11"):
+        webbrowser.open(audioconnect["win11"])
+        exit()
+    elif (audioissuev == 1) and (deviceosv == "macOS"):
+        webbrowser.open(audioconnect["macOS"])
+        exit()
+    elif (audioissuev == 2) and (deviceosv == "windows10"):
+        webbrowser.open(audioconnect["win10"])
+        exit()
+    elif (audioissuev == 2) and (deviceosv == "windows11"):
+        webbrowser.open(audioconnect["win11"])
+        exit()
+    elif (audioissuev == 2) and (deviceosv == ["macOS"]):
+        webbrowser.open(audioconnect["macOS"])
+        exit()
+    elif audioissuev == 3:
+        helpdesk()
+    else:
+        print ("Chosen device OS not compatible with this option")
 
 # /*oooooo   oooooo     oooo  o8o   .o88o.  o8o        o8o                                          
 #  `888.    `888.     .8'   `"'   888 `"  `"'        `"'                                          
@@ -591,13 +604,20 @@ def audioissue():
 
 def wifissue():
     while True:
-        wifiissuev=(int(input("""I am having issues with:
+        try:
+            wifiissuev=(int(input("""I am having issues with:
 1 - Connecting
 2 - Other
 
 *Press enter after typing*
 
 """)))
+
+            break
+
+        except ValueError:       # Do this instead if the try block causes a ValueError
+            print("Sorry, that is not a number. Please try again.")
+
         if wifiissuev == 1:
             print ("connecting issues")
         
@@ -649,7 +669,8 @@ def wifissue():
 
 def printissue():
     while True:
-        printissuev=(int(input("""I am having issues with:
+        try:
+            printissuev=(int(input("""I am having issues with:
 1 - Setting printing PIN
 2 - Printing in Black & White/Colour
 3 - Other
@@ -657,6 +678,12 @@ def printissue():
 *Press enter after typing*
 
 """)))
+
+            break
+
+        except ValueError:       # Do this instead if the try block causes a ValueError
+            print("Sorry, that is not a number. Please try again.")
+
         if printissuev == 1:
             print ("'Printing PIN issue' selected")
             

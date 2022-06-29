@@ -133,10 +133,25 @@ printing = {
 "print":"https://drive.google.com/file/d/1_c7usYyc0CTCGd8SgoJAvnoGQXVf0Djg/view"}
 
 
+
+# /*ooooo   ooooo           oooo                   .o8                     oooo                                                    o8o  oooo  
+# `888'   `888'           `888                  "888                     `888                                                    `"'  `888  
+#  888     888   .ooooo.   888  oo.ooooo.   .oooo888   .ooooo.   .oooo.o  888  oooo        .ooooo.  ooo. .oo.  .oo.    .oooo.   oooo   888  
+#  888ooooo888  d88' `88b  888   888' `88b d88' `888  d88' `88b d88(  "8  888 .8P'        d88' `88b `888P"Y88bP"Y88b  `P  )88b  `888   888  
+#  888     888  888ooo888  888   888   888 888   888  888ooo888 `"Y88b.   888888.         888ooo888  888   888   888   .oP"888   888   888  
+#  888     888  888    .o  888   888   888 888   888  888    .o o.  )88b  888 `88b.       888    .o  888   888   888  d8(  888   888   888  
+# o888o   o888o `Y8bod8P' o888o  888bod8P' `Y8bod88P" `Y8bod8P' 8""888P' o888o o888o      `Y8bod8P' o888o o888o o888o `Y888""8o o888o o888o 
+#                                888                                                                                                        
+#                               o888o                                                                                                       
+
 #helpdesk email
 def helpdesk():
     email=("helpdesk@mags.school.nz")
     pyperclip.copy(email)
+    print (email)
+    print ("*email address copied to clipboard*")
+
+    
 # /*oooooo   oooooo     oooo oooo         o8o            oooo                                         .o8                 o8o      .             
 #  `888.    `888.     .8'  `888         `"'            `888                                        "888                 `"'    .o8             
 #   `888.   .8888.   .8'    888 .oo.   oooo   .ooooo.   888 .oo.        oooo oooo    ooo  .ooooo.   888oooo.   .oooo.o oooo  .o888oo  .ooooo.  

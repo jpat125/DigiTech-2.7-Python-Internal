@@ -3,6 +3,7 @@
 from tkinter import W
 import webbrowser
 import time
+import pyperclip
 
 
 # /*ooooooooo.   ooooo ooooo      ooo                                                                
@@ -133,8 +134,9 @@ printing = {
 
 
 #helpdesk email
-helpdesk = ("helpdesk@mags.school.nz")
-
+def helpdesk():
+    email=("helpdesk@mags.school.nz")
+    pyperclip.copy(email)
 # /*oooooo   oooooo     oooo oooo         o8o            oooo                                         .o8                 o8o      .             
 #  `888.    `888.     .8'  `888         `"'            `888                                        "888                 `"'    .o8             
 #   `888.   .8888.   .8'    888 .oo.   oooo   .ooooo.   888 .oo.        oooo oooo    ooo  .ooooo.   888oooo.   .oooo.o oooo  .o888oo  .ooooo.  
@@ -348,7 +350,7 @@ def devq1():
         elif devq1v == 6:
             return (googlesearch())#lead to google search
         elif devq1v == 7:
-            return (helpdesk)#throws up helpdesk email adress
+            return (helpdesk())#throws up helpdesk email adress
         else:
             print ("Unrecognised input")
         
@@ -527,7 +529,7 @@ def audioissue():
             webbrowser.open(audioconnect["macOS"])
             exit()
         elif audioissuev == 3:
-            helpdesk
+            helpdesk()
         else:
             print ("Chosen device OS not compatible with this option")
 
@@ -647,7 +649,7 @@ def printissue():
             webbrowser.open(printing["print"])
             exit()
         elif printissuev == 3:
-            print (helpdesk)
+            helpdesk()
         else:
             ()
 

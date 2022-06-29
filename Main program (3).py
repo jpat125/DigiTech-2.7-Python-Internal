@@ -6,6 +6,32 @@ import time
 import pyperclip
 
 
+
+
+
+
+def validate_integer(prompt):
+    while True:
+        try:
+            int_input = int(input(prompt))
+            return int_input
+        except ValueError:
+            print("Please input a floating point number ")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # /*ooooooooo.   ooooo ooooo      ooo                                                                
 # `888   `Y88. `888' `888b.     `8'                                                                
 #  888   .d88'  888   8 `88b.    8        .oooo.    .ooooo.   .ooooo.   .ooooo.   .oooo.o  .oooo.o 
@@ -62,6 +88,8 @@ def initalquestion():
             return (devicetype())
         elif iq == 2:
             return (whichweb()) 
+        elif iq != int:
+            print ("wrong")
         else:
             print ("Unrecognised input!")
             

@@ -62,20 +62,22 @@ def initalquestion():
             return (whichweb()) 
         else:
             print ("Unrecognised input!")
+            
         print ('\n')
     
-        contq = input(("Do you wish to continue? (y or n) ").strip().lower())
-        print ('\n')
-        if (contq == "y" or contq == "yes") and (iq == 1 or iq == 2 or iq == 3 or iq == 4):    
-            print ("Continuing")
+        if (iq == 2 or iq ==3):
+            contq = input(("Do you wish to continue? (y or n) ").strip().lower())
             print ('\n')
-            break
-        elif contq == "n" or contq == "no":
-                    print ("Stopping")
-                    print ('\n')                   
-        else:
-            print("Unrecognised input")  
-            print ('\n')
+            if (contq == "y" or contq == "yes") and (iq == 1 or iq == 2 or iq == 3 or iq == 4):    
+                print ("Continuing")
+                print ('\n')
+                break
+            elif contq == "n" or contq == "no":
+                        print ("Stopping")
+                        print ('\n')                   
+            else:
+                print("Unrecognised input")  
+                print ('\n')
 
 
 
@@ -519,8 +521,7 @@ def audioissue():
         elif audioissuev == 3:
             helpdesk
         else:
-            ()
-print ("Chosen device OS not compatible with this option")
+            print ("Chosen device OS not compatible with this option")
 
 # /*oooooo   oooooo     oooo  o8o   .o88o.  o8o        o8o                                          
 #  `888.    `888.     .8'   `"'   888 `"  `"'        `"'                                          

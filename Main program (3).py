@@ -58,7 +58,7 @@ def PIN_access():
 #Create def to ask user inital question (issue with device or website?)
 def initalquestion():
     global iq
-    iq = 0
+    
     while True:
             iq=(input("""Is your issue regarding a:
 
@@ -69,20 +69,18 @@ def initalquestion():
 
             checki=(iq.isnumeric())
             print ('\n')
-            print(iq)
+            
             if (iq == "1") and (checki==True):
-                return (devicetype())
-            elif iq == "2" and(checki==True):
-                return (whichweb())
+                print ("You have selected: Device ")
+            elif iq == "2":
+                print ("You have selected: Website ") 
             else:
                 print ("Unrecognised input!")
-                
             print ('\n')
-
-            if (iq == 1 or iq ==2):
+            if (iq == "1" or iq =="2") and (checki==True):
                 contq = input(("Do you wish to continue? (y or n) ").strip().lower())
                 print ('\n')
-                if (contq == "y" or contq == "yes") and (iq == 1 or iq == 2):    
+                if (contq == "y" or contq == "yes") and (iq == "1" or iq == "2"):    
                     print ("Continuing")
                     print ('\n')
                     break
@@ -91,6 +89,14 @@ def initalquestion():
                             print ('\n')                   
                 else:
                     print("Unrecognised input")  
+                    print ('\n')
+
+                if (contq== "1") and (checki==True):
+                    return (devicetype())
+                elif iq == "2" and (checki==True):
+                    return (whichweb())
+                else:
+                    print ("Unrecognised input!")
                     print ('\n')
 
 

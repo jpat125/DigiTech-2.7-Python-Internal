@@ -455,7 +455,7 @@ def displayissue():
                 contq = input("Have you selected the correct option? (y or n) ").strip().lower()
                 
                 print ('\n')
-                if contq == "y" or contq == "yes" and displayissue == 1 or displayissue == 2 or displayissue == 3 or displayissue == 4 :
+                if contq == "y" or contq == "yes" and displayissue == "1" or displayissue == "2" or displayissue == "3" or displayissue == "4":
                     print ("Continuing")
                     print ('\n')
                     

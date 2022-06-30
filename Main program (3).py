@@ -1,5 +1,6 @@
 #main program v2
 
+from shutil import which
 from tkinter import W
 import webbrowser
 import time
@@ -67,20 +68,19 @@ def initalquestion():
 
 """))
 
-            checki=(iq.isnumeric())
-            print ('\n')
             
-            if (iq == "1") and (checki==True):
+            if iq == "1":
                 print ("You have selected: Device ")
             elif iq == "2":
                 print ("You have selected: Website ") 
             else:
                 print ("Unrecognised input!")
             print ('\n')
-            if (iq == "1" or iq =="2") and (checki==True):
+
+            if iq == "1" or iq =="2":
                 contq = input(("Do you wish to continue? (y or n) ").strip().lower())
                 print ('\n')
-                if (contq == "y" or contq == "yes") and (iq == "1" or iq == "2"):    
+                if (contq == "y" or contq == "yes") and (iq == "1" or iq == "2") :    
                     print ("Continuing")
                     print ('\n')
                     break
@@ -91,9 +91,9 @@ def initalquestion():
                     print("Unrecognised input")  
                     print ('\n')
 
-                if (contq== "1") and (checki==True):
+                if (iq== "1"):
                     return (devicetype())
-                elif iq == "2" and (checki==True):
+                elif iq == 2:
                     return (whichweb())
                 else:
                     print ("Unrecognised input!")
@@ -191,6 +191,9 @@ def whichweb():
 5 - Other
 
 """).strip().lower())
+
+
+
         if whichweb == "1":
             print ("'KAMAR' selected")
         elif whichweb == "2":
@@ -395,7 +398,7 @@ def devq1():
             
             print ('\n')
 
-            if devty ==1 or devty =="2" or devty =="3" or devty =="4" or devty =="5" or devty =="6" or devty =="7":         
+            if devq1v  ==1 or devq1v  =="2" or devq1v  =="3" or devq1v  =="4" or devq1v  =="5" or devq1v =="6" or devq1v  =="7":         
                 contq = input("Have you selected the correct option? (y or n) ").strip().lower()
                 print ('\n')
                 if (contq == "y" or contq == "yes") and (devq1v == "1" or devq1v == "2" or devq1v == "3" or devq1v == "4"):    

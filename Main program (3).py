@@ -81,7 +81,7 @@ def initalquestion():
                 if (contq == "y" or contq == "yes") and (iq == "1" or iq == "2") :    
                     print ("Continuing")
                     print ('\n')
-                    break
+                    
                 elif contq == "n" or contq == "no":
                             print ("Stopping")
                             print ('\n')                   
@@ -89,9 +89,9 @@ def initalquestion():
                     print("Unrecognised input")  
                     print ('\n')
 
-                if (iq== "1"):
+                if iq == "1":
                     return (devicetype())
-                elif iq == 2:
+                elif iq == "2":
                     return (whichweb())
                 else:
                     print ("Unrecognised input!")
@@ -118,10 +118,11 @@ websites = {
 "google docs/slides":"https://support.google.com/docs/?hl=en#topic=1382883"}
 
 
-wificonnecting = {
-"win/ipad":"https://drive.google.com/file/d/1jPfGX0knT0gAQYvaS7phYlL1D7onEiCx/view?usp=sharing",
-"macOS":"https://drive.google.com/file/d/1avw7-i5diAHQ6UPG6en7E9PQ999W1LiY/view"
-}
+
+#"https://drive.google.com/file/d/1jPfGX0knT0gAQYvaS7phYlL1D7onEiCx/view?usp=sharing",
+
+#"https://drive.google.com/file/d/1avw7-i5diAHQ6UPG6en7E9PQ999W1LiY/view"
+
 
 
 displaymirroring = {
@@ -249,8 +250,6 @@ def whichweb():
 #                                                                       .o..P'       888                                                                                     `Y8P'       o888o                
 #def asks user for the type of device that is having the issue
 
-
-
 def devicetype():
     global devty
     while True:
@@ -268,19 +267,19 @@ def devicetype():
 
         if devty == "1":
             print ("You have selected: Laptop")
-            break
+            
         elif devty == "2":
             print ("You have selected: Ipad")
-            break
+            
         elif devty == "3":
             print ("You have selected: Tablet")
-            break
+            
         elif devty == "4":
             print ("You have selected: Apple Mac")
-            break
+            
         elif devty == "5":
             print ("You have selected: Other")
-            break
+            
         else:
             print ("Unrecognised input")
 
@@ -289,7 +288,7 @@ def devicetype():
         if devty =="1" or devty=="2" or devty=="3" or devty=="4" or devty=="5":
             contq = input("Have you selected the correct option? (y or n) ").strip().lower()
             print ('\n')
-            if (contq == "y" or contq == "yes") and (devty == 1 or devty == 2 or devty == 3 or devty == 4 or devty == 5):   
+            if (contq == "y" or contq == "yes") and (devty == "1" or devty == "2" or devty == "3" or devty == "4" or devty == "5"):   
                 print ("Continuing")
                 print ('\n')
                 break
@@ -625,10 +624,12 @@ def wifissue():
                 print ('\n')
 
         if (wifiissuev == "1") and (deviceosv == "MacOS"):
-            webbrowser.open(wificonnecting["macOS"])
+            #webbrowser.open(wificonnecting["macOS"])
+            f = open("Wifi connecting - students")
             exit()
         elif (wifiissuev == "1") and deviceosv == "windows 10" or (deviceosv == "windows 11") or (deviceosv == "ipadOS"):
-            webbrowser.open(wificonnecting["win/ipad"])
+            #webbrowser.open(wificonnecting["win/ipad"])
+            f = open("To connect to School Wifi")
             exit()
         else:
             print("Either you don't have access to this or you have input an unrecognised input, please try again")
@@ -744,5 +745,6 @@ def errorcodesearch():
 
 PIN_access()
 initalquestion()
+
 deviceos()
 devq1()

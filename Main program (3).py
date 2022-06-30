@@ -1,7 +1,5 @@
 #main program v2
 
-from shutil import which
-from tkinter import W
 import webbrowser
 import time
 import pyperclip

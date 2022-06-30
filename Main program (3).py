@@ -5,11 +5,7 @@ import webbrowser
 import time
 import pyperclip
 
-
-
-
-
-
+ 
 
 # /*ooooooooo.   ooooo ooooo      ooo                                                                
 # `888   `Y88. `888' `888b.     `8'                                                                
@@ -21,32 +17,31 @@ import pyperclip
 
 #pin def
 def PIN_access():
+    
     global studentuserpin
     global staffuserpin
     global userpin
-        
-    try:
-        userpin= int(input("input")) # Try to convert the input into a number
-                break                    # Break out of the infinite loop if the conversion is successful
-        except ValueError:       # Do this instead if the try block causes a ValueError
-            print("Sorry, that is not an integer. Please try again.")
 
+    while True:   
+            
+            userpin = (input("Enter your PIN:  "))
 
-    while True:
-        studentuserpin = 1234
-        staffuserpin = 12345
-        userpin=int(input("Enter PIN: "))
-        if userpin == studentuserpin:
-            print ("MAGS Student access granted")
-            print('\n')
-            break
-        elif userpin == staffuserpin:
-            print ("MAGS Staff access granted")
-            print ('\n')
-            break
-        else:
-            print ("Please try again:")
-            print ('\n')
+            deds=(userpin.isnumeric())
+
+            studentuserpin = "1234"
+            staffuserpin = "12345"
+
+            if (userpin == studentuserpin) and (deds==True):
+                print ("MAGS Student access granted")
+                print('\n')
+                break
+            elif (userpin == staffuserpin) and (deds==True):
+                print ("MAGS Staff access granted")
+                print ('\n')
+                break
+            else:
+                print ("Please try again:")
+                print ('\n')
 
 
 # /*ooooo              o8o      .             oooo                                                     .    o8o                        

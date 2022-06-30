@@ -26,16 +26,16 @@ def PIN_access():
             
             userpin = (input("Enter your PIN:  "))
 
-            deds=(userpin.isnumeric())
+            checki=(userpin.isnumeric())
 
             studentuserpin = "1234"
             staffuserpin = "12345"
 
-            if (userpin == studentuserpin) and (deds==True):
+            if (userpin == studentuserpin) and (checki==True):
                 print ("MAGS Student access granted")
                 print('\n')
                 break
-            elif (userpin == staffuserpin) and (deds==True):
+            elif (userpin == staffuserpin) and (checki==True):
                 print ("MAGS Staff access granted")
                 print ('\n')
                 break
@@ -66,21 +66,23 @@ def initalquestion():
 2 - Website
 
 """))
+
+            checki=(iq.isnumeric())
             print ('\n')
             print(iq)
-            if iq == "1":
+            if (iq == "1") and (checki==True):
                 return (devicetype())
-            elif iq == "2":
+            elif iq == "2" and(checki==True):
                 return (whichweb())
             else:
                 print ("Unrecognised input!")
                 
             print ('\n')
 
-            if (iq == 2 or iq ==3):
+            if (iq == 1 or iq ==2):
                 contq = input(("Do you wish to continue? (y or n) ").strip().lower())
                 print ('\n')
-                if (contq == "y" or contq == "yes") and (iq == 1 or iq == 2 or iq == 3 or iq == 4):    
+                if (contq == "y" or contq == "yes") and (iq == 1 or iq == 2):    
                     print ("Continuing")
                     print ('\n')
                     break

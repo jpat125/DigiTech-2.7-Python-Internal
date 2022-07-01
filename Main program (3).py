@@ -434,15 +434,12 @@ def displayissue():
 
 *Press enter after typing*
 
-    """))
-            
+"""))
 
             if (displayissue == "1") and (userpin == staffuserpin):
                 print ("Apple TV")
-            else:
-                print("Either you don't have access to this or you have input an unrecognised input, please try again")
-                exit()
-            if displayissue == "2":
+            
+            elif displayissue == "2":
                 print ("Monitor")
             elif displayissue == "3":
                 print ("Other")
@@ -450,7 +447,7 @@ def displayissue():
                 print("Either you don't have access to this or you have input an unrecognised input, please try again")
 
             print ('\n')
-            if displayissue == "1" or displayissue == "2" or  displayissue =="3":
+            if displayissue == "1" or displayissue == "2" or  displayissue =="3" or displayissue=="4":
                 contq = input("Have you selected the correct option? (y or n) ").strip().lower()
                 
                 print ('\n')
@@ -465,42 +462,34 @@ def displayissue():
                     print("Unrecognised input")  
                     print ('\n')
 
-            if (displayissue == "1") and (deviceosv == "macOS"):
-                webbrowser.open ("https://drive.google.com/file/d/1_eXdfVO4nRM_LLPizo9hWQtqul91OAbw/view?usp=sharing")
-                exit()
-            else:
-                print ("Chosen device OS not compatible with this option")
+                if (displayissue == "1") and (deviceosv == "macos"):
+                    webbrowser.open ("https://drive.google.com/file/d/1_eXdfVO4nRM_LLPizo9hWQtqul91OAbw/view?usp=sharing")
+                    exit()
+                elif (displayissue == "2") and (deviceosv == "macOS"):
+                    webbrowser.open(displaymirroring["macOS"])
+                    exit()
+                elif (displayissue == "2") and (deviceosv == "windows10"):
+                    webbrowser.open(displaymirroring["win10"])
+                    exit()
+                elif (displayissue == "2") and (deviceosv == "windows11"):
+                    webbrowser.open(displaymirroring["win11"])
+                    exit()
+                elif (displayissue == "3") and (deviceosv == "macOS"):
+                    webbrowser.open(displaymonitor["macOS"])
+                    exit()
+                elif (displayissue == "3") and (deviceosv == "windows10"):
+                    webbrowser.open(displaymonitor["win10"])
+                    exit()
+                elif (displayissue == "3") and (deviceosv == "windows11"):
+                    webbrowser.open(displaymonitor["win11"])
+                    exit()
+                else:
+                    print ("Chosen device OS not compatible with this option")
 
-            
-            if (displayissue == "2") and (deviceosv == "macOS"):
-                webbrowser.open(displaymirroring["macOS"])
-                exit()
-            elif (displayissue == "2") and (deviceosv == "windows10"):
-                webbrowser.open(displaymirroring["win10"])
-                exit()
-            elif (displayissue == "2") and (deviceosv == "windows11"):
-                webbrowser.open(displaymirroring["win11"])
-                exit()
-            else:
-                print ("Chose device OS not compatible with this option")
-
-
-            if (displayissue == "3") and (deviceosv == "macOS"):
-                webbrowser.open(displaymonitor["macOS"])
-                exit()
-            elif (displayissue == "3") and (deviceosv == "windows10"):
-                webbrowser.open(displaymonitor["win10"])
-                exit()
-            elif (displayissue == "3") and (deviceosv == "windows11"):
-                webbrowser.open(displaymonitor["win11"])
-                exit()
-            else:
-                print ("Chose device OS not compatible with this option")
-
-            if displayissue == "4":
-                googlesearch()
-            else:
-                ()
+                if displayissue == "4":
+                    googlesearch()
+                else:
+                    ()
 # /*      .o.                         .o8   o8o                 ooooo                                         
 #      .888.                       "888   `"'                 `888'                                         
 #     .8"888.     oooo  oooo   .oooo888  oooo   .ooooo.        888   .oooo.o  .oooo.o oooo  oooo   .ooooo.  

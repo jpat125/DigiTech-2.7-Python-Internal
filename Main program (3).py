@@ -1,5 +1,6 @@
 #main program v2
 
+import dis
 import webbrowser
 import time
 import pyperclip
@@ -456,9 +457,11 @@ def displayissue():
                 print ("Apple TV selected")
             
             elif displayissue == "2":
-                print ("Monitor selected")
+                print ("mirroring selected")
             elif displayissue == "3":
-                print ("Other selected")
+                print ("Monitor selected")
+            elif displayissue == "4":
+                print ("Other selceted")
             else:
                 print("Either you don't have access to this or you have input an unrecognised input, please try again")
 
@@ -499,13 +502,12 @@ def displayissue():
                 elif (displayissue == "3") and (deviceosv == "windows11"):
                     webbrowser.open(displaymonitor["win11"])
                     exit()
+                elif displayissue == "4":
+                    googlesearch()
                 else:
                     print ("Chosen device OS not compatible with this option")
 
-                if displayissue == "4":
-                    googlesearch()
-                else:
-                    ()
+                    
 # /*      .o.                         .o8   o8o                 ooooo                                         
 #      .888.                       "888   `"'                 `888'                                         
 #     .8"888.     oooo  oooo   .oooo888  oooo   .ooooo.        888   .oooo.o  .oooo.o oooo  oooo   .ooooo.  

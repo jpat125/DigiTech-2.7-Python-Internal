@@ -78,25 +78,24 @@ def initalquestion():
             if iq == "1" or iq =="2":
                 contq = input(("Do you wish to continue? (y or n) ").strip().lower())
                 print ('\n')
-                if (contq == "y" or contq == "yes") and (iq == "1" or iq == "2") :    
+                if (contq == "y" or contq == "yes"):    
                     print ("Continuing")
                     print ('\n')
+                    if iq == "1":
+                        return (devicetype())
+                    elif iq == "2":
+                        return (whichweb())
+               
                     
                 elif contq == "n" or contq == "no":
                             print ("Stopping")
-                            print ('\n')                   
+                            print ('\n')     
+                                          
                 else:
                     print("Unrecognised input")  
                     print ('\n')
 
-                if iq == "1":
-                    return (devicetype())
-                elif iq == "2":
-                    return (whichweb())
-                else:
-                    print ("Unrecognised input!")
-                    print ('\n')
-
+              
 
 
 #resource db to go here:
@@ -211,7 +210,24 @@ def whichweb():
         if whichweb == "1" or whichweb =="2" or whichweb =="3" or whichweb=="4" or whichweb=="5":
             contq = input("Have you selected the correct option? (y or n) ").strip().lower()
             print ('\n')
-            if (contq == "y" or contq == "yes") and (whichweb == 1 or whichweb == 2 or  whichweb == 3 or  whichweb == 4 or  whichweb == 5):
+            if (contq == "y" or contq == "yes"):
+                if whichweb == "1":
+                    webbrowser.open(websites["KAMAR"])
+                    exit()
+                elif whichweb == "2":
+                    webbrowser.open(websites["google classroom"])
+                    exit()
+                elif whichweb == "3":
+                    webbrowser.open(websites["google drive"])
+                    exit()
+                elif whichweb == "4":
+                    webbrowser.open(websites["google docs/slides"])
+                    exit()
+                elif whichweb == "5":
+                    googlesearch()
+                    
+                else:
+                    ()
                 print ("Continuing")
                 print ('\n')
                 
@@ -223,23 +239,7 @@ def whichweb():
                 print("Unrecognised input")  
                 print ('\n')
             
-            if whichweb == "1":
-                webbrowser.open(websites["KAMAR"])
-                exit()
-            elif whichweb == "2":
-                webbrowser.open(websites["google classroom"])
-                exit()
-            elif whichweb == "3":
-                webbrowser.open(websites["google drive"])
-                exit()
-            elif whichweb == "4":
-                webbrowser.open(websites["google docs/slides"])
-                exit()
-            elif whichweb == "5":
-                googlesearch()
-                exit()
-            else:
-                ()
+            
 # /*oooooooooo.                          o8o                          .                                    
 # `888'   `Y8b                         `"'                        .o8                                    
 #  888      888  .ooooo.  oooo    ooo oooo   .ooooo.   .ooooo.  .o888oo oooo    ooo oo.ooooo.   .ooooo.  
@@ -377,38 +377,54 @@ def devq1():
 """).strip().lower())
 
             if devq1v == "1":
-                return (displayissue())#leads to display issues question
+                print("Display issue selected")
             elif devq1v == "2":
-                return (wifissue())#leads to wifi issues question
+                print ("Wi-Fi issue selevted")
             elif devq1v == "3":
-                return (printissue())#leads to print issues issues question
+                print ("Printing issue selected")
             elif devq1v == "4":
-                return (audioissue())#leads to audio issues question
+                print ("Audio issue selected")
             elif devq1v == "5":
-                return (errorcodesearch())#leads to google search
-            elif devq1v == "6":
-                return (googlesearch())#lead to google search
-            elif devq1v == "7":
-                return (helpdesk())#throws up helpdesk email adress
-            else:
-                print ("Unrecognised input")
-            
-            print ('\n')
+                print ("Error code serach selected")
+            elif devq1v =="6":
+                print ("Other selected")
+            elif devq1v =="7":
+                print ("Contact Helpdesk selected")
 
-            if devq1v  ==1 or devq1v  =="2" or devq1v  =="3" or devq1v  =="4" or devq1v  =="5" or devq1v =="6" or devq1v  =="7":         
+            if devq1v  =="1" or devq1v  =="2" or devq1v  =="3" or devq1v  =="4" or devq1v  =="5" or devq1v =="6" or devq1v  =="7":         
                 contq = input("Have you selected the correct option? (y or n) ").strip().lower()
                 print ('\n')
                 if (contq == "y" or contq == "yes") and (devq1v == "1" or devq1v == "2" or devq1v == "3" or devq1v == "4"):    
                     print ("Continuing")
                     print ('\n')
+                    if devq1v == "1":
+                        return (displayissue())#leads to display issues question
+                    elif devq1v == "2":
+                        return (wifissue())#leads to wifi issues question
+                    elif devq1v == "3":
+                        return (printissue())#leads to print issues issues question
+                    elif devq1v == "4":
+                        return (audioissue())#leads to audio issues question
+                    elif devq1v == "5":
+                        return (errorcodesearch())#leads to google search
+                    elif devq1v == "6":
+                        return (googlesearch())#lead to google search
+                    elif devq1v == "7":
+                        return (helpdesk())#throws up helpdesk email adress
+                    else:
+                        print ("Unrecognised input")
+                    
+                        print ('\n')
 
                 elif contq == "n" or contq == "no":
-                            print ("Stopping")
-                            print ('\n')
+                    print ("Stopping")
+                    print ('\n')
                                     
                 else:
                     print("Unrecognised input")  
                     print ('\n')
+
+            
 
 # /*oooooooooo.    o8o                      oooo                              o8o                                          
 # `888'   `Y8b   `"'                      `888                              `"'                                          
@@ -437,12 +453,12 @@ def displayissue():
 """))
 
             if (displayissue == "1") and (userpin == staffuserpin):
-                print ("Apple TV")
+                print ("Apple TV selected")
             
             elif displayissue == "2":
-                print ("Monitor")
+                print ("Monitor selected")
             elif displayissue == "3":
-                print ("Other")
+                print ("Other selected")
             else:
                 print("Either you don't have access to this or you have input an unrecognised input, please try again")
 

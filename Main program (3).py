@@ -319,18 +319,16 @@ def deviceos():
     
     while True:
         deviceosv=(input("What is the Operating System of the device? eg. Windows 10, IpadOS, macOS (if unknown, type 'uknown') *Press enter after typing* ").strip().lower().replace(" ", ""))
-        if deviceosv == "windows10":
+        if deviceosv == "windows10" or deviceosv == "win10":
             print ("Windows 10")
-        elif deviceosv =="windows11":
+        elif deviceosv =="windows11" or deviceosv == "win11":
            print ("Windows 11")
-        elif deviceosv == "ipados":
+        elif deviceosv == "ipados" or deviceosv == "ipad":
             print ("IpadOS")
-        elif deviceosv == "macos":
+        elif deviceosv == "macos" or deviceosv == "mac":
             print ("macOS")
-        elif deviceosv == "other":
-            print ("Other")
-        elif deviceosv == "unknown":
-            print ("unknown")
+        elif deviceosv == "unknown" or deviceosv == "other": 
+            print (helpdesk)
         else:
             print ("That doesn't seem to be a supported Operating System, perphaps you have mispelt?")
     

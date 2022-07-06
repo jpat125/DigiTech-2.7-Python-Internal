@@ -4,6 +4,7 @@ import dis
 import webbrowser
 import time
 import pyperclip
+import os
 
 #/*  .oooooo.                             .                           .              .o8                                  oooo                                          
 #d8P'  `Y8b                          .o8                         .o8             "888                                  `888                                          
@@ -293,6 +294,10 @@ def devicetype():
             
         elif devty == "5":
             print ("You have selected: Other")
+            print("I'm sorry, I don't have resources to help you, I recomend you contact IT helpdesk")
+            helpdesk()
+            print ("\n")
+            exit()
             
         else:
             print ("Unrecognised input")
@@ -306,6 +311,7 @@ def devicetype():
                 print ("Continuing")
                 print ('\n')
                 break
+                exit()
             
             elif contq == "n" or contq == "no":
                 print ("Stopping")
@@ -495,7 +501,7 @@ def displayissue():
                 if (displayissue == "1") and (deviceosv == "macos"):
                     webbrowser.open ("https://drive.google.com/file/d/1_eXdfVO4nRM_LLPizo9hWQtqul91OAbw/view?usp=sharing")
                     exit()
-                elif (displayissue == "2") and (deviceosv == "macOS"):
+                elif (displayissue == "2") and (deviceosv == "macos"):
                     webbrowser.open(displaymirroring["macOS"])
                     exit()
                 elif (displayissue == "2") and (deviceosv == "windows10"):
@@ -641,13 +647,14 @@ def wifissue():
                 print("Unrecognised input")  
                 print ('\n')
 
-        if (wifiissuev == "1") and (deviceosv == "MacOS"):
+        if (wifiissuev == "1") and (deviceosv == "Macos"):
             #webbrowser.open(wificonnecting["macOS"])
             f = open("Wifi connecting - students")
             exit()
-        elif (wifiissuev == "1") and deviceosv == "windows 10" or (deviceosv == "windows 11") or (deviceosv == "ipadOS"):
-            #webbrowser.open(wificonnecting["win/ipad"])
-            f = open("To connect to School Wifi")
+        elif (wifiissuev == "1") and (deviceosv == "windows10") or (deviceosv == "windows11") or (deviceosv == "ipados"):
+            path = os.path.basename('/2.7 Internal/To connect to School Wifi.pdf')
+            os.startfile(path)
+            
             exit()
         else:
             print("Either you don't have access to this or you have input an unrecognised input, please try again")

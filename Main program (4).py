@@ -5,7 +5,20 @@ import webbrowser
 import time
 import pyperclip
 
- 
+#/*  .oooooo.                             .                           .              .o8                                  oooo                                          
+#d8P'  `Y8b                          .o8                         .o8             "888                                  `888                                          
+#888           .ooooo.  ooo. .oo.   .o888oo  .oooo.    .ooooo.  .o888oo       .oooo888   .ooooo.  oooo    ooo  .ooooo.   888   .ooooo.  oo.ooooo.   .ooooo.  oooo d8b 
+#888          d88' `88b `888P"Y88b    888   `P  )88b  d88' `"Y8   888        d88' `888  d88' `88b  `88.  .8'  d88' `88b  888  d88' `88b  888' `88b d88' `88b `888""8P 
+#888          888   888  888   888    888    .oP"888  888         888        888   888  888ooo888   `88..8'   888ooo888  888  888   888  888   888 888ooo888  888     
+#`88b    ooo  888   888  888   888    888 . d8(  888  888   .o8   888 .      888   888  888    .o    `888'    888    .o  888  888   888  888   888 888    .o  888     
+# `Y8bood8P'  `Y8bod8P' o888o o888o   "888" `Y888""8o `Y8bod8P'   "888"      `Y8bod88P" `Y8bod8P'     `8'     `Y8bod8P' o888o `Y8bod8P'  888bod8P' `Y8bod8P' d888b    
+#                                                                                                                                        888                          
+#                                                                                                                                       o888o                         
+
+def contact_developer():
+    devemail=("jpatel@students.mags.school.nz")
+    print ("If you belive I have made a mistake, please contact my devloper at:", devemail)
+
 
 # /*ooooooooo.   ooooo ooooo      ooo                                                                
 # `888   `Y88. `888' `888b.     `8'                                                                
@@ -23,7 +36,7 @@ def PIN_access():
     global userpin
 
     while True:   
-            
+            print ("Hi there!\nThis is an automated IT support tool for Mount Albert Grammar School staff and students.")
             userpin = (input("Enter your PIN:  "))
 
             checki=(userpin.isnumeric())
@@ -40,7 +53,7 @@ def PIN_access():
                 print ('\n')
                 break
             else:
-                print ("Please try again:")
+                print ("Incorrect PIN, please try again:")
                 print ('\n')
 
 
@@ -69,11 +82,11 @@ def initalquestion():
 
             
             if iq == "1":
-                print ("You have selected: Device ")
+                print ("You have selected: Issue with a Device ")
             elif iq == "2":
-                print ("You have selected: Website ") 
+                print ("You have selected: Issue with a Website ") 
             else:
-                print ("Unrecognised input!")
+                print ("I'm sorry, I don't think that's an option!\n", contact_developer())
             print ('\n')
 
             if iq == "1" or iq =="2":

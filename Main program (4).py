@@ -16,8 +16,8 @@ import pyperclip
 #                                                                                                                                       o888o                         
 
 def contact_developer():
-    devemail=("jpatel@students.mags.school.nz")
-    print ("If you belive I have made a mistake, please contact my devloper at:", devemail)
+    global mistake
+    mistake=("If you belive I have made a mistake, please contact my devloper at: jpatel@students.mags.school.nz")
 
 
 # /*ooooooooo.   ooooo ooooo      ooo                                                                
@@ -86,7 +86,7 @@ def initalquestion():
             elif iq == "2":
                 print ("You have selected: Issue with a Website ") 
             else:
-                print ("I'm sorry, I don't think that's an option!\n", contact_developer())
+                print ("I'm sorry, I don't think that's an option!\n"+mistake)
             print ('\n')
 
             if iq == "1" or iq =="2":
@@ -406,7 +406,7 @@ def devq1():
             if devq1v  =="1" or devq1v  =="2" or devq1v  =="3" or devq1v  =="4" or devq1v  =="5" or devq1v =="6" or devq1v  =="7":         
                 contq = input("Have you selected the correct option? (y or n) ").strip().lower()
                 print ('\n')
-                if (contq == "y" or contq == "yes") and (devq1v == "1" or devq1v == "2" or devq1v == "3" or devq1v == "4"):    
+                if (contq == "y" or contq == "yes"):
                     print ("Continuing")
                     print ('\n')
                     if devq1v == "1":
@@ -422,7 +422,7 @@ def devq1():
                     elif devq1v == "6":
                         return (googlesearch())#lead to google search
                     elif devq1v == "7":
-                        return (helpdesk())#throws up helpdesk email adress
+                        return (helpdesk())#throws up helpdesk email address
                     else:
                         print ("Unrecognised input")
                     
@@ -762,6 +762,7 @@ def errorcodesearch():
 
 
 PIN_access()
+contact_developer()
 initalquestion()
 
 deviceos()

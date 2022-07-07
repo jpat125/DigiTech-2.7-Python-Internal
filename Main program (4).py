@@ -334,17 +334,23 @@ def devicetype():
 
 
 def deviceos():
-    global deviceosv
+    global deviceoss
     
     while True:
         deviceosv=(input("What is the Operating System of the device? eg. Windows 10, IpadOS, macOS (if unknown, type 'uknown') *Press enter after typing* ").strip().lower().replace(" ", ""))
+        deviceoss=()
         if deviceosv == "windows10" or deviceosv == "win10":
+            deviceoss = ("windows10")
             print ("Windows 10")
+            print (deviceoss)
         elif deviceosv =="windows11" or deviceosv == "win11":
-           print ("Windows 11")
+            deviceoss =("windows11")
+            print ("Windows 11")
         elif deviceosv == "ipados" or deviceosv == "ipad":
+            deviceoss =("ipados")
             print ("IpadOS")
         elif deviceosv == "macos" or deviceosv == "mac":
+            deviceoss =("macos")
             print ("macOS")
         elif deviceosv == "unknown" or deviceosv == "other": 
             print (helpdesk)
@@ -498,25 +504,25 @@ def displayissue():
                     print("Unrecognised input")  
                     print ('\n')
 
-                if (displayissue == "1") and (deviceosv == "macos"):
+                if (displayissue == "1") and (deviceoss == "macos"):
                     webbrowser.open ("https://drive.google.com/file/d/1_eXdfVO4nRM_LLPizo9hWQtqul91OAbw/view?usp=sharing")
                     exit()
-                elif (displayissue == "2") and (deviceosv == "macos"):
+                elif (displayissue == "2") and (deviceoss == "macos"):
                     webbrowser.open(displaymirroring["macOS"])
                     exit()
-                elif (displayissue == "2") and (deviceosv == "windows10"):
+                elif (displayissue == "2") and (deviceoss == "windows10"):
                     webbrowser.open(displaymirroring["win10"])
                     exit()
-                elif (displayissue == "2") and (deviceosv == "windows11"):
+                elif (displayissue == "2") and (deviceoss == "windows11"):
                     webbrowser.open(displaymirroring["win11"])
                     exit()
-                elif (displayissue == "3") and (deviceosv == "macOS"):
+                elif (displayissue == "3") and (deviceoss == "macOS"):
                     webbrowser.open(displaymonitor["macOS"])
                     exit()
-                elif (displayissue == "3") and (deviceosv == "windows10"):
+                elif (displayissue == "3") and (deviceoss == "windows10"):
                     webbrowser.open(displaymonitor["win10"])
                     exit()
-                elif (displayissue == "3") and (deviceosv == "windows11"):
+                elif (displayissue == "3") and (deviceoss == "windows11"):
                     webbrowser.open(displaymonitor["win11"])
                     exit()
                 elif displayissue == "4":
@@ -576,22 +582,22 @@ def audioissue():
                 print("Unrecognised input")  
                 print ('\n')
 
-        if (audioissuev == "1") and (deviceosv == "windows10"):
+        if (audioissuev == "1") and (deviceoss == "windows10"):
             webbrowser.open(audioconnect["win10"])
             exit()
-        elif (audioissuev == "1") and (deviceosv == "windows11"):
+        elif (audioissuev == "1") and (deviceoss == "windows11"):
             webbrowser.open(audioconnect["win11"])
             exit()
-        elif (audioissuev == "1") and (deviceosv == "macOS"):
+        elif (audioissuev == "1") and (deviceoss == "macOS"):
             webbrowser.open(audioconnect["macOS"])
             exit()
-        elif (audioissuev == "2") and (deviceosv == "windows10"):
+        elif (audioissuev == "2") and (deviceoss == "windows10"):
             webbrowser.open(audioconnect["win10"])
             exit()
-        elif (audioissuev == "2") and (deviceosv == "windows11"):
+        elif (audioissuev == "2") and (deviceoss == "windows11"):
             webbrowser.open(audioconnect["win11"])
             exit()
-        elif (audioissuev == 2) and (deviceosv == ["macOS"]):
+        elif (audioissuev == 2) and (deviceoss == ["macOS"]):
             webbrowser.open(audioconnect["macOS"])
             exit()
         elif audioissuev == "3":
@@ -647,11 +653,11 @@ def wifissue():
                 print("Unrecognised input")  
                 print ('\n')
 
-        if (wifiissuev == "1") and (deviceosv == "Macos"):
+        if (wifiissuev == "1") and (deviceoss == "Macos"):
             #webbrowser.open(wificonnecting["macOS"])
             f = open("Wifi connecting - students")
             exit()
-        elif (wifiissuev == "1") and (deviceosv == "windows10") or (deviceosv == "windows11") or (deviceosv == "ipados"):
+        elif (wifiissuev == "1") and (deviceoss == "windows10") or (deviceoss == "windows11") or (deviceoss == "ipados"):
             path = os.path.basename('/2.7 Internal/To connect to School Wifi.pdf')
             os.startfile(path)
             
@@ -761,7 +767,7 @@ def googlesearch():
 def errorcodesearch():
     taburl=("https://www.google.com/search?q=")
     errorcode=(input("Input error code: "))
-    search=(taburl+"Error code "+errorcode+" "+deviceosv)
+    search=(taburl+"Error code "+errorcode+" "+deviceoss)
     webbrowser.open(search)
     time.sleep (1.5)
     exit()

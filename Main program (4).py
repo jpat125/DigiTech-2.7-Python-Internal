@@ -511,10 +511,10 @@ def displayissue():
                     webbrowser.open(displaymirroring["macOS"])
                     exit()
                 elif (displayissue == "2") and (deviceoss == "windows10"):
-                    webbrowser.open(displaymirroring["win10"])
+                    webbrowser.open(displaymirroring["win10/11"])
                     exit()
                 elif (displayissue == "2") and (deviceoss == "windows11"):
-                    webbrowser.open(displaymirroring["win11"])
+                    webbrowser.open(displaymirroring["win10/11"])
                     exit()
                 elif (displayissue == "3") and (deviceoss == "macOS"):
                     webbrowser.open(displaymonitor["macOS"])

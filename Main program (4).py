@@ -1,10 +1,10 @@
 #main program v2
 
-import dis
 import webbrowser
 import time
 import pyperclip
 import os
+import emoji
 
 #/*  .oooooo.                             .                           .              .o8                                  oooo                                          
 #d8P'  `Y8b                          .o8                         .o8             "888                                  `888                                          
@@ -18,7 +18,8 @@ import os
 
 def contact_developer():
     global mistake
-    mistake=("If you belive I have made a mistake, please contact my devloper at: jpatel@students.mags.school.nz")
+    devemail_emoji=(emoji.emojize(':e-mail:'))
+    mistake=(f"If you belive I have made a mistake, please contact my devloper at: jpatel@students.mags.school.nz {devemail_emoji}")
 
 
 # /*ooooooooo.   ooooo ooooo      ooo                                                                
@@ -37,7 +38,8 @@ def PIN_access():
     global userpin
 
     while True:   
-            print ("Hi there!\nThis is an automated IT support tool for Mount Albert Grammar School staff and students.")
+            wave = (emoji.emojize(':waving_hand:'))
+            print (wave, "Hi there!\nThis is an automated IT support tool for Mount Albert Grammar School staff and students.")
             userpin = (input("Enter your PIN:  "))
 
             checki=(userpin.isnumeric())
@@ -74,18 +76,20 @@ def initalquestion():
     global iq
     
     while True:
+            #device_emoji=(emoji.emojize(':desktop_computer:'))
+            #web_emoji=(emoji.emojize(':globe_with_meridians:'))
             iq=(input("""Is your issue regarding a:
 
-1 - BYOD, School or Staff Device
-2 - Website
+1 - BYOD, School or Staff Device 
+2 - Website 
 
 """))
 
             
             if iq == "1":
-                print ("You have selected: Issue with a Device ")
+                print (f"You have selected: Issue with a Device")
             elif iq == "2":
-                print ("You have selected: Issue with a Website ") 
+                print (f"You have selected: Issue with a Website") 
             else:
                 print ("I'm sorry, I don't think that's an option!\n"+mistake)
             print ('\n')
@@ -177,10 +181,13 @@ printing = {
 
 #helpdesk email
 def helpdesk():
+    helpdesk_emoji =(emoji.emojize(':technologist:'))
+    print (helpdesk_emoji)
     email=("helpdesk@mags.school.nz")
     pyperclip.copy(email)
     print (email)
     print ("*email address copied to clipboard*")
+    print ('\n')
 
     
 # /*oooooo   oooooo     oooo oooo         o8o            oooo                                         .o8                 o8o      .             

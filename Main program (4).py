@@ -22,6 +22,29 @@ def contact_developer():
     mistake=(f"If you belive I have made a mistake, please contact my devloper at: jpatel@students.mags.school.nz {devemail_emoji}")
 
 
+
+
+
+
+
+
+#/*oooooooooooo                                 o8o  o8o           
+#`888'     `8                                 `"'  `"'           
+# 888         ooo. .oo.  .oo.    .ooooo.     oooo oooo   .oooo.o 
+# 888oooo8    `888P"Y88bP"Y88b  d88' `88b    `888 `888  d88(  "8 
+# 888    "     888   888   888  888   888     888  888  `"Y88b.  
+# 888       o  888   888   888  888   888     888  888  o.  )88b 
+#o888ooooood8 o888o o888o o888o `Y8bod8P'     888 o888o 8""888P' 
+#                                             888                
+#                                         .o. 88P                
+#                                         `Y888P          
+
+error_emoji=(emoji.emojize(':red_exclamation_mark:'))
+
+
+
+
+
 # /*ooooooooo.   ooooo ooooo      ooo                                                                
 # `888   `Y88. `888' `888b.     `8'                                                                
 #  888   .d88'  888   8 `88b.    8        .oooo.    .ooooo.   .ooooo.   .ooooo.   .oooo.o  .oooo.o 
@@ -91,7 +114,7 @@ def initalquestion():
             elif iq == "2":
                 print (f"You have selected: Issue with a Website") 
             else:
-                print ("I'm sorry, I don't think that's an option!\n"+mistake)
+                print (f"{error_emoji}I'm sorry, I don't think that's an option!\n"+mistake)
             print ('\n')
 
             if iq == "1" or iq =="2":
@@ -111,7 +134,7 @@ def initalquestion():
                             print ('\n')     
                                           
                 else:
-                    print("Unrecognised input")  
+                    print(f"{error_emoji}Unrecognised input {error_emoji}")
                     print ('\n')
 
               
@@ -258,7 +281,7 @@ def whichweb():
                 print ('\n')
                                     
             else:
-                print("Unrecognised input")  
+                print(f"{error_emoji}Unrecognised input{error_emoji}")  
                 print ('\n')
             
             
@@ -301,13 +324,13 @@ def devicetype():
             
         elif devty == "5":
             print ("You have selected: Other")
-            print("I'm sorry, I don't have resources to help you, I recomend you contact IT helpdesk")
+            print("I'm sorry, I don't have resources to help you, I recommend you contact IT helpdesk")
             helpdesk()
             print ("\n")
             exit()
             
         else:
-            print ("Unrecognised input")
+            print (f"{error_emoji}Unrecognised input{error_emoji}")
 
         print('\n')
 
@@ -325,7 +348,7 @@ def devicetype():
                 print ('\n')
                 
             else:
-                print("Unrecognised input")   
+                print("{error_emoji}Unrecognised input{error_emoji}")   
                 print ('\n')
         else:
             ()   
@@ -362,22 +385,24 @@ def deviceos():
         elif deviceosv == "unknown" or deviceosv == "other": 
             print (helpdesk)
         else:
-            print ("That doesn't seem to be a supported Operating System, perphaps you have mispelt?")
-    
-        contq = input("Have you selected the correct option? (y or n) ").strip().lower()
-        print ('\n')
-        if contq == "y" or contq == "yes":
-            print ("Continuing")
+            print (f"{error_emoji}That doesn't seem to be a supported Operating System, perphaps you have mispelt?{error_emoji}")
             print ('\n')
-            break
-        elif contq == "n" or contq == "no":
-                print ("Stopping")
+        if deviceoss == "macos" or deviceoss == "windows10" or deviceoss =="windows11" or deviceoss == "ipados":
+            contq = input("Have you selected the correct option? (y or n) ").strip().lower()
+            print ('\n')
+            if contq == "y" or contq == "yes":
+                print ("Continuing")
                 print ('\n')
-                        
-        else:
-            print("Unrecognised input")  
-            print ('\n')
-
+                break
+            elif contq == "n" or contq == "no":
+                    print ("Stopping")
+                    print ('\n')
+                            
+            else:
+                print(f"{error_emoji}Unrecognised input{error_emoji}")  
+                print ('\n')
+    else:
+        ()
 # /*oooooooooo.                                      .o  
 # `888'   `Y8b                                   o888  
 #  888      888  .ooooo.  oooo    ooo  .ooooo oo  888  
@@ -443,7 +468,7 @@ def devq1():
                     elif devq1v == "7":
                         return (helpdesk())#throws up helpdesk email address
                     else:
-                        print ("Unrecognised input")
+                        print (f"{error_emoji}Unrecognised input{error_emoji}")
                     
                         print ('\n')
 
@@ -452,7 +477,7 @@ def devq1():
                     print ('\n')
                                     
                 else:
-                    print("Unrecognised input")  
+                    print(f"{error_emoji}Unrecognised input{error_emoji}")  
                     print ('\n')
 
             
@@ -473,6 +498,7 @@ def devq1():
 
 def displayissue():
     while True:
+            auth=('')
             displayissue=(input("""Please type the number that best represents your display issue:
     1 - Issue with Apple TV
     2 - Issue with mirroring
@@ -482,7 +508,7 @@ def displayissue():
 *Press enter after typing*
 
 """))
-
+            no_acess=device_emoji=(emoji.emojize(':no_entry:'))
             if (displayissue == "1") and (userpin == staffuserpin):
                 print ("Apple TV selected")
             
@@ -493,10 +519,10 @@ def displayissue():
             elif displayissue == "4":
                 print ("Other selceted")
             else:
-                print("Either you don't have access to this or you have input an unrecognised input, please try again")
-
+                print(f"{no_acess} Either you don't have access to this or you have input an unrecognised input, please try again {no_acess}")
+                auth=("false")
             print ('\n')
-            if displayissue == "1" or displayissue == "2" or  displayissue =="3" or displayissue=="4":
+            if displayissue == "1" or displayissue == "2" or  displayissue =="3" or displayissue=="4" and auth=="":
                 contq = input("Have you selected the correct option? (y or n) ").strip().lower()
                 
                 print ('\n')
@@ -508,7 +534,7 @@ def displayissue():
                     print ("Stopping")
                     print ('\n')                
                 else:
-                    print("Unrecognised input")  
+                    print(f"{error_emoji}Unrecognised input{error_emoji}")  
                     print ('\n')
 
                 if (displayissue == "1") and (deviceoss == "macos"):
@@ -535,7 +561,7 @@ def displayissue():
                 elif displayissue == "4":
                     googlesearch()
                 else:
-                    print ("Chosen device OS not compatible with this option")
+                    print (f"{error_emoji}Chosen device OS not compatible with this option{error_emoji}")
 
                     
 # /*      .o.                         .o8   o8o                 ooooo                                         

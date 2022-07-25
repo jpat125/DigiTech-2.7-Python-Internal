@@ -63,12 +63,14 @@ def PIN_access():
     while True:   
             wave = (emoji.emojize(':waving_hand:'))
             print (wave, "Hi there!\nThis is an automated IT support tool for Mount Albert Grammar School staff and students.")
+    
             userpin = (input("Enter your PIN:  "))
+
 
             checki=(userpin.isnumeric())
 
-            studentuserpin = 1234
-            staffuserpin = 12345
+            studentuserpin = "1234"
+            staffuserpin = "12345"
 
            
             

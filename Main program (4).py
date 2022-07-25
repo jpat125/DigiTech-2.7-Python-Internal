@@ -16,12 +16,9 @@ import emoji
 #                                                                                                                                        888                          
 #                                                                                                                                       o888o                         
 
-def contact_developer():
-    global mistake
-    devemail_emoji=(emoji.emojize(':e-mail:'))
-    mistake=(f"If you belive I have made a mistake, please contact my devloper at: jpatel@students.mags.school.nz {devemail_emoji}")
-
-
+devemail_emoji=(emoji.emojize(':e-mail:'))
+mistake=(f"If you belive I have made a mistake, please contact my devloper at: jpatel@students.mags.school.nz {devemail_emoji}")
+    
 
 
 
@@ -352,7 +349,7 @@ def devicetype():
                 print ('\n')
                 
             else:
-                print("{error_emoji}Unrecognised input{error_emoji}")   
+                print(f"{error_emoji}Unrecognised input{error_emoji}")   
                 print ('\n')
         else:
             ()   
@@ -809,10 +806,10 @@ def errorcodesearch():
     time.sleep (1.5)
     exit()
 
-
+ 
 
 PIN_access()
-contact_developer()
+mistake()
 initalquestion()
 
 deviceos()

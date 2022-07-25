@@ -67,9 +67,11 @@ def PIN_access():
 
             checki=(userpin.isnumeric())
 
-            studentuserpin = "1234"
-            staffuserpin = "12345"
+            studentuserpin = 1234
+            staffuserpin = 12345
 
+           
+            
             if (userpin == studentuserpin) and (checki==True):
                 print ("MAGS Student access granted")
                 print('\n')
@@ -79,7 +81,7 @@ def PIN_access():
                 print ('\n')
                 break
             else:
-                print ("Incorrect PIN, please try again:")
+                print ("Incorrect input, please try again:")
                 print ('\n')
 
 

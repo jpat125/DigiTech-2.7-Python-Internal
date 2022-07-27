@@ -1,5 +1,6 @@
 #main program v2
 
+from cmath import exp
 import webbrowser
 import time
 import pyperclip
@@ -61,16 +62,13 @@ def PIN_access():
             wave = (emoji.emojize(':waving_hand:'))
             print (wave, "Hi there!\nThis is an automated IT support tool for Mount Albert Grammar School staff and students.")
     
-            userpin = int(input("Enter your PIN:  "))
+            userpin = (input("Enter your PIN:  "))
+            
+            checki=(userpin.isnumeric())
 
+            studentuserpin = "1234"
+            staffuserpin = "12345"
 
-            checki=(True)
-                #userpin.isnumeric())
-
-            studentuserpin = 1234
-            staffuserpin = 12345
-
-           
             
             if (userpin == studentuserpin) and (checki==True):
                 print ("MAGS Student access granted")
@@ -83,6 +81,7 @@ def PIN_access():
             else:
                 print ("Incorrect input, please try again:")
                 print ('\n')
+
 
 
 # /*ooooo              o8o      .             oooo                                                     .    o8o                        

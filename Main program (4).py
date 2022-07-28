@@ -259,16 +259,16 @@ def whichweb():
             if (contq == "y" or contq == "yes"):
                 if whichweb == "1":
                     webbrowser.open(websites["KAMAR"])
-                    exit()
+                    returntomenu()()
                 elif whichweb == "2":
                     webbrowser.open(websites["google classroom"])
-                    exit()
+                    returntomenu()()
                 elif whichweb == "3":
                     webbrowser.open(websites["google drive"])
-                    exit()
+                    returntomenu()()
                 elif whichweb == "4":
                     webbrowser.open(websites["google docs/slides"])
-                    exit()
+                    returntomenu()()
                 elif whichweb == "5":
                     googlesearch()
                     
@@ -543,22 +543,22 @@ def displayissue():
                     returntomenu()
                 elif (displayissue == "2") and (deviceoss == "macos"):
                     webbrowser.open(displaymirroring["macOS"])
-                    exit()
+                    returntomenu()()
                 elif (displayissue == "2") and (deviceoss == "windows10"):
                     webbrowser.open(displaymirroring["win10/11"])
-                    exit()
+                    returntomenu()()
                 elif (displayissue == "2") and (deviceoss == "windows11"):
                     webbrowser.open(displaymirroring["win10/11"])
-                    exit()
+                    returntomenu()()
                 elif (displayissue == "3") and (deviceoss == "macOS"):
                     webbrowser.open(displaymonitor["macOS"])
-                    exit()
+                    returntomenu()()
                 elif (displayissue == "3") and (deviceoss == "windows10"):
                     webbrowser.open(displaymonitor["win10"])
-                    exit()
+                    returntomenu()()
                 elif (displayissue == "3") and (deviceoss == "windows11"):
                     webbrowser.open(displaymonitor["win11"])
-                    exit()
+                    returntomenu()()
                 elif displayissue == "4":
                     googlesearch()
                 else:
@@ -618,22 +618,22 @@ def audioissue():
 
         if (audioissuev == "1") and (deviceoss == "windows10"):
             webbrowser.open(audioconnect["win10"])
-            exit()
+            returntomenu()()
         elif (audioissuev == "1") and (deviceoss == "windows11"):
             webbrowser.open(audioconnect["win11"])
-            exit()
+            returntomenu()()
         elif (audioissuev == "1") and (deviceoss == "macOS"):
             webbrowser.open(audioconnect["macOS"])
-            exit()
+            returntomenu()()
         elif (audioissuev == "2") and (deviceoss == "windows10"):
             webbrowser.open(audioconnect["win10"])
-            exit()
+            returntomenu()()
         elif (audioissuev == "2") and (deviceoss == "windows11"):
             webbrowser.open(audioconnect["win11"])
-            exit()
+            returntomenu()()
         elif (audioissuev == 2) and (deviceoss == ["macOS"]):
             webbrowser.open(audioconnect["macOS"])
-            exit()
+            returntomenu()()
         elif audioissuev == "3":
             helpdesk()
         else:
@@ -690,12 +690,12 @@ def wifissue():
         if (wifiissuev == "1") and (deviceoss == "Macos"):
             #webbrowser.open(wificonnecting["macOS"])
             f = open("Wifi connecting - students")
-            exit()
+            returntomenu()()
         elif (wifiissuev == "1") and (deviceoss == "windows10") or (deviceoss == "windows11") or (deviceoss == "ipados"):
             path = os.path.basename('/2.7 Internal/To connect to School Wifi.pdf')
             os.startfile(path)
             
-            exit()
+            returntomenu()()
         else:
             print("Either you don't have access to this or you have input an unrecognised input, please try again")
             
@@ -756,10 +756,10 @@ def printissue():
 
             if printissuev == "1":
                 webbrowser.open(printPIN["printpin"])
-                exit()
+                returntomenu()()
             elif printissuev == "2":
                 webbrowser.open(printing["print"])
-                exit()
+                returntomenu()()
             elif printissuev == "3":
                 helpdesk()
             else:
@@ -784,7 +784,7 @@ def googlesearch():
     search=(taburl+querey)
     webbrowser.open(search)
     time.sleep (1.5)
-    exit()
+    returntomenu()()
 
 # /*oooooooooooo                                                                .o8                                                                 oooo        
 # `888'     `8                                                               "888                                                                 `888        
@@ -804,7 +804,7 @@ def errorcodesearch():
     search=(taburl+"Error code "+errorcode+" "+deviceoss)
     webbrowser.open(search)
     time.sleep (1.5)
-    exit()
+    returntomenu()()
 
 
 

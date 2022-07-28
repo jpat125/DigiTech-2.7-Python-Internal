@@ -22,10 +22,6 @@ mistake=(f"If you belive I have made a mistake, please contact my devloper at: j
     
 
 
-
-
-
-
 #/*oooooooooooo                                 o8o  o8o           
 #`888'     `8                                 `"'  `"'           
 # 888         ooo. .oo.  .oo.    .ooooo.     oooo oooo   .oooo.o 
@@ -38,8 +34,6 @@ mistake=(f"If you belive I have made a mistake, please contact my devloper at: j
 #                                         `Y888P          
 
 error_emoji=(emoji.emojize(':red_exclamation_mark:'))
-
-
 
 
 
@@ -56,7 +50,7 @@ def PIN_access():
     
     global studentuserpin
     global staffuserpin
-    global userpin
+    global userpini
 
     while True:   
         wave = (emoji.emojize(':waving_hand:'))
@@ -101,8 +95,8 @@ def PIN_access():
 #                                                            8P'                                                                     
 #                                                            "                                                                    
 
-#Create def to ask user inital question (issue with device or website?)
-def initalquestion():
+#Create def to ask user initial question (issue with device or website?)
+def initialquestion():
     global iq
     
     while True:
@@ -516,7 +510,7 @@ def displayissue():
 
 """))
             no_acess=device_emoji=(emoji.emojize(':no_entry:'))
-            if (displayissue == "1") and (userpin == staffuserpin):
+            if (displayissue == "1") and (userpini == staffuserpin):
                 print ("Apple TV selected")
             
             elif displayissue == "2":
@@ -546,7 +540,7 @@ def displayissue():
 
                 if (displayissue == "1") and (deviceoss == "macos"):
                     webbrowser.open ("https://drive.google.com/file/d/1_eXdfVO4nRM_LLPizo9hWQtqul91OAbw/view?usp=sharing")
-                    exit()
+                    returntomenu()
                 elif (displayissue == "2") and (deviceoss == "macos"):
                     webbrowser.open(displaymirroring["macOS"])
                     exit()
@@ -812,11 +806,102 @@ def errorcodesearch():
     time.sleep (1.5)
     exit()
 
- 
+
+
+
+#/*ooooooooo.                 .                                             .                                                                      
+#`888   `Y88.             .o8                                           .o8                                                                      
+# 888   .d88'  .ooooo.  .o888oo oooo  oooo  oooo d8b ooo. .oo.        .o888oo  .ooooo.       ooo. .oo.  .oo.    .ooooo.  ooo. .oo.   oooo  oooo  
+# 888ooo88P'  d88' `88b   888   `888  `888  `888""8P `888P"Y88b         888   d88' `88b      `888P"Y88bP"Y88b  d88' `88b `888P"Y88b  `888  `888  
+# 888`88b.    888ooo888   888    888   888   888      888   888         888   888   888       888   888   888  888ooo888  888   888   888   888  
+# 888  `88b.  888    .o   888 .  888   888   888      888   888         888 . 888   888       888   888   888  888    .o  888   888   888   888  
+#o888o  o888o `Y8bod8P'   "888"  `V88V"V8P' d888b    o888o o888o        "888" `Y8bod8P'      o888o o888o o888o `Y8bod8P' o888o o888o  `V88V"V8P' 
+                                                                                                                                                
+                                                                                                                                                
+
+def returntomenu():
+
+    returno=((input("Would you like to re-use this tool?")).strip().lower())
+
+    if returno == "y" or returno == "yes":
+        print ("continuing")
+        returnq=(input("""Please select an option below:
+1 - Main menu
+2 - Device Type menu
+3 - Device OS menu
+4 - Issues menu
+5 - Exit this program (Choosing this option will close this program)
+
+""").strip().lower())
+
+
+
+    if returnq == "1":
+        print ("'Main menu' selected")
+    elif returnq == "2":
+        print ("'Device Type menu' selected")
+    elif returnq == "3":
+        print("'Device OS menu' selected")
+    elif returnq == "4":
+        print ("'Issues menu' selected")
+    elif returnq == "5":
+        print ("'Exit program' selected")
+    else:
+        print ("Unrecognised input, please try again")
+
+    print ('\n')
+    
+    if returnq == "1" or returnq =="2" or returnq =="3" or returnq=="4" or returnq=="5":
+        contq = input("Have you selected the correct option? (y or n) ").strip().lower()
+        print ('\n')
+        if (contq == "y" or contq == "yes"):
+            if returnq == "1":
+                initialquestion()()
+            elif returnq == "2":
+                devicetype()
+            elif returnq == "3":
+                deviceos()
+            elif returnq == "4":
+                devq1
+            else:
+                ()
+            print ("Continuing")
+            print ('\n')
+            
+        elif contq == "n" or contq == "no":
+            print ("Stopping")
+            print ('\n')
+                                
+        else:
+            print(f"{error_emoji}Unrecognised input{error_emoji}")  
+            print ('\n')
+    
+
+    elif returno == "n" or returno == "no":
+        print ("Exiting...")
+        exit()
+
+    else:
+        ()
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 PIN_access()
 print (mistake)
-initalquestion()
+initialquestion()
 
 deviceos()
 devq1()

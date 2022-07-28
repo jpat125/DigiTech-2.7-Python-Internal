@@ -59,28 +59,34 @@ def PIN_access():
     global userpin
 
     while True:   
-            wave = (emoji.emojize(':waving_hand:'))
-            print (wave, "Hi there!\nThis is an automated IT support tool for Mount Albert Grammar School staff and students.")
-    
-            userpin = (input("Enter your PIN:  "))
-            
-            checki=(userpin.isnumeric())
+        wave = (emoji.emojize(':waving_hand:'))
+        print (wave, "Hi there!\nThis is an automated IT support tool for Mount Albert Grammar School staff and students.")
+        
+        try:
+            userpini = int(input("Enter your PIN:  ")) # Try to convert the input into a number
+            # Break out of the infinite loop if the conversion is successful
+        
 
-            studentuserpin = "1234"
-            staffuserpin = "12345"
+        #checki=(userpin.isnumeric())
 
-            
-            if (userpin == studentuserpin) and (checki==True):
+            studentuserpin = 1234
+            staffuserpin = 12345
+
+            if (userpini == studentuserpin): #and (checki==True):
                 print ("MAGS Student access granted")
                 print('\n')
                 break
-            elif (userpin == staffuserpin) and (checki==True):
+            elif (userpini == staffuserpin): #and (checki==True):
                 print ("MAGS Staff access granted")
                 print ('\n')
                 break
             else:
                 print ("Incorrect input, please try again:")
                 print ('\n')
+
+        except ValueError:       # Do this instead if the try block causes a ValueError
+            print("Sorry, that is not valid PIN. Please try again.")
+            print ('\n')
 
 
 

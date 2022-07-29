@@ -99,8 +99,8 @@ def initialquestion():
         # web_emoji=(emoji.emojize(':globe_with_meridians:'))
         iq = (input("""Is your issue regarding a:
 
-1 - BYOD, School or Staff Device 
-2 - Website 
+1 - BYOD, School or Staff Device
+2 - Website
 
 """))
 
@@ -218,7 +218,7 @@ def whichweb():
         whichweb = (input("""Please select an option below:
 1 - KAMAR
 2 - Google Classroom
-3 - Google Drive  
+3 - Google Drive
 4 - Google docs/slides
 5 - Other
 

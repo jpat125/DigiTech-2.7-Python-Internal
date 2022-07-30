@@ -1,4 +1,5 @@
 # main program v2
+import re
 import webbrowser
 import time
 import pyperclip
@@ -114,10 +115,10 @@ def initialquestion():
         print('\n')
 
         if iq == "1" or iq == "2":
-            contq = input(
-                ("Do you wish to continue? (y or n) ").strip().lower())
+            contq = input("Have you selected the correct option? (y or n) ")
+            contql = contq.strip().lower()
             print('\n')
-            if (contq == "y" or contq == "yes"):
+            if (contql == "y" or contql == "yes"):
                 print("Continuing")
                 print('\n')
                 if iq == "1":
@@ -125,7 +126,7 @@ def initialquestion():
                 elif iq == "2":
                     return (whichweb())
 
-            elif contq == "n" or contq == "no":
+            elif contql == "n" or contql == "no":
                 print("Stopping")
                 print('\n')
 
@@ -240,10 +241,10 @@ def whichweb():
         print('\n')
 
         if whichweb == "1" or whichweb == "2" or whichweb == "3" or whichweb == "4" or whichweb == "5":
-            contq = input(
-                "Have you selected the correct option? (y or n) ").strip().lower()
+            contq = input("Have you selected the correct option? (y or n) ")
+            contql = contq.strip().lower()
             print('\n')
-            if (contq == "y" or contq == "yes"):
+            if (contql == "y" or contql == "yes"):
                 if whichweb == "1":
                     webbrowser.open(websites["KAMAR"])
                     returntomenu()
@@ -258,13 +259,13 @@ def whichweb():
                     returntomenu()
                 elif whichweb == "5":
                     googlesearch()
-
+                    returntomenu()
                 else:
                     ()
                 print("Continuing")
                 print('\n')
 
-            elif contq == "n" or contq == "no":
+            elif contql == "n" or contql == "no":
                 print("Stopping")
                 print('\n')
 
@@ -312,11 +313,10 @@ def devicetype():
 
         elif devty == "5":
             print("You have selected: Other")
-            print(
-                "I'm sorry, I don't have resources to help you, I recommend you contact IT helpdesk")
+            print("I'm sorry, I don't have resources to help you, I recommend you contact IT helpdesk")
             helpdesk()
             print("\n")
-            exit()
+            returntomenu()
 
         else:
             print(f"{error_emoji}Unrecognised input{error_emoji}")
@@ -324,16 +324,16 @@ def devicetype():
         print('\n')
 
         if devty == "1" or devty == "2" or devty == "3" or devty == "4" or devty == "5":
-            contq = input(
-                "Have you selected the correct option? (y or n) ").strip().lower()
+            contq = input("Have you selected the correct option? (y or n) ")
+            contql = contq.strip().lower()
             print('\n')
-            if (contq == "y" or contq == "yes") and (devty == "1" or devty == "2" or devty == "3" or devty == "4" or devty == "5"):
+            if (contql == "y" or contql == "yes") and (devty == "1" or devty == "2" or devty == "3" or devty == "4" or devty == "5"):
                 print("Continuing")
                 print('\n')
                 break
                 exit()
 
-            elif contq == "n" or contq == "no":
+            elif contql == "n" or contql == "no":
                 print("Stopping")
                 print('\n')
 
@@ -378,14 +378,14 @@ def deviceos():
             print(f"{error_emoji}That doesn't seem to be a supported Operating System, perphaps you have mispelt?{error_emoji}")
             print('\n')
         if deviceoss == "macos" or deviceoss == "windows10" or deviceoss == "windows11" or deviceoss == "ipados":
-            contq = input(
-                "Have you selected the correct option? (y or n) ").strip().lower()
+            contq = input("Have you selected the correct option? (y or n) ")
+            contql = contq.strip().lower()
             print('\n')
-            if contq == "y" or contq == "yes":
+            if contql == "y" or contql == "yes":
                 print("Continuing")
                 print('\n')
                 break
-            elif contq == "n" or contq == "no":
+            elif contql == "n" or contql == "no":
                 print("Stopping")
                 print('\n')
 
@@ -438,10 +438,10 @@ def devq1():
             print("Contact Helpdesk selected")
 
         if devq1v == "1" or devq1v == "2" or devq1v == "3" or devq1v == "4" or devq1v == "5" or devq1v == "6" or devq1v == "7":
-            contq = input(
-                "Have you selected the correct option? (y or n) ").strip().lower()
+            contq = input("Have you selected the correct option? (y or n) ")
+            contql = contq.strip().lower()
             print('\n')
-            if (contq == "y" or contq == "yes"):
+            if (contql == "y" or contql == "yes"):
                 print("Continuing")
                 print('\n')
                 if devq1v == "1":
@@ -459,12 +459,13 @@ def devq1():
                     return (googlesearch())  # lead to google search
                 elif devq1v == "7":
                     return (helpdesk())  # throws up helpdesk email address
+                
                 else:
                     print(f"{error_emoji}Unrecognised input{error_emoji}")
 
                     print('\n')
 
-            elif contq == "n" or contq == "no":
+            elif contql == "n" or contql == "no":
                 print("Stopping")
                 print('\n')
 
@@ -498,7 +499,7 @@ def displayissue():
 *Press enter after typing*
 
 """))
-        no_acess = device_emoji = (emoji.emojize(':no_entry:'))
+        no_access=(emoji.emojize(':no_entry:'))
         if (displayissue == "1") and (userpini == staffuserpin):
             print("Apple TV selected")
 
@@ -507,21 +508,21 @@ def displayissue():
         elif displayissue == "3":
             print("Monitor selected")
         elif displayissue == "4":
-            print("Other selceted")
+            print("Other seleceted")
         else:
-            print(f"{no_acess} Either you don't have access to this or you have input an unrecognised input, please try again {no_acess}")
+            print(f"{no_access} Either you don't have access to this or you have input an unrecognised input, please try again {no_access}")
             auth = ("false")
         print('\n')
         if displayissue == "1" or displayissue == "2" or displayissue == "3" or displayissue == "4" and auth == "":
-            contq = input(
-                "Have you selected the correct option? (y or n) ").strip().lower()
+            contq = input("Have you selected the correct option? (y or n) ")
+            contql = contq.strip().lower()
 
             print('\n')
-            if contq == "y" or contq == "yes" and displayissue == "1" or displayissue == "2" or displayissue == "3" or displayissue == "4":
+            if contql == "y" or contql == "yes" and displayissue == "1" or displayissue == "2" or displayissue == "3" or displayissue == "4":
                 print("Continuing")
                 print('\n')
 
-            elif contq == "n" or contq == "no":
+            elif contql == "n" or contql == "no":
                 print("Stopping")
                 print('\n')
             else:
@@ -529,15 +530,15 @@ def displayissue():
                 print('\n')
 
             if (displayissue == "1") and (deviceoss == "macos"):
-                webbrowser.open(
-                    "https://drive.google.com/file/d/1_eXdfVO4nRM_LLPizo9hWQtqul91OAbw/view?usp=sharing")
-                returntomenu()
+                webbrowser.open("https://drive.google.com/file/d/1_eXdfVO4nRM_LLPizo9hWQtqul91OAbw/view?usp=sharing")
+                
             elif (displayissue == "2") and (deviceoss == "macos"):
                 webbrowser.open(displaymirroring["macOS"])
                 returntomenu()
             elif (displayissue == "2") and (deviceoss == "windows10"):
                 webbrowser.open(displaymirroring["win10/11"])
-                returntomenu()
+                #returntomenu()
+                return (returntomenu())
             elif (displayissue == "2") and (deviceoss == "windows11"):
                 webbrowser.open(displaymirroring["win10/11"])
                 returntomenu()
@@ -594,14 +595,14 @@ def audioissue():
         print('\n')
 
         if audioissuev == "1" or audioissuev == "2" or audioissuev == "3":
-            contq = input(
-                "Have you selected the correct option? (y or n) ").strip().lower()
+            contq = input("Have you selected the correct option? (y or n) ")
+            contql = contq.strip().lower()
             print('\n')
-            if (contq == "y" or contq == "yes") and (audioissuev == "1" or audioissuev == "2" or audioissuev == "3"):
+            if (contql == "y" or contql == "yes") and (audioissuev == "1" or audioissuev == "2" or audioissuev == "3"):
                 print("Continuing")
                 print('\n')
 
-            elif contq == "n" or contq == "no":
+            elif contql == "n" or contql == "no":
                 print("Stopping")
                 print('\n')
             else:
@@ -628,6 +629,7 @@ def audioissue():
             returntomenu()
         elif audioissuev == "3":
             helpdesk()
+            returntomenu()
         else:
             print("Chosen device OS not compatible with this option")
 
@@ -665,14 +667,14 @@ def wifissue():
         print('\n')
 
         if wifiissuev == "1" or wifiissuev == "2":
-            contq = input(
-                "Have you selected the correct option? (y or n) ").strip().lower()
+            contq = input("Have you selected the correct option? (y or n) ")
+            contql = contq.strip().lower()
             print('\n')
-            if (contq == "y" or contq == "yes") and (wifiissuev == "1" or wifiissuev == "2" or wifiissuev == "3"):
+            if (contql == "y" or contql == "yes") and (wifiissuev == "1" or wifiissuev == "2" or wifiissuev == "3"):
                 print("Continuing")
                 print('\n')
 
-            elif contq == "n" or contq == "no":
+            elif contql == "n" or contql == "no":
                 print("Stopping")
                 print('\n')
             else:
@@ -733,14 +735,14 @@ def printissue():
         print('\n')
 
         if printissuev == "1" or printissuev == 2 or printissuev == "3":
-            contq = input(
-                "Have you selected the correct option? (y or n) ").strip().lower()
+            contq = input("Have you selected the correct option? (y or n) ")
+            contql = contq.strip().lower()
             print('\n')
-            if (contq == "y" or contq == "yes") and (printissuev == "1" or printissuev == "2" or printissuev == "3"):
+            if (contql == "y" or contql == "yes") and (printissuev == "1" or printissuev == "2" or printissuev == "3"):
                 print("Continuing")
                 print('\n')
 
-            elif contq == "n" or contq == "no":
+            elif contql == "n" or contql == "no":
                 print("Stopping")
                 print('\n')
             else:
@@ -755,6 +757,7 @@ def printissue():
             returntomenu()
         elif printissuev == "3":
             helpdesk()
+            returntomenu()
         else:
             ()
 
@@ -807,73 +810,80 @@ def errorcodesearch():
 # o888o  o888o `Y8bod8P'   "888"  `V88V"V8P' d888b    o888o o888o        "888" `Y8bod8P'      o888o o888o o888o `Y8bod8P' o888o o888o  `V88V"V8P'
 
 
+
+
+
 def returntomenu():
+    while True:
+        global returnq
+        returno = (input("Would you like to re-use this tool? "))
+        returnol = returno.strip().lower()
+        if returnol == "y" or returnol == "yes":
+            print("continuing")
+            print ('\n')
+            returnq = (input("""Please select an option below:
+    1 - Main menu
+    2 - Device Type menu
+    3 - Device OS menu
+    4 - Issues menu
+    5 - Exit this program (Choosing this option will close this program)
 
-    returno = ((input("Would you like to re-use this tool?")).strip().lower())
+    """))
+            returnql=returnq.strip().lower()
 
-    if returno == "y" or returno == "yes":
-        print("continuing")
-        returnq = (input("""Please select an option below:
-1 - Main menu
-2 - Device Type menu
-3 - Device OS menu
-4 - Issues menu
-5 - Exit this program (Choosing this option will close this program)
-
-""").strip().lower())
-
-    if returnq == "1":
-        print("'Main menu' selected")
-    elif returnq == "2":
-        print("'Device Type menu' selected")
-    elif returnq == "3":
-        print("'Device OS menu' selected")
-    elif returnq == "4":
-        print("'Issues menu' selected")
-    elif returnq == "5":
-        print("'Exit program' selected")
-    else:
-        print("Unrecognised input, please try again")
-
-    print('\n')
-
-    if returnq == "1" or returnq == "2" or returnq == "3" or returnq == "4" or returnq == "5":
-        contq = input(
-            "Have you selected the correct option? (y or n) ").strip().lower()
-        print('\n')
-        if (contq == "y" or contq == "yes"):
-            if returnq == "1":
-                initialquestion()
-            elif returnq == "2":
-                devicetype()
-            elif returnq == "3":
-                deviceos()
-            elif returnq == "4":
-                devq1
+            if returnql == "1":
+                print("'Main menu' selected")
+            elif returnql == "2":
+                print("'Device Type menu' selected")
+            elif returnql == "3":
+                print("'Device OS menu' selected")
+            elif returnql == "4":
+                print("'Issues menu' selected")
+            elif returnql == "5":
+                print("'Exit program' selected")
             else:
-                ()
-            print("Continuing")
+                print("Unrecognised input, please try again")
+
             print('\n')
 
-        elif contq == "n" or contq == "no":
-            print("Stopping")
-            print('\n')
+            if returnql == "1" or returnql == "2" or returnql == "3" or returnql == "4" or returnql == "5":
+                contq = input("Have you selected the correct option? (y or n) ")
+                contql = contq.strip().lower()
+                print('\n')
+                if (contql == "y" or contql == "yes"):
+                    if returnql == "1":
+                        return initialquestion()
+                    elif returnql == "2":
+                        return devicetype()
+                    elif returnql == "3":
+                        return deviceos()
+                    elif returnql == "4":
+                        return devq1()
+                    elif returnql == "5":
+                        print("Exiting...")
+                        time.sleep(3)
+                        exit()
+                    else:
+                        ()
+
+                elif contql == "n" or contql == "no":
+                    print("Stopping")
+                    print('\n')
+
+                else:
+                    print(f"Unrecognised input")
+                    print('\n')
+
+        elif returnol == "n" or returnol == "no":
+            print("Exiting...")
+            time.sleep(3)
+            exit()
 
         else:
-            print(f"{error_emoji}Unrecognised input{error_emoji}")
-            print('\n')
-
-    elif returno == "n" or returno == "no":
-        print("Exiting...")
-        exit()
-
-    else:
-        print ("Unrecognised input")
-        print ('\n')
-
+            print(f"Unrecognised input 2")
+            print ('\n')
 
 PIN_access()
-print(mistake)
 initialquestion()
 
 deviceos()

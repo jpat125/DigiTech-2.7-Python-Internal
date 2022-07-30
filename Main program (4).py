@@ -15,9 +15,7 @@ import emoji
 #                                                                                                                                        888
 #                                                                                                                                       o888o
 
-devemail_emoji = (emoji.emojize(':e-mail:'))
-mistake = (
-    f"If you belive I have made a mistake, please contact my devloper at: jpatel@students.mags.school.nz {devemail_emoji}")
+mistake = ("If you belive I have made a mistake, please contact my devloper at: jpatel@students.mags.school.nz")
 
 
 # /*oooooooooooo                                 o8o  o8o

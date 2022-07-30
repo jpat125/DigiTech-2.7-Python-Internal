@@ -107,9 +107,9 @@ def initialquestion():
         elif iq == "2":
             print(f"You have selected: Issue with a Website")
         else:
-            print(
-                f"{error_emoji}I'm sorry, I don't think that's an option!\n"+mistake)
-        print('\n')
+            print ('\n)')
+            print(f"{error_emoji}I'm sorry, I don't think that's an option!\n"+mistake)
+            print('\n')
 
         if iq == "1" or iq == "2":
             contq = input("Have you selected the correct option? (y or n) ")

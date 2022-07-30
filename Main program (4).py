@@ -1,5 +1,4 @@
 # main program v2
-import re
 import webbrowser
 import time
 import pyperclip
@@ -183,25 +182,6 @@ printing = {
     "print": "https://drive.google.com/file/d/1_c7usYyc0CTCGd8SgoJAvnoGQXVf0Djg/view"}
 
 
-# /*ooooo   ooooo           oooo                   .o8                     oooo                                                    o8o  oooo
-# `888'   `888'           `888                  "888                     `888                                                    `"'  `888
-#  888     888   .ooooo.   888  oo.ooooo.   .oooo888   .ooooo.   .oooo.o  888  oooo        .ooooo.  ooo. .oo.  .oo.    .oooo.   oooo   888
-#  888ooooo888  d88' `88b  888   888' `88b d88' `888  d88' `88b d88(  "8  888 .8P'        d88' `88b `888P"Y88bP"Y88b  `P  )88b  `888   888
-#  888     888  888ooo888  888   888   888 888   888  888ooo888 `"Y88b.   888888.         888ooo888  888   888   888   .oP"888   888   888
-#  888     888  888    .o  888   888   888 888   888  888    .o o.  )88b  888 `88b.       888    .o  888   888   888  d8(  888   888   888
-# o888o   o888o `Y8bod8P' o888o  888bod8P' `Y8bod88P" `Y8bod8P' 8""888P' o888o o888o      `Y8bod8P' o888o o888o o888o `Y888""8o o888o o888o
-#                                888
-#                               o888o
-
-# helpdesk email
-def helpdesk():
-    helpdesk_emoji = (emoji.emojize(':technologist:'))
-    print(helpdesk_emoji)
-    email = ("helpdesk@mags.school.nz")
-    pyperclip.copy(email)
-    print(email)
-    print("*email address copied to clipboard*")
-    print('\n')
 
 
 # /*oooooo   oooooo     oooo oooo         o8o            oooo                                         .o8                 o8o      .
@@ -234,7 +214,7 @@ def whichweb():
         elif whichweb == "4":
             print("'Google doc/slides' selected")
         elif whichweb == "5":
-            print("'other' selected")
+            print("'Other' selected")
         else:
             print("Unrecognised input, please try again")
 
@@ -315,8 +295,7 @@ def devicetype():
             print("You have selected: Other")
             print("I'm sorry, I don't have resources to help you, I recommend you contact IT helpdesk")
             helpdesk()
-            print("\n")
-            returntomenu()
+
 
         else:
             print(f"{error_emoji}Unrecognised input{error_emoji}")
@@ -361,19 +340,22 @@ def deviceos():
         deviceoss = ()
         if deviceosv == "windows10" or deviceosv == "win10":
             deviceoss = ("windows10")
-            print("Windows 10")
-            print(deviceoss)
+            print("'Windows 10' selected")
         elif deviceosv == "windows11" or deviceosv == "win11":
             deviceoss = ("windows11")
-            print("Windows 11")
+            print("'Windows 11' selected ")
         elif deviceosv == "ipados" or deviceosv == "ipad":
             deviceoss = ("ipados")
-            print("IpadOS")
+            print("'IpadOS' selected")
         elif deviceosv == "macos" or deviceosv == "mac":
             deviceoss = ("macos")
-            print("macOS")
+            print("'macOS' selected")
         elif deviceosv == "unknown" or deviceosv == "other":
-            print(helpdesk)
+            print("I'm sorry, I don't have resources to help you, I recommend you contact IT helpdesk")
+            return helpdesk()
+            
+            
+            
         else:
             print(f"{error_emoji}That doesn't seem to be a supported Operating System, perphaps you have mispelt?{error_emoji}")
             print('\n')
@@ -629,7 +611,7 @@ def audioissue():
             returntomenu()
         elif audioissuev == "3":
             helpdesk()
-            returntomenu()
+            
         else:
             print("Chosen device OS not compatible with this option")
 
@@ -882,6 +864,32 @@ def returntomenu():
         else:
             print(f"Unrecognised input 2")
             print ('\n')
+
+
+
+# /*ooooo   ooooo           oooo                   .o8                     oooo                                                    o8o  oooo
+# `888'   `888'           `888                  "888                     `888                                                    `"'  `888
+#  888     888   .ooooo.   888  oo.ooooo.   .oooo888   .ooooo.   .oooo.o  888  oooo        .ooooo.  ooo. .oo.  .oo.    .oooo.   oooo   888
+#  888ooooo888  d88' `88b  888   888' `88b d88' `888  d88' `88b d88(  "8  888 .8P'        d88' `88b `888P"Y88bP"Y88b  `P  )88b  `888   888
+#  888     888  888ooo888  888   888   888 888   888  888ooo888 `"Y88b.   888888.         888ooo888  888   888   888   .oP"888   888   888
+#  888     888  888    .o  888   888   888 888   888  888    .o o.  )88b  888 `88b.       888    .o  888   888   888  d8(  888   888   888
+# o888o   o888o `Y8bod8P' o888o  888bod8P' `Y8bod88P" `Y8bod8P' 8""888P' o888o o888o      `Y8bod8P' o888o o888o o888o `Y888""8o o888o o888o
+#                                888
+#                               o888o
+
+# helpdesk email
+def helpdesk():
+    helpdesk_emoji = (emoji.emojize(':technologist:'))
+    print(helpdesk_emoji)
+    email = ("helpdesk@mags.school.nz")
+    pyperclip.copy(email)
+    print(email)
+    print("*email address copied to clipboard*")
+    print('\n')
+    return returntomenu()
+
+
+
 
 PIN_access()
 initialquestion()

@@ -406,7 +406,7 @@ def devq1():
         if devq1v == "1":
             print("Display issue selected")
         elif devq1v == "2":
-            print("Wi-Fi issue selevted")
+            print("Wi-Fi issue selected")
         elif devq1v == "3":
             print("Printing issue selected")
         elif devq1v == "4":
@@ -665,10 +665,11 @@ def wifissue():
                 print('\n')
 
         if (wifiissuev == "1") and (deviceoss == "windows10") or (deviceoss == "windows11") or (deviceoss == "ipados"):
-            path = os.path.basename(
-                'C:/Users/JP (School)/OneDrive - Mount Albert Grammar School/Desktop/Digital Tech VS Code/2.7_Internal/To connect to Schools Wifi.pdf')                
-            os.startfile(path)
-           
+            #path = os.path.basename(
+            #    'C:/Users/JP (School)/OneDrive - Mount Albert Grammar School/Desktop/Digital Tech VS Code/2.7_Internal/To connect to Schools Wifi.pdf')                
+            #os.startfile(path)
+            path=("C:/Users/JP (School)/OneDrive - Mount Albert Grammar School/Desktop/Digital Tech VS Code/2.7_Internal/MAGS BYOD booklet.pdf")
+            webbrowser.open_new(path)
             returntomenu()
         
         elif (wifiissuev == "2"):

@@ -46,10 +46,9 @@ def PIN_access():
     global studentuserpin
     global staffuserpin
     global userpini
-
     while True:
         wave = (emoji.emojize(':waving_hand:'))
-        print(wave, "Hi there!\nThis is an automated IT support tool for Mount Albert Grammar School staff and students.")
+        print (wave,"Hi there!\nThis is an automated IT support tool for Mount Albert Grammar School staff and students.")
 
         try:
             # Try to convert the input into a number
@@ -142,45 +141,42 @@ def initialquestion():
 #  888  `88b.  888    .o o.  )88b 888   888  888   888   888     888   .o8 888    .o o.  )88b
 # o888o  o888o `Y8bod8P' 8""888P' `Y8bod8P'  `V88V"V8P' d888b    `Y8bod8P' `Y8bod8P' 8""888P'
 
+website_resources=[
+    {"KAMAR": "https://drive.google.com/file/d/16K9lJfnL3C9IF913k29JYJDTiXMdrtNS/view"},
+    {"KAMAR students":"https://drive.google.com/file/d/1lM3Pm6HS9T5NMb8cUe2mnFgepn1KIG3d/view"},
+    {"mags google classroom": "https://drive.google.com/file/d/1uAGse14fctRMNYP-3t28VuKLi79Y5XAq/view"},
+    {"google classroom":"https://support.google.com/edu/classroom/?hl=en-GB&authuser=0#topic=10298088"},
+    {"google drive": "https://support.google.com/drive/?hl=en#topic=14940"},
+    {"google docs/slides": "https://support.google.com/docs/?hl=en#topic=1382883"}
+    ]
 
-websites = {
-    "KAMAR": "https://drive.google.com/file/d/16K9lJfnL3C9IF913k29JYJDTiXMdrtNS/view",
-    "google classroom": "https://drive.google.com/file/d/1uAGse14fctRMNYP-3t28VuKLi79Y5XAq/view",
-    "google drive": "https://support.google.com/drive/?hl=en#topic=14940",
-    "google docs/slides": "https://support.google.com/docs/?hl=en#topic=1382883"}
+displayappletv = [
+    {"macOS":"https://drive.google.com/file/d/1_eXdfVO4nRM_LLPizo9hWQtqul91OAbw/view?usp=sharing"}
+]
+displaymirroring = [
+    {"win10/11": "https://drive.google.com/file/d/1Lcqxyu1V3Ux5n3U7_t3FQlk_shnTFlem/view?usp=sharing"},
+    {"macOS": "https://drive.google.com/file/d/1cf2DiJSysehx9bMe8kMZXQsfhKdwsHwl/view?usp=sharing"}
+]
+displaymonitor = [
+    {"win10": "https://drive.google.com/file/d/11cTYSBwgbVK_A3CK0hyCAuHVPsX62OoV/view?usp=sharing"},
+    {"win11": "https://drive.google.com/file/d/1XJcZodhqdsZootrNOwhm0yENvMtlNec8/view?usp=sharing"},
+    {"macOS": "https://drive.google.com/file/d/1rcsKU7H14xK5pZoheyIC0-aI5S3J88Vs/view?usp=sharing"},
+    {"iPadOS": "https://drive.google.com/file/d/1oaxtQBz0YE9F19HFYO9fR5RgXdlwhC0l/view"}
+]
 
+audioconnect = [
+    {"win10": "https://drive.google.com/file/d/1KnkxN617MFcKG_Yo95xtZw4vE7tO0c1h/view?usp=sharing"},
+    {"win11": "https://drive.google.com/file/d/1FehHSMAIIBheyqeIJqlIE9c0utXIstOt/view?usp=sharing"},
+    {"macOS": "https://drive.google.com/file/d/1FOhVpn30CN4Fj0DJwkFZpoR2HB9Qkij2/view?usp=sharing"}
+]
 
-# "https://drive.google.com/file/d/1jPfGX0knT0gAQYvaS7phYlL1D7onEiCx/view?usp=sharing",
-
-# "https://drive.google.com/file/d/1avw7-i5diAHQ6UPG6en7E9PQ999W1LiY/view"
-
-
-displaymirroring = {
-    "win10/11": "https://drive.google.com/file/d/1Lcqxyu1V3Ux5n3U7_t3FQlk_shnTFlem/view?usp=sharing",
-    "macOS": "https://drive.google.com/file/d/1cf2DiJSysehx9bMe8kMZXQsfhKdwsHwl/view?usp=sharing"
-}
-
-displaymonitor = {
-    "win10": "https://drive.google.com/file/d/11cTYSBwgbVK_A3CK0hyCAuHVPsX62OoV/view?usp=sharing",
-    "win11": "https://drive.google.com/file/d/1XJcZodhqdsZootrNOwhm0yENvMtlNec8/view?usp=sharing",
-    "macOS": "https://drive.google.com/file/d/1rcsKU7H14xK5pZoheyIC0-aI5S3J88Vs/view?usp=sharing",
-    "iPadOS": "link"}
-
-
-audioconnect = {
-    "win10": "https://drive.google.com/file/d/1KnkxN617MFcKG_Yo95xtZw4vE7tO0c1h/view?usp=sharing",
-    "win11": "https://drive.google.com/file/d/1FehHSMAIIBheyqeIJqlIE9c0utXIstOt/view?usp=sharing",
-    "macOS": "https://drive.google.com/file/d/1FOhVpn30CN4Fj0DJwkFZpoR2HB9Qkij2/view?usp=sharing",
-}
-
-printPIN = {
-    "printpin": "https://drive.google.com/file/d/1_c7usYyc0CTCGd8SgoJAvnoGQXVf0Djg/view"}
-
-printing = {
-    "print": "https://drive.google.com/file/d/1_c7usYyc0CTCGd8SgoJAvnoGQXVf0Djg/view"}
-
-
-
+wifi = [
+    {"connectingstudents":"C:/Users/JP (School)/OneDrive - Mount Albert Grammar School/Desktop/Digital Tech VS Code/2.7 Internal/MAGS-BYOD-booklet-2022-V2.pdf"}
+]
+printing = [
+    {"printpin": "https://drive.google.com/file/d/1_c7usYyc0CTCGd8SgoJAvnoGQXVf0Djg/view"},
+    {"print": "https://drive.google.com/file/d/1_c7usYyc0CTCGd8SgoJAvnoGQXVf0Djg/view"}
+]
 
 # /*oooooo   oooooo     oooo oooo         o8o            oooo                                         .o8                 o8o      .
 #  `888.    `888.     .8'  `888         `"'            `888                                        "888                 `"'    .o8
@@ -191,16 +187,16 @@ printing = {
 #       `8'      `8'       o888o o888o o888o `Y8bod8P' o888o o888o          `8'  `8'     `Y8bod8P'  `Y8bod8P' 8""888P' o888o   "888" `Y8bod8P'
 
 
+
 # webq1
 def whichweb():
     while True:
-        whichweb = (input("""Please select an option below:
+        whichweb = (input(f"""Please select an option below:
 1 - KAMAR
 2 - Google Classroom
 3 - Google Drive
 4 - Google docs/slides
 5 - Other
-
 """).strip().lower())
 
         if whichweb == "1":
@@ -223,17 +219,22 @@ def whichweb():
             contql = contq.strip().lower()
             print('\n')
             if (contql == "y" or contql == "yes"):
-                if whichweb == "1":
-                    webbrowser.open(websites["KAMAR"])
+                if (whichweb == "1") and (userpini == staffuserpin):
+                    webbrowser.open(website_resources[0]['KAMAR'])
                     returntomenu()
-                elif whichweb == "2":
-                    webbrowser.open(websites["google classroom"])
+                elif (whichweb == "1") and (userpini == studentuserpin):
+                    webbrowser.open(website_resources[1]['KAMAR students'])
                     returntomenu()
+                elif whichweb == "2" and (userpini == staffuserpin):
+                    webbrowser.open(website_resources[2]['mags google classroom'])
+                    returntomenu()
+                elif whichweb == "2" and (userpini == studentuserpin):
+                    webbrowser.open(website_resources[3]['google classroom'])
                 elif whichweb == "3":
-                    webbrowser.open(websites["google drive"])
+                    webbrowser.open(website_resources[4]['google drive'])
                     returntomenu()
                 elif whichweb == "4":
-                    webbrowser.open(websites["google docs/slides"])
+                    webbrowser.open(website_resources[5]["google docs/slides"])
                     returntomenu()
                 elif whichweb == "5":
                     googlesearch()
@@ -510,27 +511,29 @@ def displayissue():
                 print('\n')
 
             if (displayissue == "1") and (deviceoss == "macos"):
-                webbrowser.open("https://drive.google.com/file/d/1_eXdfVO4nRM_LLPizo9hWQtqul91OAbw/view?usp=sharing")
+                webbrowser.open(displayappletv[0]['macOS'])
                 
             elif (displayissue == "2") and (deviceoss == "macos"):
-                webbrowser.open(displaymirroring["macOS"])
+                webbrowser.open(displaymirroring[1]["macOS"])
                 returntomenu()
             elif (displayissue == "2") and (deviceoss == "windows10"):
-                webbrowser.open(displaymirroring["win10/11"])
+                webbrowser.open(displaymirroring[0]["win10/11"])
                 #returntomenu()
                 return (returntomenu())
             elif (displayissue == "2") and (deviceoss == "windows11"):
-                webbrowser.open(displaymirroring["win10/11"])
+                (webbrowser.open (displaymirroring[2]["win10/11"]))
                 returntomenu()
-            elif (displayissue == "3") and (deviceoss == "macOS"):
-                webbrowser.open(displaymonitor["macOS"])
+            elif (displayissue == "3") and (deviceoss == "macos"):
+                webbrowser.open(displaymonitor[2]["macOS"])
                 returntomenu()
             elif (displayissue == "3") and (deviceoss == "windows10"):
-                webbrowser.open(displaymonitor["win10"])
+                webbrowser.open(displaymonitor[0]["win10"])
                 returntomenu()
             elif (displayissue == "3") and (deviceoss == "windows11"):
-                webbrowser.open(displaymonitor["win11"])
+                webbrowser.open(displaymonitor[1]["win11"])
                 returntomenu()
+            elif (displayissue == "3") and (deviceoss ==" ipados"):
+                webbrowser.open(displaymonitor[3]["iPadOS"])
             elif displayissue == "4":
                 googlesearch()
             else:
@@ -590,22 +593,22 @@ def audioissue():
                 print('\n')
 
         if (audioissuev == "1") and (deviceoss == "windows10"):
-            webbrowser.open(audioconnect["win10"])
+            webbrowser.open(audioconnect[0]["win10"])
             returntomenu()
         elif (audioissuev == "1") and (deviceoss == "windows11"):
-            webbrowser.open(audioconnect["win11"])
+            webbrowser.open(audioconnect[1]["win11"])
             returntomenu()
-        elif (audioissuev == "1") and (deviceoss == "macOS"):
-            webbrowser.open(audioconnect["macOS"])
+        elif (audioissuev == "1") and (deviceoss == "macos"):
+            webbrowser.open(audioconnect[2]["macOS"])
             returntomenu()
         elif (audioissuev == "2") and (deviceoss == "windows10"):
-            webbrowser.open(audioconnect["win10"])
+            webbrowser.open(audioconnect[0]["win10"])
             returntomenu()
         elif (audioissuev == "2") and (deviceoss == "windows11"):
-            webbrowser.open(audioconnect["win11"])
+            webbrowser.open(audioconnect[1]["win11"])
             returntomenu()
-        elif (audioissuev == 2) and (deviceoss == ["macOS"]):
-            webbrowser.open(audioconnect["macOS"])
+        elif (audioissuev == "2") and (deviceoss == ["macos"]):
+            webbrowser.open(audioconnect[2]["macOS"])
             returntomenu()
         elif audioissuev == "3":
             helpdesk()
@@ -661,22 +664,20 @@ def wifissue():
                 print("Unrecognised input")
                 print('\n')
 
-        if (wifiissuev == "1") and (deviceoss == "Macos"):
-            # webbrowser.open(wificonnecting["macOS"])
-            f = open("Wifi connecting - students")
-            returntomenu()
-        elif (wifiissuev == "1") and (deviceoss == "windows10") or (deviceoss == "windows11") or (deviceoss == "ipados"):
+        if (wifiissuev == "1") and (deviceoss == "windows10") or (deviceoss == "windows11") or (deviceoss == "ipados"):
             path = os.path.basename(
-                '/2.7 Internal/To connect to School Wifi.pdf')
+                'C:/Users/JP (School)/OneDrive - Mount Albert Grammar School/Desktop/Digital Tech VS Code/2.7_Internal/To connect to Schools Wifi.pdf')                
             os.startfile(path)
-
+           
             returntomenu()
+        
+        elif (wifiissuev == "2"):
+            helpdesk()
+
         else:
             print(
                 "Either you don't have access to this or you have input an unrecognised input, please try again")
 
-        if (wifiissuev == "2"):
-            googlesearch()
 
 # /*ooooooooo.             o8o                  .         o8o
 # `888   `Y88.           `"'                .o8         `"'
@@ -730,10 +731,10 @@ def printissue():
                 print('\n')
 
         if printissuev == "1":
-            webbrowser.open(printPIN["printpin"])
+            webbrowser.open(printing[0]["printpin"])
             returntomenu()
         elif printissuev == "2":
-            webbrowser.open(printing["print"])
+            webbrowser.open(printing[1]["print"])
             returntomenu()
         elif printissuev == "3":
             helpdesk()
@@ -802,44 +803,49 @@ def returntomenu():
             print("continuing")
             print ('\n')
             returnq = (input("""Please select an option below:
-    1 - Main menu
-    2 - Device Type menu
-    3 - Device OS menu
-    4 - Issues menu
-    5 - Exit this program (Choosing this option will close this program)
+    1 - Login menu
+    2 - Main menu
+    3 - Device Type menu
+    4 - Device OS menu
+    5 - Issues menu
+    6 - Exit this program (Choosing this option will close this program)
 
     """))
             returnql=returnq.strip().lower()
-
+           
             if returnql == "1":
-                print("'Main menu' selected")
+                print ("'Login' selected")
             elif returnql == "2":
-                print("'Device Type menu' selected")
+                print("'Main menu' selected")
             elif returnql == "3":
-                print("'Device OS menu' selected")
+                print("'Device Type menu' selected")
             elif returnql == "4":
-                print("'Issues menu' selected")
+                print("'Device OS menu' selected")
             elif returnql == "5":
+                print("'Issues menu' selected")
+            elif returnql == "6":
                 print("'Exit program' selected")
             else:
                 print("Unrecognised input, please try again")
 
             print('\n')
 
-            if returnql == "1" or returnql == "2" or returnql == "3" or returnql == "4" or returnql == "5":
+            if returnql == "1" or returnql == "2" or returnql == "3" or returnql == "4" or returnql == "5" or returnql == "6":
                 contq = input("Have you selected the correct option? (y or n) ")
                 contql = contq.strip().lower()
                 print('\n')
                 if (contql == "y" or contql == "yes"):
                     if returnql == "1":
-                        return initialquestion()
+                        return PIN_access() 
                     elif returnql == "2":
-                        return devicetype()
+                        return initialquestion()
                     elif returnql == "3":
-                        return deviceos()
+                        return devicetype()
                     elif returnql == "4":
-                        return devq1()
+                        return deviceos()
                     elif returnql == "5":
+                        return devq1()
+                    elif returnql == "6":
                         print("Exiting...")
                         time.sleep(3)
                         exit()

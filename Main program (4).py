@@ -1,4 +1,4 @@
-# main program v2
+# main program v4
 import webbrowser
 import time
 import pyperclip
@@ -72,7 +72,7 @@ def PIN_access():
                 print('\n')
 
         except ValueError:       # Do this instead if the try block causes a ValueError
-            print("Sorry, that is not valid PIN. Please try again.")
+            print("Sorry, that is not a valid PIN. Please try again.")
             print('\n')
 
 
@@ -99,6 +99,8 @@ def initialquestion():
 1 - BYOD, School or Staff Device
 2 - Website
 
+*Type the number next to option below and press 'ENTER' after typing*
+
 """))
 
         if iq == "1":
@@ -106,7 +108,7 @@ def initialquestion():
         elif iq == "2":
             print(f"You have selected: Issue with a Website")
         else:
-            print ('\n)')
+            print ('\n')
             print(f"{error_emoji}I'm sorry, I don't think that's an option!\n"+mistake)
             print('\n')
 
@@ -197,6 +199,9 @@ def whichweb():
 3 - Google Drive
 4 - Google docs/slides
 5 - Other
+
+*Type the number next to option below and press 'ENTER' after typing*
+
 """).strip().lower())
 
         if whichweb == "1":
@@ -274,7 +279,7 @@ def devicetype():
 4 - Apple Mac
 5 - Other
 
-*Press enter after typing*
+*Type the number next to option below and press 'ENTER' after typing*
 
 """))
 
@@ -390,7 +395,7 @@ def deviceos():
 def devq1():
     global devq1v
     while True:
-        devq1v = (input("""Please type the number of one of the options below:
+        devq1v = (input("""Please pick the option that best represent's your issue:
 1 - Display issue (including projecting)
 2 - Wi-Fi issues
 3 - Printing issues
@@ -399,7 +404,7 @@ def devq1():
 6 - Other
 7 - Contact Helpdesk
 
-*Press enter after typing*
+*Type the number next to option below and press 'ENTER' after typing*
 
 """).strip().lower())
 
@@ -477,7 +482,7 @@ def displayissue():
     3 - Issue with connecting to monitor/projector
     4 - Other 
 
-*Press enter after typing*
+*Type the number next to option below and press 'ENTER' after typing*
 
 """))
         no_access=(emoji.emojize(':no_entry:'))
@@ -560,7 +565,7 @@ def audioissue():
 2 - Connecting to speakers
 3 - Other
 
-*Press enter after typing*
+*Type the number next to option below and press 'ENTER' after typing*
 
 """))
         if audioissuev == "1":
@@ -634,7 +639,7 @@ def wifissue():
 1 - Connecting
 2 - Other
 
-*Press enter after typing*
+*Type the number next to option below and press 'ENTER' after typing*
 
 """))
 
@@ -698,7 +703,7 @@ def printissue():
 2 - Printing in Black & White/Colour
 3 - Other
 
-*Press enter after typing*
+*Type the number next to option below and press 'ENTER' after typing*
 
 """))
 
@@ -804,14 +809,16 @@ def returntomenu():
             print("continuing")
             print ('\n')
             returnq = (input("""Please select an option below:
-    1 - Login menu
-    2 - Main menu
-    3 - Device Type menu
-    4 - Device OS menu
-    5 - Issues menu
-    6 - Exit this program (Choosing this option will close this program)
+1 - Login menu
+2 - Main menu
+3 - Device Type menu
+4 - Device OS menu
+5 - Issues menu
+6 - Exit this program (Choosing this option will close this program)
 
-    """))
+*Type the number next to option below and press 'ENTER' after typing*
+
+"""))
             returnql=returnq.strip().lower()
            
             if returnql == "1":
@@ -894,7 +901,7 @@ def helpdesk():
     return returntomenu()
 
 
-
+ 
 
 PIN_access()
 initialquestion()

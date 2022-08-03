@@ -32,6 +32,63 @@ mistake = ("If you belive I have made a mistake, please contact my devloper at: 
 error_emoji = (emoji.emojize(':red_exclamation_mark:'))
 
 
+#/*  .oooooo.       .   oooo                                                                                        
+# d8P'  `Y8b    .o8   `888                                                                                        
+#888      888 .o888oo  888 .oo.    .ooooo.  oooo d8b       .ooooo.  oooo d8b oooo d8b  .ooooo.  oooo d8b  .oooo.o 
+#888      888   888    888P"Y88b  d88' `88b `888""8P      d88' `88b `888""8P `888""8P d88' `88b `888""8P d88(  "8 
+#888      888   888    888   888  888ooo888  888          888ooo888  888      888     888   888  888     `"Y88b.  
+#`88b    d88'   888 .  888   888  888    .o  888          888    .o  888      888     888   888  888     o.  )88b 
+# `Y8bood8P'    "888" o888o o888o `Y8bod8P' d888b         `Y8bod8P' d888b    d888b    `Y8bod8P' d888b    8""888P' 
+                                                                                                                 
+def othererror():
+    
+    oerrorc=input("""What catagory is the isssue related to? 
+
+    1 - Display issue (including projecting)
+    2 - Wi-Fi issues
+    3 - Printing issues
+    4 - Audio issues
+    5 - Other
+
+    *Type the number next to option below and press 'ENTER' after typing*
+
+    """)
+
+    oerrordos = input("""What device and Operating System are you using?
+
+    *Type then press 'ENTER' after typing*
+
+    """)
+
+    oerrordesc = input("""Please describe the error in full detail and how you came across it:
+
+    *Type out then press 'ENTER' after typing*
+
+    """)
+
+
+    oerrorlformat={"Catagory":oerrorc,
+    "Device type and OS":oerrordos,
+    "Description":oerrordesc
+    }
+
+    othererrorslog = [] 
+
+    othererrorslog.append(oerrorlformat)
+
+    print (othererrorslog)
+
+    oels=str(othererrorslog)
+
+    file_object = open('othererrors.txt', 'a')
+    file_object.write('\n')
+    file_object.write(oels)
+
+    file_object.close()                                                                                                             
+                            
+
+
+
 # /*ooooooooo.   ooooo ooooo      ooo
 # `888   `Y88. `888' `888b.     `8'
 #  888   .d88'  888   8 `88b.    8        .oooo.    .ooooo.   .ooooo.   .ooooo.   .oooo.o  .oooo.o
@@ -40,7 +97,7 @@ error_emoji = (emoji.emojize(':red_exclamation_mark:'))
 #  888          888   8       `888       d8(  888  888   .o8 888   .o8 888    .o o.  )88b o.  )88b
 # o888o        o888o o8o        `8       `Y888""8o `Y8bod8P' `Y8bod8P' `Y8bod8P' 8""888P' 8""888P'
 
-# pin def
+# PIN function - controls and resticts access to program to only PIN holders (MAGS staff and students)
 def PIN_access():
 
     global studentuserpin
@@ -401,7 +458,7 @@ def devq1():
 3 - Printing issues
 4 - Audio issues
 5 - Error code(s)
-6 - Other
+6 - Other issue (logs issue)
 7 - Contact Helpdesk
 
 *Type the number next to option below and press 'ENTER' after typing*
@@ -417,9 +474,9 @@ def devq1():
         elif devq1v == "4":
             print("Audio issue selected")
         elif devq1v == "5":
-            print("Error code serach selected")
+            print("Error code search selected")
         elif devq1v == "6":
-            print("Other selected")
+            print("Other issue selected")
         elif devq1v == "7":
             print("Contact Helpdesk selected")
 
@@ -442,7 +499,7 @@ def devq1():
                 elif devq1v == "5":
                     return (errorcodesearch())  # leads to google search
                 elif devq1v == "6":
-                    return (googlesearch())  # lead to google search
+                    return (othererror())  # lead to google search
                 elif devq1v == "7":
                     return (helpdesk())  # throws up helpdesk email address
                 
@@ -494,7 +551,7 @@ def displayissue():
         elif displayissue == "3":
             print("Monitor selected")
         elif displayissue == "4":
-            print("Other seleceted")
+            print("Other selected")
         else:
             print(f"{no_access} Either you don't have access to this or you have input an unrecognised input, please try again {no_access}")
             auth = ("false")
@@ -504,47 +561,48 @@ def displayissue():
             contql = contq.strip().lower()
 
             print('\n')
-            if contql == "y" or contql == "yes" and displayissue == "1" or displayissue == "2" or displayissue == "3" or displayissue == "4":
+            if contql == "y" or contql == "yes":                
                 print("Continuing")
                 print('\n')
 
-            elif contql == "n" or contql == "no":
+            elif contql == "n" or contql == "no" :
                 print("Stopping")
                 print('\n')
             else:
                 print(f"{error_emoji}Unrecognised input{error_emoji}")
                 print('\n')
 
-            if (displayissue == "1") and (deviceoss == "macos"):
-                webbrowser.open(displayappletv[0]['macOS'])
-                
-            elif (displayissue == "2") and (deviceoss == "macos"):
-                webbrowser.open(displaymirroring[1]["macOS"])
-                returntomenu()
-            elif (displayissue == "2") and (deviceoss == "windows10"):
-                webbrowser.open(displaymirroring[0]["win10/11"])
-                #returntomenu()
-                return (returntomenu())
-            elif (displayissue == "2") and (deviceoss == "windows11"):
-                (webbrowser.open (displaymirroring[2]["win10/11"]))
-                returntomenu()
-            elif (displayissue == "3") and (deviceoss == "macos"):
-                webbrowser.open(displaymonitor[2]["macOS"])
-                returntomenu()
-            elif (displayissue == "3") and (deviceoss == "windows10"):
-                webbrowser.open(displaymonitor[0]["win10"])
-                returntomenu()
-            elif (displayissue == "3") and (deviceoss == "windows11"):
-                webbrowser.open(displaymonitor[1]["win11"])
-                returntomenu()
-            elif (displayissue == "3") and (deviceoss ==" ipados"):
-                webbrowser.open(displaymonitor[3]["iPadOS"])
-            elif displayissue == "4":
-                googlesearch()
-            else:
-                print(
-                    f"{error_emoji}Chosen device OS not compatible with this option{error_emoji}")
-
+                if (displayissue == "1") and (deviceoss == "macos"):
+                    webbrowser.open(displayappletv[0]['macOS'])
+                    
+                elif (displayissue == "2") and (deviceoss == "macos"):
+                    webbrowser.open(displaymirroring[1]["macOS"])
+                    returntomenu()
+                elif (displayissue == "2") and (deviceoss == "windows10"):
+                    webbrowser.open(displaymirroring[0]["win10/11"])
+                    #returntomenu()
+                    return (returntomenu())
+                elif (displayissue == "2") and (deviceoss == "windows11"):
+                    (webbrowser.open (displaymirroring[2]["win10/11"]))
+                    returntomenu()
+                elif (displayissue == "3") and (deviceoss == "macos"):
+                    webbrowser.open(displaymonitor[2]["macOS"])
+                    returntomenu()
+                elif (displayissue == "3") and (deviceoss == "windows10"):
+                    webbrowser.open(displaymonitor[0]["win10"])
+                    returntomenu()
+                elif (displayissue == "3") and (deviceoss == "windows11"):
+                    webbrowser.open(displaymonitor[1]["win11"])
+                    returntomenu()
+                elif (displayissue == "3") and (deviceoss ==" ipados"):
+                    webbrowser.open(displaymonitor[3]["iPadOS"])
+                elif displayissue == "4":
+                    googlesearch()
+                else:
+                    print(
+                        f"{error_emoji}Chosen device OS not compatible with this option{error_emoji}")
+        else:
+            ()
 
 # /*      .o.                         .o8   o8o                 ooooo
 #      .888.                       "888   `"'                 `888'
@@ -597,27 +655,27 @@ def audioissue():
                 print("Unrecognised input")
                 print('\n')
 
-        if (audioissuev == "1") and (deviceoss == "windows10"):
-            webbrowser.open(audioconnect[0]["win10"])
-            returntomenu()
-        elif (audioissuev == "1") and (deviceoss == "windows11"):
-            webbrowser.open(audioconnect[1]["win11"])
-            returntomenu()
-        elif (audioissuev == "1") and (deviceoss == "macos"):
-            webbrowser.open(audioconnect[2]["macOS"])
-            returntomenu()
-        elif (audioissuev == "2") and (deviceoss == "windows10"):
-            webbrowser.open(audioconnect[0]["win10"])
-            returntomenu()
-        elif (audioissuev == "2") and (deviceoss == "windows11"):
-            webbrowser.open(audioconnect[1]["win11"])
-            returntomenu()
-        elif (audioissuev == "2") and (deviceoss == ["macos"]):
-            webbrowser.open(audioconnect[2]["macOS"])
-            returntomenu()
-        elif audioissuev == "3":
-            helpdesk()
-            
+                if (audioissuev == "1") and (deviceoss == "windows10"):
+                    webbrowser.open(audioconnect[0]["win10"])
+                    returntomenu()
+                elif (audioissuev == "1") and (deviceoss == "windows11"):
+                    webbrowser.open(audioconnect[1]["win11"])
+                    returntomenu()
+                elif (audioissuev == "1") and (deviceoss == "macos"):
+                    webbrowser.open(audioconnect[2]["macOS"])
+                    returntomenu()
+                elif (audioissuev == "2") and (deviceoss == "windows10"):
+                    webbrowser.open(audioconnect[0]["win10"])
+                    returntomenu()
+                elif (audioissuev == "2") and (deviceoss == "windows11"):
+                    webbrowser.open(audioconnect[1]["win11"])
+                    returntomenu()
+                elif (audioissuev == "2") and (deviceoss == ["macos"]):
+                    webbrowser.open(audioconnect[2]["macOS"])
+                    returntomenu()
+                elif audioissuev == "3":
+                    helpdesk()
+                    
         else:
             print("Chosen device OS not compatible with this option")
 
@@ -669,16 +727,14 @@ def wifissue():
                 print("Unrecognised input")
                 print('\n')
 
-        if (wifiissuev == "1") and (deviceoss == "windows10") or (deviceoss == "windows11") or (deviceoss == "ipados"):
-            #path = os.path.basename(
-            #    'C:/Users/JP (School)/OneDrive - Mount Albert Grammar School/Desktop/Digital Tech VS Code/2.7_Internal/To connect to Schools Wifi.pdf')                
-            #os.startfile(path)
-            path=("C:/Users/JP (School)/OneDrive - Mount Albert Grammar School/Desktop/Digital Tech VS Code/2.7_Internal/MAGS BYOD booklet.pdf")
-            webbrowser.open_new(path)
-            returntomenu()
-        
-        elif (wifiissuev == "2"):
-            helpdesk()
+                if (wifiissuev == "1") and (deviceoss == "windows10") or (deviceoss == "windows11") or (deviceoss == "ipados"):
+                    
+                    path=("C:/Users/JP (School)/OneDrive - Mount Albert Grammar School/Desktop/Digital Tech VS Code/2.7_Internal/MAGS BYOD booklet.pdf")
+                    webbrowser.open_new(path)
+                    returntomenu()
+                
+                elif (wifiissuev == "2"):
+                    helpdesk()
 
         else:
             print(
@@ -721,7 +777,7 @@ def printissue():
 
         print('\n')
 
-        if printissuev == "1" or printissuev == 2 or printissuev == "3":
+        if printissuev == "1" or printissuev == "2" or printissuev == "3":
             contq = input("Have you selected the correct option? (y or n) ")
             contql = contq.strip().lower()
             print('\n')
@@ -736,17 +792,17 @@ def printissue():
                 print("Unrecognised input")
                 print('\n')
 
-        if printissuev == "1":
-            webbrowser.open(printing[0]["printpin"])
-            returntomenu()
-        elif printissuev == "2":
-            webbrowser.open(printing[1]["print"])
-            returntomenu()
-        elif printissuev == "3":
-            helpdesk()
-            returntomenu()
-        else:
-            ()
+                if printissuev == "1":
+                    webbrowser.open(printing[0]["printpin"])
+                    returntomenu()
+                elif printissuev == "2":
+                    webbrowser.open(printing[1]["print"])
+                    returntomenu()
+                elif printissuev == "3":
+                    helpdesk()
+                    returntomenu()
+                else:
+                    ()
 
 # /*  .oooooo.                                   oooo                                                                 oooo
 #  d8P'  `Y8b                                  `888                                                                 `888
@@ -874,7 +930,7 @@ def returntomenu():
             exit()
 
         else:
-            print(f"Unrecognised input 2")
+            print(f"Unrecognised input, please try again")
             print ('\n')
 
 
